@@ -792,7 +792,14 @@
           "NameMapSourceSchema": "?"
         },
         "BorderColor",
-        "DisabledBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(166. 166. 166. 1)",
+          "InvariantPropertyName": "DisabledBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PressedBorderColor",
         "HoverBorderColor",
         "BorderStyle",
@@ -867,7 +874,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -892,7 +899,7 @@
         {
           "Category": "Design",
           "PropertyName": "Color",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

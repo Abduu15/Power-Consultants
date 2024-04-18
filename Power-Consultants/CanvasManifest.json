@@ -101,7 +101,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 242,
+    "BindingErrorCount": 236,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -120,7 +120,7 @@
     "ManualOfflineProfileId": "",
     "Name": "Power Consultants",
     "OriginatingVersion": "1.338",
-    "ParserErrorCount": 312,
+    "ParserErrorCount": 304,
     "ShowStatusBar": false
   },
   "PublishInfo": {
