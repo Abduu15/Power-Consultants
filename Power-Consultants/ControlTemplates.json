@@ -27,7 +27,7 @@
     "OverridableProperties": {},
     "Version": "2.2.0"
   },
-  "Date picker": {
+  "Datumsauswahl": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_DatePickerCanvas",
@@ -39,7 +39,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Date picker",
+    "TemplateDisplayName": "Datumsauswahl",
     "Version": "0.0.20"
   },
   "dropdown": {
@@ -56,7 +56,7 @@
     "OverridableProperties": {},
     "Version": "2.3.1"
   },
-  "Dropdown": {
+  "Dropdownmenü": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_DropdownCanvas",
@@ -68,7 +68,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Dropdown",
+    "TemplateDisplayName": "Dropdownmenü",
     "Version": "0.0.29"
   },
   "groupContainer": {
@@ -153,7 +153,7 @@
     "TemplateDisplayName": "Text",
     "Version": "0.0.25"
   },
-  "Text input": {
+  "Texteingabe": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextInputCanvas",
@@ -165,7 +165,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Text input",
+    "TemplateDisplayName": "Texteingabe",
     "Version": "0.0.26"
   },
   "timer": {
