@@ -433,40 +433,40 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Texteingabe",
+  "Name": "Text input",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "Start",
-      "Description": "Text mit der ausgewählten Textausrichtung anzeigen.",
+      "Description": "Display text using the selected text alignment.",
       "DescriptionResourceString": "TextInputCanvas_Align_Desc",
-      "DisplayName": "Ausrichten",
+      "DisplayName": "Align",
       "DisplayNameResourceString": "TextInputCanvas_Align",
       "EnumValues": [
         {
-          "Description": "Beginn",
-          "DisplayName": "Beginn",
+          "Description": "Start",
+          "DisplayName": "Start",
           "IsDefaultValue": true,
           "Name": "Start",
           "Value": "Start"
         },
         {
-          "Description": "Ende",
-          "DisplayName": "Ende",
+          "Description": "End",
+          "DisplayName": "End",
           "IsDefaultValue": false,
           "Name": "End",
           "Value": "End"
         },
         {
-          "Description": "Zentrieren",
-          "DisplayName": "Zentrieren",
+          "Description": "Center",
+          "DisplayName": "Center",
           "IsDefaultValue": false,
           "Name": "Center",
           "Value": "Center"
         },
         {
-          "Description": "Blocksatz",
-          "DisplayName": "Blocksatz",
+          "Description": "Justify",
+          "DisplayName": "Justify",
           "IsDefaultValue": false,
           "Name": "Justify",
           "Value": "Justify"
@@ -495,9 +495,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Beschriftung für Bildschirmausgabe.",
+      "Description": "Label for screen readers.",
       "DescriptionResourceString": "TextInputCanvas_AccessibleLabel_Desc",
-      "DisplayName": "Beschriftung für Bedienungshilfen",
+      "DisplayName": "Accessible label",
       "DisplayNameResourceString": "TextInputCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
@@ -523,9 +523,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Bei „True“ wird die Benutzereingabe nach einer halbe Sekunde Verzögerung registriert. Dies ist nützlich für verzögerungsintensive Vorgänge, bis der Benutzer die Texteingabe abschließt (z.\u00A0B. zum Filtern, wenn Eingaben in anderen Formeln verwendet werden).",
+      "Description": "When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).",
       "DescriptionResourceString": "TextInputCanvas_DelayOutput_Desc",
-      "DisplayName": "Ausgabe verzögern",
+      "DisplayName": "Delay output",
       "DisplayNameResourceString": "TextInputCanvas_DelayOutput",
       "EnumValues": [],
       "HelperUI": "",
@@ -551,9 +551,9 @@
     {
       "Category": "data",
       "DefaultValue": "-1",
-      "Description": "Die maximale Länge des Inhalts der Texteingabe.",
+      "Description": "The maximum content length of the Text input.",
       "DescriptionResourceString": "TextInputCanvas_MaxLength_Desc",
-      "DisplayName": "Maximale Länge",
+      "DisplayName": "Maximum length",
       "DisplayNameResourceString": "TextInputCanvas_MaxLength",
       "EnumValues": [],
       "HelperUI": "",
@@ -579,21 +579,21 @@
     {
       "Category": "data",
       "DefaultValue": "SingleLine",
-      "Description": "Typ der Texteingabe: einzeilig oder mehrzeilig.",
+      "Description": "Type of text input: single line or multiline.",
       "DescriptionResourceString": "TextInputCanvas_Mode_Desc",
-      "DisplayName": "Modus",
+      "DisplayName": "Mode",
       "DisplayNameResourceString": "TextInputCanvas_Mode",
       "EnumValues": [
         {
-          "Description": "Einzeilig",
-          "DisplayName": "Einzeilig",
+          "Description": "Single line",
+          "DisplayName": "Single line",
           "IsDefaultValue": true,
           "Name": "SingleLine",
           "Value": "SingleLine"
         },
         {
-          "Description": "Mehrzeilig",
-          "DisplayName": "Mehrzeilig",
+          "Description": "Multiline",
+          "DisplayName": "Multiline",
           "IsDefaultValue": false,
           "Name": "Multiline",
           "Value": "Multiline"
@@ -622,9 +622,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Platzhaltertext der Texteingabe.",
+      "Description": "The placeholder text of the text input.",
       "DescriptionResourceString": "TextInputCanvas_Placeholder_Desc",
-      "DisplayName": "Platzhaltertext",
+      "DisplayName": "Placeholder text",
       "DisplayNameResourceString": "TextInputCanvas_Placeholder",
       "EnumValues": [],
       "HelperUI": null,
@@ -650,9 +650,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Gibt an, ob dieses Steuerelement Text enthalten muss.",
+      "Description": "Whether this control must contain text.",
       "DescriptionResourceString": "TextInputCanvas_Required_Desc",
-      "DisplayName": "Erforderlich",
+      "DisplayName": "Required",
       "DisplayNameResourceString": "TextInputCanvas_Required",
       "EnumValues": [],
       "HelperUI": "",
@@ -678,21 +678,21 @@
     {
       "Category": "data",
       "DefaultValue": "Text",
-      "Description": "Inhaltstyp der Texteingabe: Klartext, Kennwort oder Suche.",
+      "Description": "Content type of text input: plain text, password, or search.",
       "DescriptionResourceString": "TextInputCanvas_Type_Desc",
-      "DisplayName": "Typ",
+      "DisplayName": "Type",
       "DisplayNameResourceString": "TextInputCanvas_Type",
       "EnumValues": [
         {
-          "Description": "Kennwort",
-          "DisplayName": "Kennwort",
+          "Description": "Password",
+          "DisplayName": "Password",
           "IsDefaultValue": false,
           "Name": "Password",
           "Value": "Password"
         },
         {
-          "Description": "Suche",
-          "DisplayName": "Suche",
+          "Description": "Search",
+          "DisplayName": "Search",
           "IsDefaultValue": false,
           "Name": "Search",
           "Value": "Search"
@@ -728,21 +728,21 @@
     {
       "Category": "data",
       "DefaultValue": "None",
-      "Description": "Der aktuelle Status der Texteingabe in Bezug auf die Überprüfung.",
+      "Description": "The current status of the Text input, with regard to validation.",
       "DescriptionResourceString": "TextInputCanvas_ValidationState_Desc",
-      "DisplayName": "Überprüfungsstatus",
+      "DisplayName": "Validation state",
       "DisplayNameResourceString": "TextInputCanvas_ValidationState",
       "EnumValues": [
         {
-          "Description": "Fehler",
-          "DisplayName": "Fehler",
+          "Description": "Error",
+          "DisplayName": "Error",
           "IsDefaultValue": false,
           "Name": "Error",
           "Value": "Error"
         },
         {
-          "Description": "Keine",
-          "DisplayName": "Keine",
+          "Description": "None",
+          "DisplayName": "None",
           "IsDefaultValue": true,
           "Name": "None",
           "Value": "None"
@@ -771,9 +771,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Text, der in einem Steuerelement erscheint oder den der Benutzer in ein Steuerelement eingibt.",
+      "Description": "Text that appears on a control or that the user types into a control.",
       "DescriptionResourceString": "TextInputCanvas_Value_Desc",
-      "DisplayName": "Wert",
+      "DisplayName": "Value",
       "DisplayNameResourceString": "TextInputCanvas_Value",
       "EnumValues": [],
       "HelperUI": "",
@@ -799,9 +799,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.",
+      "Description": "Choose a color palette that's different from the theme.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Farbpalette",
+      "DisplayName": "Color palette",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -827,9 +827,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Name der Schriftfamilie, in der Text angezeigt wird",
+      "Description": "The name of the family of fonts in which text appears",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Schriftart",
+      "DisplayName": "Font",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -855,9 +855,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Legen Sie die Schriftgröße für den angezeigten Text fest.",
+      "Description": "Set the font size for displayed text.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Schriftgröße",
+      "DisplayName": "Font size",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -883,9 +883,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Farbe des Texts im Steuerelement",
+      "Description": "The color of text in the control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Schriftfarbe",
+      "DisplayName": "Font color",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -911,9 +911,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Gewichtung des Texts in einem Steuerelement",
+      "Description": "The weight of the text in a control",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Schriftstärke",
+      "DisplayName": "Font weight",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -939,9 +939,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Kursiv",
+      "Description": "Italic",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Kursiv",
+      "DisplayName": "Italic",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -967,9 +967,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Unterstrichen",
+      "Description": "Underline",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Unterstrichen",
+      "DisplayName": "Underline",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -995,9 +995,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Durchgestrichen",
+      "Description": "Strikethrough",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Durchgestrichen",
+      "DisplayName": "Strikethrough",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -1509,7 +1509,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Texteingabe\",\"TextInputCanvas_Align\":\"Ausrichten\",\"TextInputCanvas_Align_Desc\":\"Text mit der ausgewählten Textausrichtung anzeigen.\",\"TextInputCanvas_Align_Start\":\"Beginn\",\"TextInputCanvas_Align_End\":\"Ende\",\"TextInputCanvas_Align_Center\":\"Zentrieren\",\"TextInputCanvas_Align_Justify\":\"Blocksatz\",\"TextInputCanvas_AccessibleLabel\":\"Beschriftung für Bedienungshilfen\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Beschriftung für Bildschirmausgabe.\",\"TextInputCanvas_DelayOutput\":\"Ausgabe verzögern\",\"TextInputCanvas_DelayOutput_Desc\":\"Bei „True“ wird die Benutzereingabe nach einer halbe Sekunde Verzögerung registriert. Dies ist nützlich für verzögerungsintensive Vorgänge, bis der Benutzer die Texteingabe abschließt (z.\u00A0B. zum Filtern, wenn Eingaben in anderen Formeln verwendet werden).\",\"TextInputCanvas_Mode\":\"Modus\",\"TextInputCanvas_Mode_Desc\":\"Typ der Texteingabe: einzeilig oder mehrzeilig.\",\"TextInputCanvas_Mode_SingleLine\":\"Einzeilig\",\"TextInputCanvas_Mode_Multiline\":\"Mehrzeilig\",\"TextInputCanvas_Required\":\"Erforderlich\",\"TextInputCanvas_Required_Desc\":\"Gibt an, ob dieses Steuerelement Text enthalten muss.\",\"TextInputCanvas_Value\":\"Wert\",\"TextInputCanvas_Value_Desc\":\"Text, der in einem Steuerelement erscheint oder den der Benutzer in ein Steuerelement eingibt.\",\"TextInputCanvas_Placeholder\":\"Platzhaltertext\",\"TextInputCanvas_Placeholder_Desc\":\"Der Platzhaltertext der Texteingabe.\",\"TextInputCanvas_Type\":\"Typ\",\"TextInputCanvas_Type_Desc\":\"Inhaltstyp der Texteingabe: Klartext, Kennwort oder Suche.\",\"TextInputCanvas_Type_Text\":\"Text\",\"TextInputCanvas_Type_Password\":\"Kennwort\",\"TextInputCanvas_Type_Search\":\"Suche\",\"TextInputCanvas_MaxLength\":\"Maximale Länge\",\"TextInputCanvas_MaxLength_Desc\":\"Die maximale Länge des Inhalts der Texteingabe.\",\"Base_Palette_Color\":\"Farbpalette\",\"Base_Palette_Color_description\":\"Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.\",\"TextInputCanvas_ValidationState\":\"Überprüfungsstatus\",\"TextInputCanvas_ValidationState_Desc\":\"Der aktuelle Status der Texteingabe in Bezug auf die Überprüfung.\",\"TextInputCanvas_ValidationState_None\":\"Keine\",\"TextInputCanvas_ValidationState_Error\":\"Fehler\",\"Font_Size\":\"Schriftgröße\",\"Font_Size_description\":\"Legen Sie die Schriftgröße für den angezeigten Text fest.\",\"Font\":\"Schriftart\",\"Font_description\":\"Der Name der Schriftfamilie, in der Text angezeigt wird\",\"Font_Color\":\"Schriftfarbe\",\"Font_Color_description\":\"Die Farbe des Texts im Steuerelement\",\"Font_Weight\":\"Schriftstärke\",\"Font_Weight_description\":\"Die Gewichtung des Texts in einem Steuerelement\",\"Italic\":\"Kursiv\",\"Underline\":\"Unterstrichen\",\"Strikethrough\":\"Durchgestrichen\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Text input\",\"TextInputCanvas_Align\":\"Align\",\"TextInputCanvas_Align_Desc\":\"Display text using the selected text alignment.\",\"TextInputCanvas_Align_Start\":\"Start\",\"TextInputCanvas_Align_End\":\"End\",\"TextInputCanvas_Align_Center\":\"Center\",\"TextInputCanvas_Align_Justify\":\"Justify\",\"TextInputCanvas_AccessibleLabel\":\"Accessible label\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Label for screen readers.\",\"TextInputCanvas_DelayOutput\":\"Delay output\",\"TextInputCanvas_DelayOutput_Desc\":\"When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).\",\"TextInputCanvas_Mode\":\"Mode\",\"TextInputCanvas_Mode_Desc\":\"Type of text input: single line or multiline.\",\"TextInputCanvas_Mode_SingleLine\":\"Single line\",\"TextInputCanvas_Mode_Multiline\":\"Multiline\",\"TextInputCanvas_Required\":\"Required\",\"TextInputCanvas_Required_Desc\":\"Whether this control must contain text.\",\"TextInputCanvas_Value\":\"Value\",\"TextInputCanvas_Value_Desc\":\"Text that appears on a control or that the user types into a control.\",\"TextInputCanvas_Placeholder\":\"Placeholder text\",\"TextInputCanvas_Placeholder_Desc\":\"The placeholder text of the text input.\",\"TextInputCanvas_Type\":\"Type\",\"TextInputCanvas_Type_Desc\":\"Content type of text input: plain text, password, or search.\",\"TextInputCanvas_Type_Text\":\"Text\",\"TextInputCanvas_Type_Password\":\"Password\",\"TextInputCanvas_Type_Search\":\"Search\",\"TextInputCanvas_MaxLength\":\"Maximum length\",\"TextInputCanvas_MaxLength_Desc\":\"The maximum content length of the Text input.\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"TextInputCanvas_ValidationState\":\"Validation state\",\"TextInputCanvas_ValidationState_Desc\":\"The current status of the Text input, with regard to validation.\",\"TextInputCanvas_ValidationState_None\":\"None\",\"TextInputCanvas_ValidationState_Error\":\"Error\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\"}}}",
       "Type": 3
     },
     {

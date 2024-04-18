@@ -14,6 +14,19 @@
         "Type": 0,
         "WizardStep": null
       },
+      "Appearance": {
+        "EnabledForFlyout": false,
+        "HelperUI": null,
+        "Hidden": false,
+        "PropertyGroupName": "",
+        "PropertyKind": 1,
+        "SectionIndex": 3,
+        "SectionName": null,
+        "SectionType": "StyleAndThemeSection",
+        "ShowInCanvasInlineActionBar": false,
+        "Type": 0,
+        "WizardStep": null
+      },
       "BasePaletteColor": {
         "EnabledForFlyout": false,
         "HelperUI": null,
@@ -131,19 +144,6 @@
         "Type": 34,
         "WizardStep": null
       },
-      "Format": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 0,
-        "SectionName": null,
-        "SectionType": "GeneralSection",
-        "ShowInCanvasInlineActionBar": false,
-        "Type": 0,
-        "WizardStep": null
-      },
       "Height": {
         "EnabledForFlyout": false,
         "HelperUI": null,
@@ -157,7 +157,7 @@
         "Type": 0,
         "WizardStep": null
       },
-      "Placeholder": {
+      "Text": {
         "EnabledForFlyout": false,
         "HelperUI": null,
         "Hidden": false,
@@ -227,16 +227,16 @@
   "CommonEvents": [
     {
       "Description": "",
-      "DisplayName": "OnChange",
+      "DisplayName": "OnSelect",
       "Hidden": false,
       "IsPrimaryInput": false,
-      "Name": "OnChange",
+      "Name": "OnSelect",
       "PfxDefaultValue": null
     }
   ],
-  "ControlConstructor": "DatePickerCanvas",
+  "ControlConstructor": "ButtonCanvas",
   "ControlNamespace": "PowerApps.CoreControls",
-  "DisplayNameKey": "DatePickerCanvas",
+  "DisplayNameKey": "ButtonCanvas",
   "IncludedProperties": [
     {
       "Category": "design",
@@ -296,7 +296,7 @@
     },
     {
       "Category": "design",
-      "DefaultValue": "320",
+      "DefaultValue": "96",
       "Description": "",
       "DescriptionResourceString": "",
       "DisplayName": "Width",
@@ -315,12 +315,12 @@
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": null,
-      "PhoneDefaultValue": "320",
+      "PhoneDefaultValue": "96",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 2,
       "Usage": 2,
-      "WebDefaultValue": "320"
+      "WebDefaultValue": "96"
     },
     {
       "Category": "design",
@@ -407,15 +407,43 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Datumsauswahl",
+  "Name": "Button",
   "Properties": [
     {
       "Category": "data",
+      "DefaultValue": "true",
+      "Description": "Whether this field can be reached with Tab key.",
+      "DescriptionResourceString": "ButtonCanvas_AcceptsFocus_Desc",
+      "DisplayName": "Accepts focus",
+      "DisplayNameResourceString": "ButtonCanvas_AcceptsFocus",
+      "EnumValues": [],
+      "HelperUI": "",
+      "Hidden": false,
+      "IsDataSourceProperty": false,
+      "IsLinkableToParentTheme": false,
+      "IsPrimaryBehavioral": false,
+      "IsPrimaryInput": false,
+      "IsPrimaryOutput": false,
+      "IsResettable": false,
+      "IsResettableToManifestDefault": false,
+      "Name": "AcceptsFocus",
+      "ParentDataSetName": "",
+      "PassThroughProperty": "",
+      "PfxDefaultValue": "",
+      "PhoneDefaultValue": "",
+      "Required": false,
+      "ShouldAutoBind": false,
+      "Type": 20,
+      "Usage": 2,
+      "WebDefaultValue": ""
+    },
+    {
+      "Category": "data",
       "DefaultValue": "",
-      "Description": "Beschriftung für Sprachausgabe",
-      "DescriptionResourceString": "DatePickerCanvas_AccessibleLabel_Desc",
-      "DisplayName": "Beschriftung für Bedienungshilfen",
-      "DisplayNameResourceString": "DatePickerCanvas_AccessibleLabel",
+      "Description": "Label read out by screen readers.",
+      "DescriptionResourceString": "ButtonCanvas_AccessibleLabel_Desc",
+      "DisplayName": "Accessible label",
+      "DisplayNameResourceString": "ButtonCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
@@ -434,121 +462,51 @@
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 6,
-      "Usage": 2,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "",
-      "Description": "In diesem Steuerelement ausgewähltes Datum.",
-      "DescriptionResourceString": "DatePickerCanvas_SelectedDate_Desc",
-      "DisplayName": "Ausgewähltes Datum",
-      "DisplayNameResourceString": "DatePickerCanvas_SelectedDate",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": true,
-      "IsResettableToManifestDefault": false,
-      "Name": "SelectedDate",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 23,
-      "Usage": 2,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "",
-      "Description": "Das früheste auswählbare Jahr.",
-      "DescriptionResourceString": "DatePickerCanvas_StartYear_Desc",
-      "DisplayName": "Startjahr",
-      "DisplayNameResourceString": "DatePickerCanvas_StartYear",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "StartDate",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 23,
       "Usage": 0,
       "WebDefaultValue": ""
     },
     {
       "Category": "data",
-      "DefaultValue": "",
-      "Description": "Das letzte auswählbare Jahr.",
-      "DescriptionResourceString": "DatePickerCanvas_EndYear_Desc",
-      "DisplayName": "Endjahr",
-      "DisplayNameResourceString": "DatePickerCanvas_EndYear",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "EndDate",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 23,
-      "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "Long Abbreviated",
-      "Description": "Das Format, in dem das Datum angezeigt werden soll.",
-      "DescriptionResourceString": "DatePickerCanvas_Format_Desc",
-      "DisplayName": "Format",
-      "DisplayNameResourceString": "DatePickerCanvas_Format",
+      "DefaultValue": "Primary",
+      "Description": "Display as one of button types.",
+      "DescriptionResourceString": "ButtonCanvas_Appearance_Desc",
+      "DisplayName": "Type",
+      "DisplayNameResourceString": "ButtonCanvas_Appearance",
       "EnumValues": [
         {
-          "Description": "Kurz",
-          "DisplayName": "Kurz",
-          "IsDefaultValue": false,
-          "Name": "Short",
-          "Value": "Short"
-        },
-        {
-          "Description": "Lang gekürzt",
-          "DisplayName": "Lang gekürzt",
+          "Description": "Primary",
+          "DisplayName": "Primary",
           "IsDefaultValue": true,
-          "Name": "LongAbbreviated",
-          "Value": "Long Abbreviated"
+          "Name": "Primary",
+          "Value": "Primary"
         },
         {
-          "Description": "Monat des Jahres",
-          "DisplayName": "Monat des Jahres",
+          "Description": "Secondary",
+          "DisplayName": "Secondary",
           "IsDefaultValue": false,
-          "Name": "YearMonth",
-          "Value": "Year Month"
+          "Name": "Secondary",
+          "Value": "Secondary"
+        },
+        {
+          "Description": "Outline",
+          "DisplayName": "Outline",
+          "IsDefaultValue": false,
+          "Name": "Outline",
+          "Value": "Outline"
+        },
+        {
+          "Description": "Subtle",
+          "DisplayName": "Subtle",
+          "IsDefaultValue": false,
+          "Name": "Subtle",
+          "Value": "Subtle"
+        },
+        {
+          "Description": "Transparent",
+          "DisplayName": "Transparent",
+          "IsDefaultValue": false,
+          "Name": "Transparent",
+          "Value": "Transparent"
         }
       ],
       "HelperUI": null,
@@ -560,141 +518,35 @@
       "IsPrimaryOutput": false,
       "IsResettable": false,
       "IsResettableToManifestDefault": false,
-      "Name": "Format",
+      "Name": "Appearance",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": "",
-      "PhoneDefaultValue": "Long Abbreviated",
+      "PhoneDefaultValue": "Primary",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 1,
       "Usage": 2,
-      "WebDefaultValue": "Long Abbreviated"
+      "WebDefaultValue": "Primary"
     },
     {
       "Category": "data",
-      "DefaultValue": "false",
-      "Description": "Gibt an, ob der Benutzer ein Datum eingeben kann.",
-      "DescriptionResourceString": "DatePickerCanvas_IsEditable_Desc",
-      "DisplayName": "Ist bearbeitbar",
-      "DisplayNameResourceString": "DatePickerCanvas_IsEditable",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "IsEditable",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 20,
-      "Usage": 2,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "Sunday",
-      "Description": "An welchem Wochentag der Kalender beginnen soll.",
-      "DescriptionResourceString": "DatePickerCanvas_StartOfWeek_Desc",
-      "DisplayName": "Wochenbeginn",
-      "DisplayNameResourceString": "DatePickerCanvas_StartOfWeek",
-      "EnumValues": [
-        {
-          "Description": "Sonntag",
-          "DisplayName": "Sonntag",
-          "IsDefaultValue": true,
-          "Name": "Sunday",
-          "Value": "Sunday"
-        },
-        {
-          "Description": "Montag",
-          "DisplayName": "Montag",
-          "IsDefaultValue": false,
-          "Name": "Monday",
-          "Value": "Monday"
-        },
-        {
-          "Description": "Dienstag",
-          "DisplayName": "Dienstag",
-          "IsDefaultValue": false,
-          "Name": "Tuesday",
-          "Value": "Tuesday"
-        },
-        {
-          "Description": "Mittwoch",
-          "DisplayName": "Mittwoch",
-          "IsDefaultValue": false,
-          "Name": "Wednesday",
-          "Value": "Wednesday"
-        },
-        {
-          "Description": "Donnerstag",
-          "DisplayName": "Donnerstag",
-          "IsDefaultValue": false,
-          "Name": "Thursday",
-          "Value": "Thursday"
-        },
-        {
-          "Description": "Freitag",
-          "DisplayName": "Freitag",
-          "IsDefaultValue": false,
-          "Name": "Friday",
-          "Value": "Friday"
-        },
-        {
-          "Description": "Samstag",
-          "DisplayName": "Samstag",
-          "IsDefaultValue": false,
-          "Name": "Saturday",
-          "Value": "Saturday"
-        }
-      ],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "StartOfWeek",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "Sunday",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 1,
-      "Usage": 0,
-      "WebDefaultValue": "Sunday"
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "Datum auswählen ...",
-      "Description": "Der Text, der angezeigt wird, wenn kein Datum ausgewählt ist.",
-      "DescriptionResourceString": "DatePickerCanvas_Placeholder_Desc",
-      "DisplayName": "Platzhalter",
-      "DisplayNameResourceString": "DatePickerCanvas_Placeholder",
+      "DefaultValue": "Button",
+      "Description": "Text to display in the button.",
+      "DescriptionResourceString": "ButtonCanvas_Text_Desc",
+      "DisplayName": "Text",
+      "DisplayNameResourceString": "ButtonCanvas_Text",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
       "IsDataSourceProperty": false,
       "IsLinkableToParentTheme": false,
       "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
+      "IsPrimaryInput": true,
       "IsPrimaryOutput": false,
       "IsResettable": false,
       "IsResettableToManifestDefault": false,
-      "Name": "Placeholder",
+      "Name": "Text",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": "",
@@ -702,58 +554,15 @@
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 6,
-      "Usage": 0,
+      "Usage": 2,
       "WebDefaultValue": ""
     },
     {
       "Category": "data",
-      "DefaultValue": "None",
-      "Description": "Der aktuelle Status der Datumsauswahl in Bezug auf die Überprüfung.",
-      "DescriptionResourceString": "DatePickerCanvas_ValidationState_Desc",
-      "DisplayName": "Überprüfungsstatus",
-      "DisplayNameResourceString": "DatePickerCanvas_ValidationState",
-      "EnumValues": [
-        {
-          "Description": "Fehler",
-          "DisplayName": "Fehler",
-          "IsDefaultValue": false,
-          "Name": "Error",
-          "Value": "Error"
-        },
-        {
-          "Description": "Keine",
-          "DisplayName": "Keine",
-          "IsDefaultValue": true,
-          "Name": "None",
-          "Value": "None"
-        }
-      ],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "ValidationState",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "None",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 1,
-      "Usage": 2,
-      "WebDefaultValue": "None"
-    },
-    {
-      "Category": "data",
       "DefaultValue": "",
-      "Description": "Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.",
+      "Description": "Choose a color palette that's different from the theme.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Farbpalette",
+      "DisplayName": "Color palette",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -779,9 +588,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Name der Schriftfamilie, in der Text angezeigt wird",
+      "Description": "The name of the family of fonts in which text appears",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Schriftart",
+      "DisplayName": "Font",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -807,9 +616,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Legen Sie die Schriftgröße für den angezeigten Text fest.",
+      "Description": "Set the font size for displayed text.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Schriftgröße",
+      "DisplayName": "Font size",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -835,9 +644,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Farbe des Texts im Steuerelement",
+      "Description": "The color of text in the control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Schriftfarbe",
+      "DisplayName": "Font color",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -863,9 +672,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Gewichtung des Texts in einem Steuerelement",
+      "Description": "The weight of the text in a control",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Schriftstärke",
+      "DisplayName": "Font weight",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -891,9 +700,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Kursiv",
+      "Description": "Italic",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Kursiv",
+      "DisplayName": "Italic",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -919,9 +728,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Unterstrichen",
+      "Description": "Underline",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Unterstrichen",
+      "DisplayName": "Underline",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -947,9 +756,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Durchgestrichen",
+      "Description": "Strikethrough",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Durchgestrichen",
+      "DisplayName": "Strikethrough",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -970,34 +779,6 @@
       "ShouldAutoBind": false,
       "Type": 20,
       "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "false",
-      "Description": "Gibt an, ob dieses Steuerelement einen Wert benötigt",
-      "DescriptionResourceString": "DatePickerCanvas_Required_Desc",
-      "DisplayName": "Erforderlich",
-      "DisplayNameResourceString": "DatePickerCanvas_Required",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": true,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "Required",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 20,
-      "Usage": 2,
       "WebDefaultValue": ""
     },
     {
@@ -1139,357 +920,357 @@
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.DatePickerCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.DatePickerCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AccessibleLabel\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"SelectedDate\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"StartDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"EndDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Format\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Long Abbreviated\"},\"IsEditable\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"StartOfWeek\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Sunday\"},\"Placeholder\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Datum auswählen ...\"},\"ValidationState\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"None\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"Required\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":{\"OnChange\":{\"EventName\":\"OnChange\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.ButtonCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.ButtonCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AcceptsFocus\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"true\"},\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Primary\"},\"Text\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Button\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":{\"OnSelect\":{\"EventName\":\"OnSelect\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"SelectedDate\",\"Type\":\"DateAndTime_DateOnly\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"StartDate\",\"Type\":\"DateAndTime_DateOnly\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"EndDate\",\"Type\":\"DateAndTime_DateOnly\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Format\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"IsEditable\",\"Type\":\"TwoOptions\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"StartOfWeek\",\"Type\":\"Enum\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Placeholder\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"ValidationState\",\"Type\":\"Enum\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"BasePaletteColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"ColorPalette\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Font\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"Font\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontColor\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontWeight\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontWeight\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontItalic\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Italics\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontUnderline\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Underline\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontStrikethrough\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Strikethrough\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Required\",\"Type\":\"TwoOptions\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
+      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"AcceptsFocus\",\"Type\":\"TwoOptions\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Appearance\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Text\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":true,\"IsIncluded\":false},{\"Name\":\"BasePaletteColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"ColorPalette\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Font\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"Font\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontColor\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontWeight\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontWeight\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontItalic\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Italics\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontUnderline\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Underline\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontStrikethrough\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Strikethrough\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.29\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 11,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/DatePickerCanvas.js",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/ButtonCanvas.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1033.resx",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1033.resx",
       "Type": 2
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1025.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1025.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1026.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1026.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1027.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1027.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1028.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1028.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1029.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1029.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1030.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1030.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1031.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1031.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1032.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1032.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1033.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1033.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1035.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1035.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1036.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1036.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1037.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1037.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1038.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1038.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1040.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1040.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1041.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1041.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1042.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1042.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1043.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1043.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1044.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1044.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1045.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1045.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1046.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1046.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1048.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1048.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1049.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1049.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1050.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1050.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1051.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1051.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1053.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1053.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1054.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1054.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1055.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1055.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1057.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1057.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1058.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1058.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1060.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1060.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1061.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1061.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1062.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1062.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1063.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1063.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1066.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1066.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1069.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1069.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1081.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1081.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1086.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1086.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1087.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1087.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.1110.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1110.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.2052.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2052.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.2070.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2070.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.2074.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2074.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.3076.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3076.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.3082.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3082.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_DatePickerCanvas/strings/DatePickerCanvas.3098.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3098.json",
       "Type": 5
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"DatePickerCanvas\":\"Datumsauswahl\",\"DatePickerCanvas_Placeholder\":\"Platzhalter\",\"DatePickerCanvas_AccessibleLabel\":\"Beschriftung für Bedienungshilfen\",\"DatePickerCanvas_AccessibleLabel_Desc\":\"Beschriftung für Sprachausgabe\",\"DatePickerCanvas_Calendar_GoToToday\":\"Zum heutigen Tag wechseln\",\"DatePickerCanvas_Calendar_NextMonth\":\"Zum nächsten Monat navigieren\",\"DatePickerCanvas_Calendar_NextYearRange\":\"Zum nächsten Jahresbereich navigieren\",\"DatePickerCanvas_Calendar_NextYear\":\"Zum nächsten Jahr navigieren\",\"DatePickerCanvas_Calendar_PreviousMonth\":\"Zum vorherigen Monat navigieren\",\"DatePickerCanvas_Calendar_PreviousYear\":\"Zum vorherigen Jahr navigieren\",\"DatePickerCanvas_Calendar_PreviousYearRange\":\"Zum vorherigen Jahresbereich navigieren\",\"DatePickerCanvas_InvalidInputMessage\":\"Ungültiges Datum in {0} eingegeben. Auf vorherigen Wert zurückgesetzt. Geben Sie ein Datum wie {1} ein.\",\"DatePickerCanvas_Required\":\"Erforderlich\",\"DatePickerCanvas_Required_Desc\":\"Gibt an, ob dieses Steuerelement einen Wert benötigt\",\"DatePickerCanvas_SelectedDate\":\"Ausgewähltes Datum\",\"DatePickerCanvas_SelectedDate_Desc\":\"In diesem Steuerelement ausgewähltes Datum.\",\"DatePickerCanvas_StartYear\":\"Startjahr\",\"DatePickerCanvas_StartYear_Desc\":\"Das früheste auswählbare Jahr.\",\"DatePickerCanvas_EndYear\":\"Endjahr\",\"DatePickerCanvas_EndYear_Desc\":\"Das letzte auswählbare Jahr.\",\"DatePickerCanvas_Placeholder_Desc\":\"Der Text, der angezeigt wird, wenn kein Datum ausgewählt ist.\",\"DatePickerCanvas_IsEditable\":\"Ist bearbeitbar\",\"DatePickerCanvas_IsEditable_Desc\":\"Gibt an, ob der Benutzer ein Datum eingeben kann.\",\"DatePickerCanvas_StartOfWeek\":\"Wochenbeginn\",\"DatePickerCanvas_StartOfWeek_Desc\":\"An welchem Wochentag der Kalender beginnen soll.\",\"DatePickerCanvas_StartOfWeek_Sunday\":\"Sonntag\",\"DatePickerCanvas_StartOfWeek_Monday\":\"Montag\",\"DatePickerCanvas_StartOfWeek_Tuesday\":\"Dienstag\",\"DatePickerCanvas_StartOfWeek_Wednesday\":\"Mittwoch\",\"DatePickerCanvas_StartOfWeek_Thursday\":\"Donnerstag\",\"DatePickerCanvas_StartOfWeek_Friday\":\"Freitag\",\"DatePickerCanvas_StartOfWeek_Saturday\":\"Samstag\",\"DatePickerCanvas_Format\":\"Format\",\"DatePickerCanvas_Format_Desc\":\"Das Format, in dem das Datum angezeigt werden soll.\",\"DatePickerCanvas_Format_Short\":\"Kurz\",\"DatePickerCanvas_Format_Long\":\"Lang\",\"DatePickerCanvas_Format_LongAbbreviated\":\"Lang gekürzt\",\"DatePickerCanvas_Format_YearMonth\":\"Monat des Jahres\",\"Base_Palette_Color\":\"Farbpalette\",\"Base_Palette_Color_description\":\"Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.\",\"DatePickerCanvas_ValidationState\":\"Überprüfungsstatus\",\"DatePickerCanvas_ValidationState_Desc\":\"Der aktuelle Status der Datumsauswahl in Bezug auf die Überprüfung.\",\"DatePickerCanvas_ValidationState_None\":\"Keine\",\"DatePickerCanvas_ValidationState_Error\":\"Fehler\",\"Font_Size\":\"Schriftgröße\",\"Font_Size_description\":\"Legen Sie die Schriftgröße für den angezeigten Text fest.\",\"Default_Value_Placeholder\":\"Datum auswählen ...\",\"Font\":\"Schriftart\",\"Font_description\":\"Der Name der Schriftfamilie, in der Text angezeigt wird\",\"Font_Color\":\"Schriftfarbe\",\"Font_Color_description\":\"Die Farbe des Texts im Steuerelement\",\"Font_Weight\":\"Schriftstärke\",\"Font_Weight_description\":\"Die Gewichtung des Texts in einem Steuerelement\",\"Italic\":\"Kursiv\",\"Underline\":\"Unterstrichen\",\"Strikethrough\":\"Durchgestrichen\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ButtonCanvas\":\"Button\",\"ButtonCanvas_Desc\":\"Let users to click or tap to perform an action.\",\"ButtonCanvas_Appearance\":\"Type\",\"ButtonCanvas_Appearance_Desc\":\"Display as one of button types.\",\"ButtonCanvas_Appearance_Secondary\":\"Secondary\",\"ButtonCanvas_Appearance_Primary\":\"Primary\",\"ButtonCanvas_Appearance_Outline\":\"Outline\",\"ButtonCanvas_Appearance_Subtle\":\"Subtle\",\"ButtonCanvas_Appearance_Transparent\":\"Transparent\",\"ButtonCanvas_Text\":\"Text\",\"ButtonCanvas_Text_Desc\":\"Text to display in the button.\",\"ButtonCanvas_AcceptsFocus\":\"Accepts focus\",\"ButtonCanvas_AcceptsFocus_Desc\":\"Whether this field can be reached with Tab key.\",\"ButtonCanvas_AccessibleLabel\":\"Accessible label\",\"ButtonCanvas_AccessibleLabel_Desc\":\"Label read out by screen readers.\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\"}}}",
       "Type": 3
     },
     {
@@ -1498,12 +1279,18 @@
       "ModifiedPath": "",
       "Path": "/PCF/fluentui-react.js",
       "Type": 0
+    },
+    {
+      "IsControlSpecific": false,
+      "LoadingOrder": 0,
+      "ModifiedPath": "",
+      "Path": "Fluent/9.4.0/9.4.0",
+      "Type": 4
     }
   ],
   "SubscribedFunctionalities": {
     "autoDisabledViewState": "true",
-    "supportResettableProperties": "true",
     "supportSetFocus": "true"
   },
-  "Version": "0.0.20"
+  "Version": "0.0.29"
 }
