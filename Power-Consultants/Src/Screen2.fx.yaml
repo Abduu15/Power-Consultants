@@ -6,6 +6,7 @@ Screen2 As screen:
         BorderColor: |+
             =
             
+        Color: =RGBA(0. 0. 0. 1)
         Default: ="Texteingabe"
         DisabledBorderColor: |
             =
@@ -13,7 +14,7 @@ Screen2 As screen:
             =
         DisabledFill: |
             =
-        Fill: =RGBA(253, 207, 180, 1)
+        Fill: =RGBA(253. 207. 180. 1)
         Font: =Font.Arial
         HoverBorderColor: |
             =
