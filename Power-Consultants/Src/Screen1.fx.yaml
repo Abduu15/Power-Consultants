@@ -78,7 +78,7 @@ Screen1 As screen:
         HoverFill: =ColorFade(RGBA(56. 96. 178. 1), -20%)
         Text: ="Bearbeiten"
         Width: =157
-        X: =121
-        Y: =439
+        X: =641
+        Y: =193
         ZIndex: =7
 
