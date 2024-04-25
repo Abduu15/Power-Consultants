@@ -120,6 +120,7 @@ Screen1 As screen:
 
     TextCanvas2 As Text:
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Text: |-
             =00:00:00
