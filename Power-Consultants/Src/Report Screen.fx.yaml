@@ -1,4 +1,4 @@
-Screen4 As screen:
+"'Report Screen' As screen":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
@@ -15,7 +15,7 @@ Screen4 As screen:
         ShowFooter: ="no"
         Width: =1275
         X: =45
-        Y: =45
+        Y: =164
         ZIndex: =1
 
         Projekt2 As pcfDataField.textualColumn:
@@ -68,11 +68,27 @@ Screen4 As screen:
 
     TextCanvas8 As Text:
         DisplayMode: =DisplayMode.Edit
-        Height: =32
-        Text: |-
-            ="Total Items: " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10))
-        Width: =96
+        FontColor: =
+        Height: =30
+        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
+        Width: =132
         X: =90
-        Y: =535
+        Y: =666
         ZIndex: =2
+
+    Header1_1 As Kopfzeile:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =75
+        Logo: ='cropped-yaveon-logo-negativ'
+        OnSelectLogo: =false
+        Title: ="Report Screen"
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =3
 
