@@ -3,7 +3,7 @@ App As appinfo:
     Formulas: |-
         =tabListItems = Table({ name: "Zeiterfassung", Screen: Zeiterfassung},{ name: "Report", Screen: Report});
     SizeBreakpoints: =[600. 900. 1200]
-    Theme: =PowerAppsTheme
+    Theme: =Yaveon
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

@@ -1,0 +1,290 @@
+"Zeiterfassung As screen.'headerGalleryLayout_ver1.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Set(varDPBuchen, DisplayMode.Disabled)
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            Header1 As Header:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =
+                Height: =75
+                LayoutMinHeight: =75
+                LayoutMinWidth: =Parent.Width
+                Logo: ='cropped-yaveon-logo-negativ'
+                OnSelectLogo: =false
+                Title: ="Projekterfassung"
+                UserEmail: =User().Email
+                UserImage: =User().Image
+                UserName: =User().FullName
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        MainContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =Color.WhiteSmoke
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1000
+            ZIndex: =4
+
+            Container1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =1.5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =1
+
+                TextCanvas3 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =45
+                    Size: =20
+                    Text: =User().FullName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =352
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                TextCanvas4 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Size: =16
+                    Text: ="Projekt"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =320
+                    X: =30
+                    Y: =68
+                    ZIndex: =4
+
+                TextCanvas4_1 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Projektaufgabe"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =320
+                    X: =30
+                    Y: =132
+                    ZIndex: =5
+
+                ComboboxCanvas1 As Combobox.pcfdataset:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
+                    Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+                    Width: =320
+                    X: =30
+                    Y: =100
+                    ZIndex: =6
+
+                ComboboxCanvas1_1 As Combobox.pcfdataset:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
+                    Items: |
+                        =Switch(
+                            ComboboxCanvas1.Selected.Value,
+                            "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
+                            "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
+                            "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+                        )
+                    Width: =320
+                    X: =30
+                    Y: =164
+                    ZIndex: =7
+
+                TextCanvas4_2 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Startzeit"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =320
+                    X: =382
+                    Y: =68
+                    ZIndex: =8
+
+                TextCanvas4_3 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Endzeit"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =320
+                    X: =382
+                    Y: =132
+                    ZIndex: =9
+
+                "TextInputCanvas3_1 As 'Text input'":
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.View
+                    FontColor: =RGBA(53, 61, 63, 1)
+                    Height: =32
+                    Value: =varCurrentTime
+                    Width: =320
+                    X: =382
+                    Y: =164
+                    ZIndex: =10
+
+                TextCanvas4_4 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =29
+                    Size: =14
+                    Text: ="Bearbeitungsdauer"
+                    Weight: ='TextCanvas.Weight'.Regular
+                    Width: =122
+                    X: =440
+                    Y: =240
+                    ZIndex: =11
+
+            Container2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0.5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =2
+
+    Icon1 As icon.Reset:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =25
+        Icon: =Icon.Reset
+        OnSelect: =Reset(ComboboxCanvas1);Reset(ComboboxCanvas1_1);Reset(TextInput3);Reset(TextInput3_1)
+        Width: =22
+        X: =330
+        Y: =130
+        ZIndex: =2
+
+    Timer2 As timer:
+        AutoPause: =false
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Duration: =1e+70
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        Height: =24
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =10
+        Start: =varTimer
+        Width: =138
+        X: =443
+        Y: =376
+        ZIndex: =3
+
+    "TextInputCanvas3 As 'Text input'":
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.View
+        FontColor: =RGBA(53, 61, 63, 1)
+        Height: =32
+        Value: =varStartTime
+        Width: =320
+        X: =400
+        Y: =205
+        ZIndex: =5
+
+    ButtonCanvas1 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =varDPStop
+        Height: =32
+        OnSelect: |-
+            =UpdateContext({varCurrentTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer,false);Set(varDPStop, DisplayMode.Disabled);Set(varDPBuchen, DisplayMode.Edit)
+        Text: ="Stop"
+        Width: =96
+        X: =635
+        Y: =368
+        ZIndex: =6
+
+    ButtonCanvas1_1 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Primary
+        BasePaletteColor: =RGBA(8, 222, 8, 1)
+        DisplayMode: =varDP
+        FontColor: =
+        Height: =32
+        OnSelect: |-
+            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDP, DisplayMode.Disabled);Set(varDPStop, DisplayMode.Edit)
+        Text: ="Start"
+        Width: =96
+        X: =293
+        Y: =368
+        ZIndex: =7
+
+    ButtonCanvas2 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        BasePaletteColor: =RGBA(5, 102, 178, 1)
+        DisplayMode: =varDPBuchen
+        Height: =32
+        OnSelect: |-
+            =Reset(ComboboxCanvas1);Reset(ComboboxCanvas1_1);Reset(Timer2);Reset(TextInputCanvas3);Reset(TextInputCanvas3_1);Set(varDP, DisplayMode.Edit);UpdateContext({varStartTime: "00:00 00.00.0000"});UpdateContext({varCurrentTime: "00:00 00.00.0000"})
+        Text: ="Buchen"
+        Width: =96
+        X: =464
+        Y: =455
+        ZIndex: =8
+
