@@ -1,0 +1,78 @@
+Screen4 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Table2 As Tabelle.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =550
+        Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
+        onCellValueChange: =false
+        onFilter: =false
+        onNavigate: =false
+        onRowSelect: =false
+        onSave: =false
+        OnSelect: =false
+        ShowFooter: ="no"
+        Width: =1275
+        X: =45
+        Y: =45
+        ZIndex: =1
+
+        Projekt2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Projekt"
+            FieldName: ="Projekt"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =2
+            ZIndex: =2
+
+        Projektaufgabe2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Projektaufgabe"
+            FieldName: ="Projektaufgabe"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =3
+
+        Startzeit2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Startzeit"
+            FieldName: ="Startzeit"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =4
+            ZIndex: =4
+
+        Endzeit2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Endzeit"
+            FieldName: ="Endzeit"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =5
+
+        Bearbeitungsdauer2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Bearbeitungsdauer"
+            FieldName: ="Bearbeitungsdauer"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =6
+            ZIndex: =6
+
+        Anlagen2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Anlagen"
+            FieldName: ="{Attachments}"
+            FieldType: ="r*"
+            FieldVariantName: ="textualColumn"
+            Order: =7
+            ZIndex: =7
+
+    TextCanvas8 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Total Items: " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10))
+        Width: =96
+        X: =90
+        Y: =535
+        ZIndex: =2
+
