@@ -133,9 +133,9 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Zeiterfassung",
     "Screen1",
     "Screen2",
-    "Screen3",
-    "Zeiterfassung"
+    "Screen3"
   ]
 }
