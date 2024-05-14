@@ -281,7 +281,17 @@
         DisplayMode: =varDPBuchen
         Height: =32
         OnSelect: |-
-            =Reset(ComboboxCanvas1);Reset(ComboboxCanvas1_1);Reset(Timer2);Reset(TextInputCanvas3);Reset(TextInputCanvas3_1);Set(varDP, DisplayMode.Edit);UpdateContext({varStartTime: "00:00 00.00.0000"});UpdateContext({varCurrentTime: "00:00 00.00.0000"})
+            =Reset(ComboboxCanvas1);
+            Reset(ComboboxCanvas1_1);
+            Reset(Timer2);
+            Reset(TextInputCanvas3);
+            Reset(TextInputCanvas3_1);
+            Set(
+                varDP,
+                DisplayMode.Edit
+            );
+            UpdateContext({varStartTime: "00:00 00.00.0000"});
+            UpdateContext({varCurrentTime: "00:00 00.00.0000"})
         Text: ="Buchen"
         Width: =96
         X: =464
