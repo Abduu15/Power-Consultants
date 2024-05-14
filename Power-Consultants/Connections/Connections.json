@@ -1,1 +1,24 @@
-{}
+{
+  "773e1a9f-c58f-41e2-bedb-610e5a4d7522": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://hsalbsigde.sharepoint.com/sites/MSc.-DEC_ProjektOctocon": {
+        "dataSources": {
+          "Yaveon Projecttasks": {
+            "tableName": "3d1dff39-04ae-4e90-a277-446dc052c858"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Yaveon Projecttasks"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "773e1a9f-c58f-41e2-bedb-610e5a4d7522"
+  }
+}
