@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 35,
+    "BindingErrorCount": 37,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -136,8 +136,6 @@
     "Screen1",
     "Screen2",
     "Screen3",
-    "Screen4",
-    "Zeiterfassung",
-    "Report"
+    "Screen4"
   ]
 }
