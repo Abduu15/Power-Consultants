@@ -34,7 +34,7 @@
       "disablecdsfileandlargeimage": false,
       "disableruntimepolicies": false,
       "dynamicschema": false,
-      "enableappembeddingux": true,
+      "enableappembeddingux": false,
       "enablechatbotfeature": true,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
