@@ -450,14 +450,3 @@
         Y: =455
         ZIndex: =8
 
-    ButtonCanvas3 As Schaltfläche:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =32
-        Text: ="test"
-        Width: =96
-        X: =485
-        Y: =590
-        ZIndex: =9
-
