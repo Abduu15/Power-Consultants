@@ -325,6 +325,7 @@
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
                     Font: =Font.Lato
+                    FontColor: =
                     FontItalic: =false
                     FontUnderline: =false
                     Height: =40
@@ -406,9 +407,8 @@
         DisplayMode: =varDPBuchen
         FontColor: =
         Height: =32
-        OnSelect: |
-            =
-            Set(
+        OnSelect: |-
+            =Set(
                 varRecord,
                 Patch(
                     'Yaveon Projecttasks',
@@ -418,19 +418,21 @@
                         Projektaufgabe: AufgabeCombo.Selected.Value,
                         Startzeit: StartZeitInput.Value,
                         Endzeit: EndZeitInput.Value,
-                        Bearbeitungsdauer: Timer2.Text  
+                        Bearbeitungsdauer: Timer2.Text
                     }
                 )
             );
-            
-            
             If(
                 IsBlank(varRecord) || IsError(varRecord),
-                Notify("Failed to patch data to SharePoint list", NotificationType.Error),
-                Notify("Data successfully patched to SharePoint list", NotificationType.Success)
+                Notify(
+                    "Fehler beim Buchen des Datensatzes.",
+                    NotificationType.Error
+                ),
+                Notify(
+                    "Datensatz erfolgreich gebucht.",
+                    NotificationType.Success
+                )
             );
-            
-            
             Reset(ProjektCombo);
             Reset(AufgabeCombo);
             Reset(Timer2);
