@@ -1967,7 +1967,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Parent.Fill",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Fill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2062,7 +2062,7 @@
         {
           "Category": "Design",
           "PropertyName": "Fill",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -2622,7 +2622,14 @@
       "ControlPropertyState": [
         "BorderColor",
         "BorderStyle",
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         "Width",

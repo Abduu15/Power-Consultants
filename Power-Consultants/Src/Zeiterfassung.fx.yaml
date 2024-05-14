@@ -5,7 +5,7 @@
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
-        Fill: =RGBA(245, 245, 245, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
@@ -57,7 +57,7 @@
 
         MainContainer1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Fill: =Color.WhiteSmoke
+            Fill: =RGBA(255, 255, 255, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutMinHeight: =100
             LayoutMinWidth: =250
