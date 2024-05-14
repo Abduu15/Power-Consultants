@@ -374,7 +374,7 @@
     {
       "Category": "data",
       "DefaultValue": "Text",
-      "Description": "Text that appears on a control.",
+      "Description": "Text, der in einem Steuerelement angezeigt wird.",
       "DescriptionResourceString": "TextCanvas_Text_Desc",
       "DisplayName": "Text",
       "DisplayNameResourceString": "TextCanvas_Text",
@@ -402,9 +402,9 @@
     {
       "Category": "data",
       "DefaultValue": "14",
-      "Description": "Display text using the selected font sizes.",
+      "Description": "Der Text wird mit ausgewählten Schriftgrößen angezeigt.",
       "DescriptionResourceString": "TextCanvas_Size_Desc",
-      "DisplayName": "Font size",
+      "DisplayName": "Schriftgrad",
       "DisplayNameResourceString": "TextCanvas_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -430,35 +430,35 @@
     {
       "Category": "data",
       "DefaultValue": "Regular",
-      "Description": "Display text using the selected font weights.",
+      "Description": "Der Text wird mit der ausgewählten Schriftstärke angezeigt.",
       "DescriptionResourceString": "TextCanvas_Weight_Desc",
-      "DisplayName": "Font weight",
+      "DisplayName": "Schriftstärke",
       "DisplayNameResourceString": "TextCanvas_Weight",
       "EnumValues": [
         {
-          "Description": "Medium",
-          "DisplayName": "Medium",
+          "Description": "Mittel",
+          "DisplayName": "Mittel",
           "IsDefaultValue": false,
           "Name": "Medium",
           "Value": "Medium"
         },
         {
-          "Description": "Regular",
-          "DisplayName": "Regular",
+          "Description": "Regulär",
+          "DisplayName": "Regulär",
           "IsDefaultValue": true,
           "Name": "Regular",
           "Value": "Regular"
         },
         {
-          "Description": "Semibold",
-          "DisplayName": "Semibold",
+          "Description": "Halbfett",
+          "DisplayName": "Halbfett",
           "IsDefaultValue": false,
           "Name": "Semibold",
           "Value": "Semibold"
         },
         {
-          "Description": "Bold",
-          "DisplayName": "Bold",
+          "Description": "Fett",
+          "DisplayName": "Fett",
           "IsDefaultValue": false,
           "Name": "Bold",
           "Value": "Bold"
@@ -487,35 +487,35 @@
     {
       "Category": "data",
       "DefaultValue": "Start",
-      "Description": "Display text using the selected text alignment.",
+      "Description": "Text mit der ausgewählten Textausrichtung anzeigen.",
       "DescriptionResourceString": "TextCanvas_Align_Desc",
-      "DisplayName": "Align",
+      "DisplayName": "Ausrichten",
       "DisplayNameResourceString": "TextCanvas_Align",
       "EnumValues": [
         {
-          "Description": "Start",
-          "DisplayName": "Start",
+          "Description": "Beginn",
+          "DisplayName": "Beginn",
           "IsDefaultValue": true,
           "Name": "Start",
           "Value": "Start"
         },
         {
-          "Description": "End",
-          "DisplayName": "End",
+          "Description": "Ende",
+          "DisplayName": "Ende",
           "IsDefaultValue": false,
           "Name": "End",
           "Value": "End"
         },
         {
-          "Description": "Center",
-          "DisplayName": "Center",
+          "Description": "Zentrum",
+          "DisplayName": "Zentrum",
           "IsDefaultValue": false,
           "Name": "Center",
           "Value": "Center"
         },
         {
-          "Description": "Justify",
-          "DisplayName": "Justify",
+          "Description": "Blocksatz",
+          "DisplayName": "Blocksatz",
           "IsDefaultValue": false,
           "Name": "Justify",
           "Value": "Justify"
@@ -544,28 +544,28 @@
     {
       "Category": "data",
       "DefaultValue": "Middle",
-      "Description": "Display text using the selected text verlitcal alignment.",
+      "Description": "Text mit der ausgewählten vertikalen Textausrichtung anzeigen.",
       "DescriptionResourceString": "TextCanvas_VerticalAlign_Desc",
-      "DisplayName": "Vertical align",
+      "DisplayName": "Vertikale Ausrichtung",
       "DisplayNameResourceString": "TextCanvas_VerticalAlign",
       "EnumValues": [
         {
-          "Description": "Top",
-          "DisplayName": "Top",
+          "Description": "Oben",
+          "DisplayName": "Oben",
           "IsDefaultValue": false,
           "Name": "Top",
           "Value": "Top"
         },
         {
-          "Description": "Middle",
-          "DisplayName": "Middle",
+          "Description": "2. Vorname",
+          "DisplayName": "2. Vorname",
           "IsDefaultValue": true,
           "Name": "Middle",
           "Value": "Middle"
         },
         {
-          "Description": "Bottom",
-          "DisplayName": "Bottom",
+          "Description": "Unten",
+          "DisplayName": "Unten",
           "IsDefaultValue": false,
           "Name": "Bottom",
           "Value": "Bottom"
@@ -594,9 +594,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Container height will adjust to text content.",
+      "Description": "Die Containerhöhe wird an den Textinhalt angepasst.",
       "DescriptionResourceString": "TextCanvas_AutoHeight_Desc",
-      "DisplayName": "Auto height",
+      "DisplayName": "Automatische Höhe",
       "DisplayNameResourceString": "TextCanvas_AutoHeight",
       "EnumValues": [],
       "HelperUI": null,
@@ -622,9 +622,9 @@
     {
       "Category": "design",
       "DefaultValue": "32",
-      "Description": "The height of the control.",
+      "Description": "Die Höhe des Steuerelements.",
       "DescriptionResourceString": "TextCanvas_Height_Desc",
-      "DisplayName": "Text height",
+      "DisplayName": "Texthöhe",
       "DisplayNameResourceString": "TextCanvas_Height",
       "EnumValues": [],
       "HelperUI": null,
@@ -650,9 +650,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The name of the family of fonts in which text appears",
+      "Description": "Der Name der Schriftfamilie, in der Text angezeigt wird",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Font",
+      "DisplayName": "Schriftart",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -678,9 +678,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The color of text in the control",
+      "Description": "Die Farbe des Texts im Steuerelement",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Font color",
+      "DisplayName": "Schriftfarbe",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -706,9 +706,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Display text using the italic font style.",
+      "Description": "Der Text wird mit einer kursiven Schriftart angezeigt.",
       "DescriptionResourceString": "TextCanvas_Italic_Desc",
-      "DisplayName": "Italic",
+      "DisplayName": "Kursiv",
       "DisplayNameResourceString": "TextCanvas_Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -734,9 +734,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Display text using the strikethrough font style.",
+      "Description": "Der Text wird mit einer durchgestrichenen Schriftart angezeigt.",
       "DescriptionResourceString": "TextCanvas_Strikethrough_Desc",
-      "DisplayName": "Strikethrough",
+      "DisplayName": "Durchgestrichen",
       "DisplayNameResourceString": "TextCanvas_Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -762,9 +762,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Display text using the underline font style.",
+      "Description": "Der Text wird mit einer unterstrichenen Schriftart angezeigt.",
       "DescriptionResourceString": "TextCanvas_Underline_Desc",
-      "DisplayName": "Underline",
+      "DisplayName": "Unterstrichen",
       "DisplayNameResourceString": "TextCanvas_Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -790,9 +790,9 @@
     {
       "Category": "data",
       "DefaultValue": "true",
-      "Description": "Display overflow text as wrapped.",
+      "Description": "Überlauftext wird mit Zeilenumbruch angezeigt.",
       "DescriptionResourceString": "TextCanvas_Wrap_Desc",
-      "DisplayName": "Wrap",
+      "DisplayName": "Zeilenumbruch",
       "DisplayNameResourceString": "TextCanvas_Wrap",
       "EnumValues": [],
       "HelperUI": null,
@@ -1304,7 +1304,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextCanvas\":\"Text\",\"TextCanvas_VerticalAlign\":\"Vertical align\",\"TextCanvas_VerticalAlign_Desc\":\"Display text using the selected text verlitcal alignment.\",\"TextCanvas_VerticalAlign_Top\":\"Top\",\"TextCanvas_VerticalAlign_Middle\":\"Middle\",\"TextCanvas_VerticalAlign_Bottom\":\"Bottom\",\"TextCanvas_Height\":\"Text height\",\"TextCanvas_Height_Desc\":\"The height of the control.\",\"TextCanvas_Align\":\"Align\",\"TextCanvas_Align_Desc\":\"Display text using the selected text alignment.\",\"TextCanvas_Align_Start\":\"Start\",\"TextCanvas_Align_End\":\"End\",\"TextCanvas_Align_Center\":\"Center\",\"TextCanvas_Align_Justify\":\"Justify\",\"TextCanvas_Desc\":\"Display text\",\"TextCanvas_AutoHeight\":\"Auto height\",\"TextCanvas_AutoHeight_Desc\":\"Container height will adjust to text content.\",\"TextCanvas_Italic\":\"Italic\",\"TextCanvas_Italic_Desc\":\"Display text using the italic font style.\",\"TextCanvas_Size\":\"Font size\",\"TextCanvas_Size_Desc\":\"Display text using the selected font sizes.\",\"TextCanvas_Strikethrough\":\"Strikethrough\",\"TextCanvas_Strikethrough_Desc\":\"Display text using the strikethrough font style.\",\"TextCanvas_Text\":\"Text\",\"TextCanvas_Text_Desc\":\"Text that appears on a control.\",\"TextCanvas_Underline\":\"Underline\",\"TextCanvas_Underline_Desc\":\"Display text using the underline font style.\",\"TextCanvas_Weight\":\"Font weight\",\"TextCanvas_Weight_Desc\":\"Display text using the selected font weights.\",\"TextCanvas_Weight_Medium\":\"Medium\",\"TextCanvas_Weight_Regular\":\"Regular\",\"TextCanvas_Weight_Semibold\":\"Semibold\",\"TextCanvas_Weight_Bold\":\"Bold\",\"TextCanvas_Wrap\":\"Wrap\",\"TextCanvas_Wrap_Desc\":\"Display overflow text as wrapped.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextCanvas\":\"Text\",\"TextCanvas_VerticalAlign\":\"Vertikale Ausrichtung\",\"TextCanvas_VerticalAlign_Desc\":\"Text mit der ausgewählten vertikalen Textausrichtung anzeigen.\",\"TextCanvas_VerticalAlign_Top\":\"Oben\",\"TextCanvas_VerticalAlign_Middle\":\"2. Vorname\",\"TextCanvas_VerticalAlign_Bottom\":\"Unten\",\"TextCanvas_Height\":\"Texthöhe\",\"TextCanvas_Height_Desc\":\"Die Höhe des Steuerelements.\",\"TextCanvas_Align\":\"Ausrichten\",\"TextCanvas_Align_Desc\":\"Text mit der ausgewählten Textausrichtung anzeigen.\",\"TextCanvas_Align_Start\":\"Beginn\",\"TextCanvas_Align_End\":\"Ende\",\"TextCanvas_Align_Center\":\"Zentrum\",\"TextCanvas_Align_Justify\":\"Blocksatz\",\"TextCanvas_Desc\":\"Text anzeigen\",\"TextCanvas_AutoHeight\":\"Automatische Höhe\",\"TextCanvas_AutoHeight_Desc\":\"Die Containerhöhe wird an den Textinhalt angepasst.\",\"TextCanvas_Italic\":\"Kursiv\",\"TextCanvas_Italic_Desc\":\"Der Text wird mit einer kursiven Schriftart angezeigt.\",\"TextCanvas_Size\":\"Schriftgrad\",\"TextCanvas_Size_Desc\":\"Der Text wird mit ausgewählten Schriftgrößen angezeigt.\",\"TextCanvas_Strikethrough\":\"Durchgestrichen\",\"TextCanvas_Strikethrough_Desc\":\"Der Text wird mit einer durchgestrichenen Schriftart angezeigt.\",\"TextCanvas_Text\":\"Text\",\"TextCanvas_Text_Desc\":\"Text, der in einem Steuerelement angezeigt wird.\",\"TextCanvas_Underline\":\"Unterstrichen\",\"TextCanvas_Underline_Desc\":\"Der Text wird mit einer unterstrichenen Schriftart angezeigt.\",\"TextCanvas_Weight\":\"Schriftstärke\",\"TextCanvas_Weight_Desc\":\"Der Text wird mit der ausgewählten Schriftstärke angezeigt.\",\"TextCanvas_Weight_Medium\":\"Mittel\",\"TextCanvas_Weight_Regular\":\"Regulär\",\"TextCanvas_Weight_Semibold\":\"Halbfett\",\"TextCanvas_Weight_Bold\":\"Fett\",\"TextCanvas_Wrap\":\"Zeilenumbruch\",\"TextCanvas_Wrap_Desc\":\"Überlauftext wird mit Zeilenumbruch angezeigt.\",\"Font\":\"Schriftart\",\"Font_description\":\"Der Name der Schriftfamilie, in der Text angezeigt wird\",\"Font_Color\":\"Schriftfarbe\",\"Font_Color_description\":\"Die Farbe des Texts im Steuerelement\"}}}",
       "Type": 3
     },
     {
