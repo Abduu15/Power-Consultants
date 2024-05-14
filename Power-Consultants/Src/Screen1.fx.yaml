@@ -167,3 +167,11 @@ Screen1 As screen:
         Y: =284
         ZIndex: =8
 
+    TextCanvas6 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =518
+        Y: =82
+        ZIndex: =9
+
