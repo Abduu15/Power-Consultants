@@ -40,6 +40,7 @@
                 varDP,
                 DisplayMode.Edit
             );
+            Navigate('Report Screen');
             UpdateContext({varStartTime: "00:00 00.00.0000"});
             UpdateContext({varCurrentTime: "00:00 00.00.0000"})
         Text: ="Änderungen speichern"
@@ -155,7 +156,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
         X: =1013
@@ -177,7 +178,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
         X: =1013
@@ -200,7 +201,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: |
             =13
         Width: =293
@@ -260,6 +261,7 @@
 
     TextCanvas7 As Text:
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =67
         Size: =19
         Text: =gblSelectedEntry.Projekt
@@ -275,7 +277,7 @@
         Size: =19
         Text: =gblSelectedEntry.Projektaufgabe
         Width: =334
-        X: =79
+        X: =62
         Y: =383
         ZIndex: =17
 
