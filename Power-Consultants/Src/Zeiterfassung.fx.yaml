@@ -454,7 +454,9 @@
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(255, 174, 0, 1)
         DisplayMode: =varDP
+        FontColor: =
         Height: =32
+        OnSelect: =Navigate(Zeiterfassung)
         Text: ="Bearbeiten"
         Width: =96
         X: =635
