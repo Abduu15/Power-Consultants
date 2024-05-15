@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 42,
+    "BindingErrorCount": 40,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -116,13 +116,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "Power Consultants",
+    "Name": "Power Consultants Gute Version",
     "OriginatingVersion": "1.338",
     "ParserErrorCount": 45,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "3f410b9f-2bea-4410-9dc4-da3592efefa5",
+    "AppName": "19735510-a4f1-46ed-b484-052bc4803679",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
