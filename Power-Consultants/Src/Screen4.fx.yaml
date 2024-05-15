@@ -1,0 +1,184 @@
+Screen4 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Gallery3 As gallery.galleryVertical:
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Items: =FirstN(Sort('Yaveon Projecttasks', ID, SortOrder.Descending), 10)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =81
+        Width: =977
+        X: =45
+        Y: =127
+        ZIndex: =1
+
+        Label7 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Titel
+            X: =16
+            Y: =24
+            ZIndex: =1
+
+        Label8 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Projekt
+            Width: =235
+            X: =16
+            Y: =24
+            ZIndex: =2
+
+        Label9 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Projektaufgabe
+            Width: =274
+            X: =238
+            Y: =24
+            ZIndex: =3
+
+        Label10 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Startzeit
+            X: =501
+            Y: =24
+            ZIndex: =4
+
+        Label11 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Endzeit
+            X: =651
+            Y: =24
+            ZIndex: =5
+
+        Label11_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Bearbeitungsdauer
+            X: =818
+            Y: =24
+            ZIndex: =6
+
+    Header1_2 As Kopfzeile:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =75
+        Logo: ='cropped-yaveon-logo-negativ'
+        OnSelectLogo: =false
+        Title: ="Report Screen"
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =3
+
+    TextCanvas8_1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
+        Width: =132
+        X: =72
+        Y: =721
+        ZIndex: =4
+
+    TextCanvas4_10 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Projekt"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =190
+        X: =72
+        Y: =115
+        ZIndex: =5
+
+    TextCanvas4_11 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Projektaufgabe"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =190
+        X: =289
+        Y: =115
+        ZIndex: =6
+
+    TextCanvas4_12 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Startzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =100
+        X: =554
+        Y: =115
+        ZIndex: =7
+
+    TextCanvas4_13 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Endzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =100
+        X: =705
+        Y: =115
+        ZIndex: =8
+
+    TextCanvas4_14 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Bearbeitungsdauer"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =158
+        X: =864
+        Y: =115
+        ZIndex: =9
+
+    Arrow2 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        X: =11
+        Y: =95
+        ZIndex: =10
+
