@@ -5218,36 +5218,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Bearbeiten Screen'.AufgabeCombo_BearbeitenAuftrag.DefaultSelectedItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Bearbeiten Screen'.AufgabeCombo_BearbeitenAuftrag.DefaultSelectedItems",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DefaultSelectedItems",
-                "module": "Bearbeiten Screen",
-                "type": "'Bearbeiten Screen'.AufgabeCombo_BearbeitenAuftrag"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 16
         }
       ],
       "tool": {
@@ -5518,23 +5488,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
-              }
-            },
-            {
-              "id": "app-InefficientDelayLoading",
-              "messageStrings": {
-                "issue": {
-                  "text": "Inefficient delay loading"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Use variables, collections, and navigation context to share state across screens instead."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],

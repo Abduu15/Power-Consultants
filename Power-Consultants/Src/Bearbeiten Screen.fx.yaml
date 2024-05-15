@@ -2,6 +2,7 @@
     Fill: =Color.White
     Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Reset(StartzeitBearbeiten_Bearbeiten); Reset(EndzeitBearbeiten_Bearbeiten); Reset(Bearbeitungsdauer_Bearbeiten)
     Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
     Width: =Max(App.Width; App.MinScreenWidth)
@@ -17,8 +18,8 @@
                 'Yaveon Projecttasks',
                 gblSelectedEntry,
                 {
-                    Projekt: ProjektCombo_BearbeitenProjekt,
-                    Projektaufgabe: AufgabeCombo_BearbeitenAuftrag,
+                    Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
+                    Projektaufgabe: AufgabeCombo_BearbeitenAuftrag.Selected.Value,
                     Startzeit: StartzeitBearbeiten_Bearbeiten.Text,
                     Endzeit: EndzeitBearbeiten_Bearbeiten.Text,
                     Bearbeitungsdauer: Bearbeitungsdauer_Bearbeiten.Text
@@ -49,8 +50,8 @@
             UpdateContext({varCurrentTime: "00:00 00.00.0000"})
         Text: ="Änderungen speichern"
         Width: =396
-        X: =485
-        Y: =639
+        X: =466
+        Y: =632
         ZIndex: =1
 
     TextCanvas4_20 As Text:
@@ -58,10 +59,10 @@
         FontColor: =
         Height: =57
         Size: =40
-        Text: ="Projekt"
+        Text: ="Projekt ändern"
         Weight: ='TextCanvas.Weight'.Semibold
-        Width: =163
-        X: =265
+        Width: =391
+        X: =518
         Y: =160
         ZIndex: =2
 
@@ -70,34 +71,28 @@
         FontColor: =
         Height: =56
         Size: =40
-        Text: ="Projektaufgabe"
+        Text: ="Projektaufgabe ändern"
         Weight: ='TextCanvas.Weight'.Semibold
-        Width: =343
-        X: =265
+        Width: =418
+        X: =518
         Y: =315
         ZIndex: =3
 
     ProjektCombo_BearbeitenProjekt As Combobox.pcfdataset:
         BasePaletteColor: =
-        DefaultSelectedItems: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         Height: =42
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
-        Width: =391
-        X: =265
-        Y: =242
+        Width: =418
+        X: =518
+        Y: =241
         ZIndex: =4
 
     AufgabeCombo_BearbeitenAuftrag As Combobox.pcfdataset:
         BasePaletteColor: =
-        DefaultSelectedItems: |
-            =Switch(
-                ProjektCombo.Selected.Value,
-                "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
-                "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
-                "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
-            )
+        DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         Height: =42
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
@@ -108,9 +103,9 @@
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
-        Width: =391
-        X: =265
-        Y: =390
+        Width: =418
+        X: =518
+        Y: =385
         ZIndex: =5
 
     TextCanvas4_22 As Text:
@@ -121,7 +116,7 @@
         Text: ="Startzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =796
+        X: =1013
         Y: =160
         ZIndex: =6
 
@@ -134,7 +129,7 @@
         Text: ="Endzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =796
+        X: =1013
         Y: =315
         ZIndex: =7
 
@@ -147,7 +142,7 @@
         Text: ="Bearbeitungsdauer"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =364
-        X: =501
+        X: =518
         Y: =471
         ZIndex: =8
 
@@ -170,7 +165,7 @@
         Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
-        X: =796
+        X: =1013
         Y: =229
         ZIndex: =9
 
@@ -193,8 +188,8 @@
         Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
-        X: =796
-        Y: =378
+        X: =1013
+        Y: =372
         ZIndex: =10
 
     Bearbeitungsdauer_Bearbeiten As text:
@@ -218,7 +213,7 @@
         Size: |
             =13
         Width: =293
-        X: =501
+        X: =518
         Y: =529
         ZIndex: =11
 
@@ -251,4 +246,53 @@
         X: =12
         Y: =98
         ZIndex: =13
+
+    OldProjekt As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontStrikethrough: =false
+        Height: =67
+        Size: =19
+        Text: =gblSelectedEntry.Projekt
+        Weight: ='TextCanvas.Weight'.Regular
+        Width: =391
+        X: =62
+        Y: =229
+        ZIndex: =14
+
+    TextCanvas4_25 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =57
+        Size: =40
+        Text: ="Vorheriges Projekt"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =391
+        X: =62
+        Y: =160
+        ZIndex: =15
+
+    TextCanvas4_26 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =56
+        Size: =40
+        Text: ="Projektaufgabe ändern"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =418
+        X: =62
+        Y: =315
+        ZIndex: =16
+
+    OldProjektaufgabe As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        FontStrikethrough: =false
+        Height: =67
+        Size: =19
+        Text: =gblSelectedEntry.Projektaufgabe
+        Weight: ='TextCanvas.Weight'.Regular
+        Width: =391
+        X: =62
+        Y: =372
+        ZIndex: =17
 
