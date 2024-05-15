@@ -455,11 +455,24 @@
         BasePaletteColor: =RGBA(222, 160, 16, 1)
         DisplayMode: =varDP
         FontColor: =
-        Height: =32
+        Height: =50
         OnSelect: =Navigate('Report Screen 3', ScreenTransition.None)
-        Text: ="Bearbeiten"
-        Width: =96
-        X: =635
-        Y: =455
+        Text: ="Reporting"
+        Width: =111
+        X: =285
+        Y: =527
         ZIndex: =9
+
+    ButtonCanvas4_1 As Schaltfläche:
+        Appearance: ='ButtonCanvas.Appearance'.Primary
+        BasePaletteColor: =RGBA(222, 160, 16, 1)
+        DisplayMode: =varDP
+        FontColor: =
+        Height: =50
+        OnSelect: =Navigate('Bearbeiten Screen', ScreenTransition.None)
+        Text: ="Bearbeiten"
+        Width: =111
+        X: =627
+        Y: =527
+        ZIndex: =10
 
