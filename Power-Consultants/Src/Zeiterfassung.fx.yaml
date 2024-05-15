@@ -1,11 +1,16 @@
 "Zeiterfassung As screen.'headerGalleryLayout_ver1.0'":
     Fill: =Color.White
+    Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: =Set(varDPBuchen, DisplayMode.Disabled)
+    OnVisible: =Set(varDPBuchen; DisplayMode.Disabled)
+    Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
+    Width: =Max(App.Width; App.MinScreenWidth)
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(0; 0; 0; 1)
         DropShadow: =DropShadow.Light
-        Fill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255; 255; 255; 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
@@ -23,8 +28,9 @@
         ZIndex: =1
 
         HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: =RGBA(0; 0; 0; 1)
             DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255; 255; 255; 1)
             FillPortions: =0
             Height: =75
             LayoutMinHeight: =100
@@ -56,8 +62,9 @@
                 ZIndex: =3
 
         MainContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: =RGBA(0; 0; 0; 1)
             DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255; 255; 255; 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -71,8 +78,10 @@
             ZIndex: =4
 
             Container1 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(0; 0; 0; 1)
                 DropShadow: =DropShadow.Light
-                FillPortions: =1.5
+                Fill: =RGBA(0; 0; 0; 0)
+                FillPortions: =1,5
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
@@ -122,7 +131,7 @@
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
-                    Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+                    Items: =["Yaveon - Zeiterfassungstool"; "OctoCon - Urlaubsanfragen"; "Hochschule Albstadt - SCRUM Tool"]
                     Width: =320
                     X: =30
                     Y: =100
@@ -135,10 +144,10 @@
                     InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
                     Items: |
                         =Switch(
-                            ProjektCombo.Selected.Value,
-                            "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
-                            "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
-                            "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+                            ProjektCombo.Selected.Value;
+                            "Yaveon - Zeiterfassungstool"; ["Benutzeroberfläche entwerfen"; "Backend-Dienste implementieren"; "Testen und Debuggen"];
+                            "OctoCon - Urlaubsanfragen"; ["Antragsformular entwickeln"; "Genehmigungsworkflow erstellen"; "Mit dem Kalender integrieren"];
+                            "Hochschule Albstadt - SCRUM Tool"; ["Projektboard einrichten"; "Benutzergeschichten definieren"; "Sprints planen"]
                         )
                     Width: =320
                     X: =30
@@ -172,7 +181,7 @@
                 EndZeitInput As Texteingabe:
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.View
-                    FontColor: =RGBA(53, 61, 63, 1)
+                    FontColor: =RGBA(53; 61; 63; 1)
                     Height: =32
                     Value: =varCurrentTime
                     Width: =320
@@ -195,7 +204,7 @@
                 StartZeitInput As Texteingabe:
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.View
-                    FontColor: =RGBA(53, 61, 63, 1)
+                    FontColor: =RGBA(53; 61; 63; 1)
                     Height: =32
                     Value: =varStartTime
                     Width: =320
@@ -204,8 +213,10 @@
                     ZIndex: =12
 
             Container2 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(0; 0; 0; 1)
                 DropShadow: =DropShadow.Regular
-                FillPortions: =0.5
+                Fill: =RGBA(0; 0; 0; 0)
+                FillPortions: =0,5
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
@@ -217,9 +228,11 @@
                 "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                     BorderColor: =App.Theme.Colors.Lighter60
                     DelayItemLoading: =true
-                    Items: =Filter('Yaveon Projecttasks', 'Erstellt von'.DisplayName = User().FullName && Text(Today(),"[$-en-US]dd.mm.yyyy") in Endzeit)
+                    Fill: =RGBA(0; 0; 0; 0)
+                    Items: =Filter('Yaveon Projecttasks'; 'Erstellt von'.DisplayName = User().FullName && Text(Today();"[$-en-US]dd.mm.yyyy") in Endzeit)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
+                    TemplateFill: =RGBA(0; 0; 0; 0)
                     TemplatePadding: =0
                     TemplateSize: =116
                     Transition: =Transition.Push
@@ -228,11 +241,15 @@
                     ZIndex: =1
 
                     Title3 As label:
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        BorderColor: =RGBA(0; 0; 0; 1)
+                        Color: =RGBA(50; 49; 48; 1)
+                        DisabledBorderColor: =RGBA(56; 56; 56; 1)
+                        DisabledColor: =RGBA(166; 166; 166; 1)
+                        DisabledFill: =RGBA(0; 0; 0; 0)
+                        Fill: =RGBA(0; 0; 0; 0)
                         Font: =App.Theme.Font
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
+                        FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
+                        Height: =Self.Size * 1,8
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -243,15 +260,19 @@
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 86
                         X: =16
-                        Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle2.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+                        Y: =(Parent.TemplateHeight - (Self.Size*1,8 + Subtitle2.Size*1,8 + 2 + Body2.Size*1,8)) / 2
                         ZIndex: =1
 
                     Subtitle2 As label:
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        BorderColor: =RGBA(0; 0; 0; 1)
+                        Color: =RGBA(0; 0; 0; 1)
+                        DisabledBorderColor: =RGBA(56; 56; 56; 1)
+                        DisabledColor: =RGBA(166; 166; 166; 1)
+                        DisabledFill: =RGBA(0; 0; 0; 0)
+                        Fill: =RGBA(0; 0; 0; 0)
                         Font: =App.Theme.Font
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
+                        FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
+                        Height: =Self.Size * 1,8
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -266,11 +287,15 @@
                         ZIndex: =2
 
                     Body2 As label:
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        BorderColor: =RGBA(0; 0; 0; 1)
+                        Color: =RGBA(0; 0; 0; 1)
+                        DisabledBorderColor: =RGBA(56; 56; 56; 1)
+                        DisabledColor: =RGBA(166; 166; 166; 1)
+                        DisabledFill: =RGBA(0; 0; 0; 0)
+                        Fill: =RGBA(0; 0; 0; 0)
                         Font: =App.Theme.Font
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
+                        FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
+                        Height: =Self.Size * 1,8
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -287,16 +312,21 @@
                     NextArrow2 As icon.ChevronRight:
                         AccessibleLabel: =Self.Tooltip
                         BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(166, 166, 166, 1)
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Color: =RGBA(166; 166; 166; 1)
+                        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+                        DisabledColor: =RGBA(244; 244; 244; 1)
+                        Fill: =RGBA(0; 0; 0; 0)
                         Height: =50
+                        HoverBorderColor: =ColorFade(Self.BorderColor; 20%)
+                        HoverColor: =ColorFade(Self.Color; 20%)
                         Icon: =Icon.ChevronRight
                         OnSelect: =Select(Parent)
                         PaddingBottom: =16
                         PaddingLeft: =16
                         PaddingRight: =16
                         PaddingTop: =16
+                        PressedBorderColor: =ColorFade(Self.BorderColor; -20%)
+                        PressedColor: =ColorFade(Self.Color; -20%)
                         Tooltip: ="View item details"
                         Width: =50
                         X: =Parent.TemplateWidth - Self.Width - 12
@@ -305,7 +335,7 @@
 
                     Separator2 As rectangle:
                         BorderColor: =App.Theme.Colors.Darker40
-                        Fill: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(255; 255; 255; 1)
                         Height: =8
                         OnSelect: =Select(Parent)
                         Width: =Parent.TemplateWidth
@@ -340,11 +370,16 @@
     Icon1 As icon.Reset:
         BorderColor: =App.Theme.Colors.Darker40
         Color: =App.Theme.Colors.Darker30
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledColor: =RGBA(244; 244; 244; 1)
+        Fill: =RGBA(0; 0; 0; 0)
         Height: =25
+        HoverBorderColor: =ColorFade(Self.BorderColor; 20%)
+        HoverColor: =ColorFade(Self.Color; 20%)
         Icon: =Icon.Reset
-        OnSelect: =Reset(ProjektCombo);Reset(AufgabeCombo);Reset(TextInput3);Reset(TextInput3_1)
+        OnSelect: =Reset(ProjektCombo);;Reset(AufgabeCombo);;Reset(TextInput3);;Reset(TextInput3_1)
+        PressedBorderColor: =ColorFade(Self.BorderColor; -20%)
+        PressedColor: =ColorFade(Self.Color; -20%)
         Width: =22
         X: =330
         Y: =130
@@ -353,34 +388,37 @@
     Timer2 As timer:
         AutoPause: =false
         BorderColor: =App.Theme.Colors.Primary
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        Color: =RGBA(255; 255; 255; 1)
+        DisabledBorderColor: =RGBA(244; 244; 244; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(244; 244; 244; 1)
         DisplayMode: =DisplayMode.Disabled
         Duration: =1e+70
         Fill: =App.Theme.Colors.Primary
         Font: =App.Theme.Font
         Height: =24
         HoverBorderColor: =App.Theme.Colors.Darker10
-        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverColor: =RGBA(255; 255; 255; 1)
         HoverFill: =App.Theme.Colors.Darker10
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
         Size: =10
         Start: =varTimer
+        Text: |-
+            =Text(Time(0; 0; Self.Value/1000); "hh:mm:ss")
         Width: =138
         X: =443
         Y: =376
         ZIndex: =3
 
     ButtonCanvas1 As Schaltfläche:
-        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BasePaletteColor: =RGBA(249; 83; 109; 1)
         DisplayMode: =varDPStop
         FontColor: =
         Height: =32
         OnSelect: |-
-            =UpdateContext({varCurrentTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer,false);Set(varDPStop, DisplayMode.Disabled);Set(varDPBuchen, DisplayMode.Edit)
+            =UpdateContext({varCurrentTime: Text(Now(); "hh:mm dd.mm.yyyy")});;Set(varTimer;false);;Set(varDPStop; DisplayMode.Disabled);;Set(varDPBuchen; DisplayMode.Edit)
         Text: ="Stop"
         Width: =96
         X: =635
@@ -389,12 +427,12 @@
 
     ButtonCanvas1_1 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(8, 222, 8, 1)
+        BasePaletteColor: =RGBA(8; 222; 8; 1)
         DisplayMode: =varDP
         FontColor: =
         Height: =32
         OnSelect: |-
-            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDP, DisplayMode.Disabled);Set(varDPStop, DisplayMode.Edit)
+            =UpdateContext({varStartTime: Text(Now(); "hh:mm dd.mm.yyyy")});;Set(varTimer; true);;Set(varDP; DisplayMode.Disabled);;Set(varDPStop; DisplayMode.Edit)
         Text: ="Start"
         Width: =96
         X: =293
@@ -403,46 +441,46 @@
 
     ButtonCanvas2 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
-        BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BasePaletteColor: =RGBA(5; 102; 178; 1)
         DisplayMode: =varDPBuchen
         FontColor: =
         Height: =32
         OnSelect: |-
             =Set(
-                varRecord,
+                varRecord;
                 Patch(
-                    'Yaveon Projecttasks',
-                    Defaults('Yaveon Projecttasks'),
+                    'Yaveon Projecttasks';
+                    Defaults('Yaveon Projecttasks');
                     {
-                        Projekt: ProjektCombo.Selected.Value,
-                        Projektaufgabe: AufgabeCombo.Selected.Value,
-                        Startzeit: StartZeitInput.Value,
-                        Endzeit: EndZeitInput.Value,
+                        Projekt: ProjektCombo.Selected.Value;
+                        Projektaufgabe: AufgabeCombo.Selected.Value;
+                        Startzeit: StartZeitInput.Value;
+                        Endzeit: EndZeitInput.Value;
                         Bearbeitungsdauer: Timer2.Text
                     }
                 )
-            );
+            );;
             If(
-                IsBlank(varRecord) || IsError(varRecord),
+                IsBlank(varRecord) || IsError(varRecord);
                 Notify(
-                    "Fehler beim Buchen des Datensatzes.",
+                    "Fehler beim Buchen des Datensatzes.";
                     NotificationType.Error
-                ),
+                );
                 Notify(
-                    "Datensatz erfolgreich gebucht.",
+                    "Datensatz erfolgreich gebucht.";
                     NotificationType.Success
                 )
-            );
-            Reset(ProjektCombo);
-            Reset(AufgabeCombo);
-            Reset(Timer2);
-            Reset(StartZeitInput);
-            Reset(EndZeitInput);
+            );;
+            Reset(ProjektCombo);;
+            Reset(AufgabeCombo);;
+            Reset(Timer2);;
+            Reset(StartZeitInput);;
+            Reset(EndZeitInput);;
             Set(
-                varDP,
+                varDP;
                 DisplayMode.Edit
-            );
-            UpdateContext({varStartTime: "00:00 00.00.0000"});
+            );;
+            UpdateContext({varStartTime: "00:00 00.00.0000"});;
             UpdateContext({varCurrentTime: "00:00 00.00.0000"})
         Text: ="Buchen"
         Width: =96
@@ -452,11 +490,11 @@
 
     ButtonCanvas4 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(222, 160, 16, 1)
+        BasePaletteColor: =RGBA(222; 160; 16; 1)
         DisplayMode: =varDP
         FontColor: =
         Height: =50
-        OnSelect: =Navigate('Report Screen', ScreenTransition.None)
+        OnSelect: =Navigate('Report Screen'; ScreenTransition.None)
         Text: ="Reporting"
         Width: =111
         X: =285
@@ -465,11 +503,11 @@
 
     ButtonCanvas4_1 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(222, 160, 16, 1)
+        BasePaletteColor: =RGBA(222; 160; 16; 1)
         DisplayMode: =varDP
         FontColor: =
         Height: =50
-        OnSelect: =Navigate('Bearbeiten Screen', ScreenTransition.None)
+        OnSelect: =Navigate('Bearbeiten Screen'; ScreenTransition.None)
         Text: ="Bearbeiten"
         Width: =111
         X: =627

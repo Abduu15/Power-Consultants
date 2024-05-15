@@ -1,11 +1,15 @@
 "'Report Screen 4' As screen":
     Fill: =Color.White
+    Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
+    Width: =Max(App.Width; App.MinScreenWidth)
 
     Table2 As Tabelle.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =550
-        Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
+        Items: =FirstN(Sort('Yaveon Projecttasks'; Startzeit; SortOrder.Descending); 10)
         onCellValueChange: =false
         onFilter: =false
         onNavigate: =false
@@ -62,7 +66,7 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =30
-        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
+        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks'; Startzeit; SortOrder.Descending); 10)) & " Einträge"
         Width: =132
         X: =90
         Y: =666
@@ -86,9 +90,14 @@
 
     Arrow1 As arrow.backArrow:
         BorderColor: =App.Theme.Colors.Darker40
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(119; 119; 119; ,5)
         Fill: =App.Theme.Colors.Primary
+        HoverBorderColor: =ColorFade(Self.BorderColor; 20%)
+        HoverFill: =ColorFade(Self.Fill; 15%)
         OnSelect: =Back(ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Self.BorderColor; -20%)
+        PressedFill: =ColorFade(Self.Fill; -15%)
         X: =64
         Y: =100
         ZIndex: =4
@@ -100,13 +109,13 @@
         Height: =54
         OnSelect: |-
             =Patch(
-                'Yaveon Projecttasks',
-                Defaults('Yaveon Projecttasks'),
+                'Yaveon Projecttasks';
+                Defaults('Yaveon Projecttasks');
                 {
-                    Projekt: TextInput_Projekt.Text,
-                    Projektaufgabe: TextInput_Projektaufgabe.Text,
-                    Startzeit: TimeValue(TextInput_Startzeit.Value),
-                    Endzeit: TimeValue(TextInput_Endzeit.Value),
+                    Projekt: TextInput_Projekt.Text;
+                    Projektaufgabe: TextInput_Projektaufgabe.Text;
+                    Startzeit: TimeValue(TextInput_Startzeit.Value);
+                    Endzeit: TimeValue(TextInput_Endzeit.Value);
                     Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
                 }
             )

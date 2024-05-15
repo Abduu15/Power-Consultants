@@ -1,15 +1,21 @@
 "'Report Screen 2' As screen":
     Fill: =Color.White
+    Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
+    Width: =Max(App.Width; App.MinScreenWidth)
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
+        Fill: =RGBA(0; 0; 0; 0)
         Height: =631
-        Items: =FirstN(Sort('Yaveon Projecttasks', ID, SortOrder.Descending), 10)
+        Items: =FirstN(Sort('Yaveon Projecttasks'; ID; SortOrder.Descending); 10)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Set(gallSelected,Gallery4.Selected)
+        OnSelect: =Set(gallSelected;Gallery4.Selected)
+        TemplateFill: =RGBA(0; 0; 0; 0)
         TemplatePadding: =0
         TemplateSize: =59
         Width: =883
@@ -18,11 +24,15 @@
         ZIndex: =1
 
         Title4 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(50; 49; 48; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
+            Height: =Self.Size * 1,8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -32,14 +42,18 @@
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 173
             X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle4.Size * 1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size * 1,8 + Subtitle4.Size * 1,8)) / 2
             ZIndex: =2
 
         Subtitle4 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(0; 0; 0; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -57,14 +71,22 @@
 
         NextArrow4 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(166; 166; 166; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(119; 119; 119; 1)
+            Fill: =RGBA(0; 0; 0; 0)
             Height: =54
+            HoverBorderColor: =ColorFade(Self.BorderColor; 20%)
+            HoverColor: =ColorFade(Self.Color; 20%)
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
+            PressedBorderColor: =ColorFade(Self.BorderColor; -20%)
+            PressedColor: =ColorFade(Self.Color; -20%)
             Tooltip: ="Elementdetails anzeigen"
             Width: =62
             X: =827
@@ -72,7 +94,7 @@
 
         Separator4 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255; 255; 255; 1)
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -89,10 +111,14 @@
             ZIndex: =6
 
         Subtitle4_1 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(0; 0; 0; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -109,10 +135,14 @@
             ZIndex: =7
 
         Subtitle4_2 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(0; 0; 0; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -129,10 +159,14 @@
             ZIndex: =8
 
         Subtitle4_3 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(0; 0; 0; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -149,10 +183,14 @@
             ZIndex: =9
 
         Subtitle4_4 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0; 0; 0; 1)
+            Color: =RGBA(0; 0; 0; 1)
+            DisabledBorderColor: =RGBA(56; 56; 56; 1)
+            DisabledColor: =RGBA(166; 166; 166; 1)
+            DisabledFill: =RGBA(0; 0; 0; 0)
+            Fill: =RGBA(0; 0; 0; 0)
             Font: =App.Theme.Font
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected; FontWeight.Semibold; FontWeight.Normal)
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -175,13 +213,13 @@
         Height: =54
         OnSelect: |-
             =Patch(
-                'Yaveon Projecttasks', 
-                Defaults('Yaveon Projecttasks'), 
+                'Yaveon Projecttasks'; 
+                Defaults('Yaveon Projecttasks'); 
                 {
-                    Projekt: ProjektCombo_Bearbeiten,
-                    Projektaufgabe: AufgabeCombo_Bearbeiten,
-                    Startzeit: TimeValue(StartzeitBearbeiten_Datum.Text),
-                    Endzeit: TimeValue(EndzeitBearbeiten_Datum.Text),
+                    Projekt: ProjektCombo_Bearbeiten;
+                    Projektaufgabe: AufgabeCombo_Bearbeiten;
+                    Startzeit: TimeValue(StartzeitBearbeiten_Datum.Text);
+                    Endzeit: TimeValue(EndzeitBearbeiten_Datum.Text);
                     Bearbeitungsdauer: Value(Bearbeitungsdauer_Bearbeiten_Stunden.Text)
                 }
             )
@@ -221,7 +259,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =30
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
-        Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        Items: =["Yaveon - Zeiterfassungstool"; "OctoCon - Urlaubsanfragen"; "Hochschule Albstadt - SCRUM Tool"]
         Width: =343
         X: =984
         Y: =248
@@ -234,10 +272,10 @@
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
-                ProjektCombo_Bearbeiten.Selected.Value,
-                "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
-                "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
-                "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+                ProjektCombo_Bearbeiten.Selected.Value;
+                "Yaveon - Zeiterfassungstool"; ["Benutzeroberfläche entwerfen"; "Backend-Dienste implementieren"; "Testen und Debuggen"];
+                "OctoCon - Urlaubsanfragen"; ["Antragsformular entwickeln"; "Genehmigungsworkflow erstellen"; "Mit dem Kalender integrieren"];
+                "Hochschule Albstadt - SCRUM Tool"; ["Projektboard einrichten"; "Benutzergeschichten definieren"; "Sprints planen"]
             )
         Width: =343
         X: =984
@@ -283,17 +321,18 @@
     StartzeitBearbeiten_Datum As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gallSelected.Startzeit
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(149, 150, 150, 1)
+        DisabledBorderColor: =RGBA(168; 168; 168; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(149; 150; 150; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =29
         HintText: ="Datum"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =13
         Width: =163
@@ -304,17 +343,18 @@
     EndzeitBearbeiten_Datum As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gallSelected.Endzeit
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(244; 244; 244; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =29
         HintText: ="Datum"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =13
         Width: =163
@@ -325,17 +365,18 @@
     Bearbeitungsdauer_Bearbeiten_Stunden As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gallSelected.Bearbeitungsdauer
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(244; 244; 244; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =29
         HintText: ="hh"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =10
         Width: =163

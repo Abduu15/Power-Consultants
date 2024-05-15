@@ -1,6 +1,10 @@
 "'Bearbeiten Screen' As screen":
     Fill: =Color.White
+    Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
+    Width: =Max(App.Width; App.MinScreenWidth)
 
     ButtonCanvas3_3 As Schaltfläche:
         BasePaletteColor: =
@@ -13,8 +17,8 @@
                 'Yaveon Projecttasks',
                 gblSelectedEntry,
                 {
-                    //Projekt: ProjektCombo_Bearbeiten_ReportScreen.Selected.Value;
-                    //Projektaufgabe: AufgabeCombo_Bearbeiten_ReportScreen.Selected.Value;
+                    Projekt: ProjektCombo_BearbeitenProjekt,
+                    Projektaufgabe: AufgabeCombo_BearbeitenAuftrag,
                     Startzeit: StartzeitBearbeiten_Bearbeiten.Text,
                     Endzeit: EndzeitBearbeiten_Bearbeiten.Text,
                     Bearbeitungsdauer: Bearbeitungsdauer_Bearbeiten.Text
@@ -31,8 +35,8 @@
                     NotificationType.Success
                 )
             );
-            Reset(ProjektCombo_Bearbeiten);
-            Reset(AufgabeCombo_Bearbeiten);
+            Reset(ProjektCombo_BearbeitenProjekt);
+            Reset(AufgabeCombo_BearbeitenAuftrag);
             Reset(Bearbeitungsdauer_Bearbeiten);
             Reset(StartzeitBearbeiten_Bearbeiten);
             Reset(EndzeitBearbeiten_Bearbeiten);
@@ -40,6 +44,7 @@
                 varDP,
                 DisplayMode.Edit
             );
+            Navigate('Report Screen');
             UpdateContext({varStartTime: "00:00 00.00.0000"});
             UpdateContext({varCurrentTime: "00:00 00.00.0000"})
         Text: ="Änderungen speichern"
@@ -72,9 +77,9 @@
         Y: =315
         ZIndex: =3
 
-    ProjektCombo_Bearbeiten_ReportScreen_1 As Combobox.pcfdataset:
+    ProjektCombo_BearbeitenProjekt As Combobox.pcfdataset:
         BasePaletteColor: =
-        DefaultSelectedItems: =gblSelectedEntry.Projekt
+        DefaultSelectedItems: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
         DisplayMode: =DisplayMode.Edit
         Height: =42
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
@@ -84,15 +89,21 @@
         Y: =242
         ZIndex: =4
 
-    AufgabeCombo_Bearbeiten_ReportScreen_1 As Combobox.pcfdataset:
+    AufgabeCombo_BearbeitenAuftrag As Combobox.pcfdataset:
         BasePaletteColor: =
-        DefaultSelectedItems: =gblSelectedEntry.Projektaufgabe
+        DefaultSelectedItems: |
+            =Switch(
+                ProjektCombo.Selected.Value,
+                "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
+                "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
+                "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+            )
         DisplayMode: =DisplayMode.Edit
         Height: =42
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
-                ProjektCombo_Bearbeiten_ReportScreen_1.Selected.Value,
+                ProjektCombo_BearbeitenProjekt.Selected.Value,
                 "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
@@ -143,19 +154,20 @@
     StartzeitBearbeiten_Bearbeiten As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gblSelectedEntry.Startzeit
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(149, 150, 150, 1)
+        DisabledBorderColor: =RGBA(168; 168; 168; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(149; 150; 150; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =67
         HintText: ="Uhrzeit"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
         X: =796
@@ -165,19 +177,20 @@
     EndzeitBearbeiten_Bearbeiten As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gblSelectedEntry.Endzeit
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(244; 244; 244; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =67
         HintText: ="Uhrzeit"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: =13
         Width: =293
         X: =796
@@ -187,20 +200,21 @@
     Bearbeitungsdauer_Bearbeiten As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0; 0; 0; 1)
         Default: =gblSelectedEntry.Bearbeitungsdauer
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(244; 244; 244; 1)
+        Fill: =RGBA(255; 255; 255; 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =67
         HintText: |-
             ="hh:mm:ss"
         HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverColor: =RGBA(0; 0; 0; 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen'
+        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
         Size: |
             =13
         Width: =293
@@ -219,17 +233,21 @@
         UserEmail: =User().Email
         UserImage: =User().Image
         UserName: =User().FullName
-        Width: |
-            =1344
+        Width: =1344
         X: =12
         Y: =12
         ZIndex: =12
 
     Arrow3 As arrow.backArrow:
         BorderColor: =App.Theme.Colors.Darker40
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledBorderColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(119; 119; 119; ,5)
         Fill: =App.Theme.Colors.Primary
+        HoverBorderColor: =ColorFade(Self.BorderColor; 20%)
+        HoverFill: =ColorFade(Self.Fill; 15%)
         OnSelect: =Back()
+        PressedBorderColor: =ColorFade(Self.BorderColor; -20%)
+        PressedFill: =ColorFade(Self.Fill; -15%)
         X: =12
         Y: =98
         ZIndex: =13

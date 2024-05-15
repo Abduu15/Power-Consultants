@@ -1,13 +1,17 @@
 Screen2 As screen:
-    Fill: =RGBA(214. 221. 224. 1)
+    Fill: =RGBA(214, 221, 224, 1)
+    Height: =Max(App.Height; App.MinScreenHeight)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Orientation: =If(Self.Width < Self.Height; Layout.Vertical; Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints; Value >= Self.Width)
+    Width: =Max(App.Width; App.MinScreenWidth)
 
     TextInput3 As text:
         BorderColor: |+
             =
             
         BorderThickness: =2
-        Color: =RGBA(0. 0. 0. 1)
+        Color: =RGBA(0, 0, 0, 1)
         Default: ="Texteingabe"
         DisabledBorderColor: |
             =
@@ -15,7 +19,7 @@ Screen2 As screen:
             =
         DisabledFill: |
             =
-        Fill: =RGBA(253. 207. 180. 1)
+        Fill: =RGBA(253, 207, 180, 1)
         FocusedBorderThickness: =4
         Font: =Font.Arial
         HoverBorderColor: |
@@ -44,7 +48,7 @@ Screen2 As screen:
         AccessibleLabel: ="Folgende Einträge sind verfügbar"
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Items: =["Item 1", "Item 2", "Item 3"]
+        Items: =["Item 1"; "Item 2"; "Item 3"]
         Width: =320
         X: =43
         Y: =241
@@ -63,7 +67,7 @@ Screen2 As screen:
     DropdownCanvas2 As Dropdownmenü.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Items: =["Item 1", "Item 2", "Item 3"]
+        Items: =["Item 1"; "Item 2"; "Item 3"]
         Width: =320
         X: =43
         Y: =307
@@ -93,10 +97,14 @@ Screen2 As screen:
 
     Label2 As label:
         BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0; 0; 0; 1)
+        DisabledBorderColor: =RGBA(56; 56; 56; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(0; 0; 0; 0)
+        Fill: =RGBA(0; 0; 0; 0)
         Font: =Font.Arial
         Height: =32
+        LineHeight: =1,2
         Size: =13
         Text: ="Eintrag"
         X: =43
@@ -105,10 +113,14 @@ Screen2 As screen:
 
     Label2_1 As label:
         BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0; 0; 0; 1)
+        DisabledBorderColor: =RGBA(56; 56; 56; 1)
+        DisabledColor: =RGBA(166; 166; 166; 1)
+        DisabledFill: =RGBA(0; 0; 0; 0)
+        Fill: =RGBA(0; 0; 0; 0)
         Font: =Font.Arial
         Height: =32
+        LineHeight: =1,2
         Size: =13
         Text: ="Aufgabe"
         X: =40

@@ -915,7 +915,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0. 18. 107. 1)",
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
           "InvariantPropertyName": "BorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -923,7 +923,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(166. 166. 166. 1)",
+          "AutoRuleBindingString": "RGBA(166, 166, 166, 1)",
           "InvariantPropertyName": "DisabledBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -932,7 +932,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0. 18. 107. 1)",
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
           "InvariantPropertyName": "HoverBorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -950,7 +950,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(166. 166. 166. 1)",
+          "AutoRuleBindingString": "RGBA(166, 166, 166, 1)",
           "InvariantPropertyName": "DisabledColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -959,7 +959,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0. 0. 0. 1)",
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
           "InvariantPropertyName": "HoverColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -975,7 +975,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(244. 244. 244. 1)",
+          "AutoRuleBindingString": "RGBA(244, 244, 244, 1)",
           "InvariantPropertyName": "DisabledFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -984,7 +984,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(186. 202. 226. 1)",
+          "AutoRuleBindingString": "RGBA(186, 202, 226, 1)",
           "InvariantPropertyName": "HoverFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
