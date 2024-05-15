@@ -6,7 +6,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =614
-        Items: =FirstN(Sort('Yaveon Projecttasks', ID, SortOrder.Descending), 10)
+        Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
