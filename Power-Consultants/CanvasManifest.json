@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 40,
+    "BindingErrorCount": 42,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -139,6 +139,7 @@
     "Screen3",
     "Report Screen",
     "Report Screen 2",
-    "Screen4"
+    "Report Screen 3",
+    "Bearbeiten Screen"
   ]
 }
