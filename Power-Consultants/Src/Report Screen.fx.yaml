@@ -13,9 +13,9 @@
         onSave: =false
         OnSelect: =false
         ShowFooter: ="no"
-        Width: =1275
+        Width: =1067
         X: =45
-        Y: =164
+        Y: =168
         ZIndex: =1
 
         Projekt2 As pcfDataField.textualColumn:
@@ -58,14 +58,6 @@
             Order: =6
             ZIndex: =6
 
-        Anlagen2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Anlagen"
-            FieldName: ="{Attachments}"
-            FieldType: ="r*"
-            FieldVariantName: ="textualColumn"
-            Order: =7
-            ZIndex: =7
-
     TextCanvas8 As Text:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -91,4 +83,77 @@
         X: =0
         Y: =0
         ZIndex: =3
+
+    Arrow1 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        OnSelect: =Back(ScreenTransition.None)
+        X: =64
+        Y: =100
+        ZIndex: =4
+
+    ButtonCanvas3 As Schaltfläche:
+        DisplayMode: =DisplayMode.Edit
+        Height: =54
+        OnSelect: |-
+            =Patch('Yaveon Projecttasks', Defaults('Yaveon Projecttasks'), 
+                {Projekt:TextInput_Projekt.Text, 
+                Projektaufgabe: TextInput_Projektaufgabe.Text, 
+                Startzeit:TimeValue(TextInput_Startzeit), 
+                Endzeit:TimeValue(TextInput_Endzeit), 
+                Bearbeitungsdauer:TextInput_Bearbeitungsdauer})
+        Text: ="Speichern"
+        Width: =228
+        X: =1112
+        Y: =501
+        ZIndex: =10
+
+    TextInput_Projekt As Texteingabe:
+        DisplayMode: =DisplayMode.Edit
+        Height: =39
+        Width: =240
+        X: =1112
+        Y: =207
+        ZIndex: =11
+
+    TextInput_Projektaufgabe As Texteingabe:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =39
+        Width: =240
+        X: =1112
+        Y: =258
+        ZIndex: =12
+
+    TextInput_Startzeit As Texteingabe:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =39
+        Width: =240
+        X: =1112
+        Y: =306
+        ZIndex: =13
+
+    TextInput_Endzeit As Texteingabe:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =39
+        Width: =240
+        X: =1112
+        Y: =354
+        ZIndex: =14
+
+    TextInput_Bearbeitungsdauer As Texteingabe:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =39
+        Width: =240
+        X: =1112
+        Y: =403
+        ZIndex: =15
 

@@ -452,11 +452,11 @@
 
     ButtonCanvas4 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(255, 174, 0, 1)
+        BasePaletteColor: =RGBA(222, 160, 16, 1)
         DisplayMode: =varDP
         FontColor: =
         Height: =32
-        OnSelect: =Navigate(Zeiterfassung)
+        OnSelect: =Navigate('Report Screen', ScreenTransition.None)
         Text: ="Bearbeiten"
         Width: =96
         X: =635
