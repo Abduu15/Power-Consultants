@@ -15,7 +15,7 @@
         ShowFooter: ="no"
         Width: =1067
         X: =45
-        Y: =168
+        Y: =175
         ZIndex: =1
 
         Projekt2 As pcfDataField.textualColumn:
@@ -94,15 +94,22 @@
         ZIndex: =4
 
     ButtonCanvas3 As Schaltfläche:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =54
         OnSelect: |-
-            =Patch('Yaveon Projecttasks', Defaults('Yaveon Projecttasks'), 
-                {Projekt:TextInput_Projekt.Text, 
-                Projektaufgabe: TextInput_Projektaufgabe.Text, 
-                Startzeit:TimeValue(TextInput_Startzeit.Value), 
-                Endzeit:TimeValue(TextInput_Endzeit.Value), 
-                Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value})
+            =Patch(
+                'Yaveon Projecttasks',
+                Defaults('Yaveon Projecttasks'),
+                {
+                    Projekt: TextInput_Projekt.Text,
+                    Projektaufgabe: TextInput_Projektaufgabe.Text,
+                    Startzeit: TimeValue(TextInput_Startzeit.Value),
+                    Endzeit: TimeValue(TextInput_Endzeit.Value),
+                    Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
+                }
+            )
         Text: ="Speichern"
         Width: =228
         X: =1112
@@ -110,7 +117,9 @@
         ZIndex: =10
 
     TextInput_Projekt As Texteingabe:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =39
         Width: =240
         X: =1112

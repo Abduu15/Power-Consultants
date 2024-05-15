@@ -1,0 +1,345 @@
+"'Report Screen 2' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =631
+        Items: =FirstN(Sort('Yaveon Projecttasks', ID, SortOrder.Descending), 10)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Set(gallSelected,Gallery4.Selected)
+        TemplatePadding: =0
+        TemplateSize: =59
+        Width: =883
+        X: =45
+        Y: =54
+        ZIndex: =1
+
+        Title4 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Titel
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle4.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: |
+                =10
+            Text: =ThisItem.Projekt
+            VerticalAlign: =VerticalAlign.Top
+            Width: =203
+            X: =15
+            Y: =15
+            ZIndex: =3
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =54
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Elementdetails anzeigen"
+            Width: =62
+            X: =827
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle4 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle4_1 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: |
+                =10
+            Text: =ThisItem.Projektaufgabe
+            VerticalAlign: =VerticalAlign.Top
+            Width: =203
+            X: =198
+            Y: =15
+            ZIndex: =7
+
+        Subtitle4_2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: |
+                =10
+            Text: =ThisItem.Startzeit
+            VerticalAlign: =VerticalAlign.Top
+            Width: =124
+            X: =434
+            Y: =15
+            ZIndex: =8
+
+        Subtitle4_3 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: |
+                =10
+            Text: =ThisItem.Endzeit
+            VerticalAlign: =VerticalAlign.Top
+            Width: =118
+            X: =599
+            Y: =15
+            ZIndex: =9
+
+        Subtitle4_4 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: |
+                =10
+            Text: =ThisItem.Bearbeitungsdauer
+            VerticalAlign: =VerticalAlign.Top
+            Width: =69
+            X: =759
+            Y: =15
+            ZIndex: =10
+
+    ButtonCanvas3_1 As Schaltfläche:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =54
+        OnSelect: |-
+            =Patch(
+                'Yaveon Projecttasks', 
+                Defaults('Yaveon Projecttasks'), 
+                {
+                    Projekt: ProjektCombo_Bearbeiten,
+                    Projektaufgabe: AufgabeCombo_Bearbeiten,
+                    Startzeit: TimeValue(StartzeitBearbeiten_Datum.Text),
+                    Endzeit: TimeValue(EndzeitBearbeiten_Datum.Text),
+                    Bearbeitungsdauer: Value(Bearbeitungsdauer_Bearbeiten_Stunden.Text)
+                }
+            )
+        Text: ="Speichern"
+        Width: =228
+        X: =1030
+        Y: =591
+        ZIndex: =2
+
+    TextCanvas4_5 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Projekt"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =984
+        Y: =216
+        ZIndex: =3
+
+    TextCanvas4_6 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Projektaufgabe"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =984
+        Y: =280
+        ZIndex: =4
+
+    ProjektCombo_Bearbeiten As Combobox.pcfdataset:
+        BasePaletteColor: =
+        DefaultSelectedItems: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =30
+        InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
+        Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        Width: =343
+        X: =984
+        Y: =248
+        ZIndex: =5
+
+    AufgabeCombo_Bearbeiten As Combobox.pcfdataset:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =30
+        InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
+        Items: |
+            =Switch(
+                ProjektCombo_Bearbeiten.Selected.Value,
+                "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
+                "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
+                "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+            )
+        Width: =343
+        X: =984
+        Y: =307
+        ZIndex: =6
+
+    TextCanvas4_7 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Startzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =984
+        Y: =355
+        ZIndex: =7
+
+    TextCanvas4_8 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Endzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =984
+        Y: =411
+        ZIndex: =8
+
+    TextCanvas4_9 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Size: =16
+        Text: ="Bearbeitungsdauer"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =984
+        Y: =485
+        ZIndex: =11
+
+    StartzeitBearbeiten_Datum As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =gallSelected.Startzeit
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =29
+        HintText: ="Datum"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        Size: =13
+        Width: =163
+        X: =984
+        Y: =382
+        ZIndex: =31
+
+    EndzeitBearbeiten_Datum As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =gallSelected.Endzeit
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =29
+        HintText: ="Datum"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        Size: =13
+        Width: =163
+        X: =984
+        Y: =436
+        ZIndex: =32
+
+    Bearbeitungsdauer_Bearbeiten_Stunden As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =gallSelected.Bearbeitungsdauer
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =29
+        HintText: ="hh"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        Size: =10
+        Width: =163
+        X: =984
+        Y: =515
+        ZIndex: =37
+
