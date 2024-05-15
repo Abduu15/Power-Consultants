@@ -23,7 +23,7 @@
             If(
                 IsBlank(gblSelectedEntry) || IsError(gblSelectedEntry),
                 Notify(
-                    "Neuer Datensatz erfolgreich gebucht.",
+                    "Neuer Datensatz wurde nicht gebucht, da kein Datensatz ausgewählt wurde",
                     NotificationType.Error
                 ),
                 Notify(
