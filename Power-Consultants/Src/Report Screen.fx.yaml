@@ -100,9 +100,9 @@
             =Patch('Yaveon Projecttasks', Defaults('Yaveon Projecttasks'), 
                 {Projekt:TextInput_Projekt.Text, 
                 Projektaufgabe: TextInput_Projektaufgabe.Text, 
-                Startzeit:TimeValue(TextInput_Startzeit), 
-                Endzeit:TimeValue(TextInput_Endzeit), 
-                Bearbeitungsdauer:TextInput_Bearbeitungsdauer})
+                Startzeit:TimeValue(TextInput_Startzeit.Value), 
+                Endzeit:TimeValue(TextInput_Endzeit.Value), 
+                Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value})
         Text: ="Speichern"
         Width: =228
         X: =1112
