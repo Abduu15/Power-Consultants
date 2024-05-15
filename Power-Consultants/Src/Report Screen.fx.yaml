@@ -209,7 +209,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        OnSelect: =Back()
+        OnSelect: =Navigate(Zeiterfassung)
         X: =12
         Y: =102
         ZIndex: =10
