@@ -219,9 +219,10 @@
         UserEmail: =User().Email
         UserImage: =User().Image
         UserName: =User().FullName
-        Width: =Parent.Width
-        X: =0
-        Y: =0
+        Width: |
+            =1344
+        X: =12
+        Y: =12
         ZIndex: =12
 
     Arrow3 As arrow.backArrow:
@@ -230,6 +231,6 @@
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Back()
         X: =12
-        Y: =86
+        Y: =98
         ZIndex: =13
 

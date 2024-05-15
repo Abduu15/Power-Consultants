@@ -5,14 +5,14 @@
     Gallery3 As gallery.galleryVertical:
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
-        Height: =614
+        Height: =595
         Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
         Width: =1235
-        X: =102
-        Y: =107
+        X: =101
+        Y: =126
         ZIndex: =1
 
         Label7 As label:
@@ -128,9 +128,9 @@
         UserEmail: =User().Email
         UserImage: =User().Image
         UserName: =User().FullName
-        Width: =Parent.Width
-        X: =0
-        Y: =0
+        Width: =1344
+        X: =12
+        Y: =12
         ZIndex: =3
 
     TextCanvas8_1 As Text:
@@ -152,8 +152,8 @@
         Text: ="Projekt"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
-        X: =129
-        Y: =95
+        X: =126
+        Y: =96
         ZIndex: =5
 
     TextCanvas4_11 As Text:
@@ -164,8 +164,8 @@
         Text: ="Projektaufgabe"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
-        X: =390
-        Y: =95
+        X: =394
+        Y: =96
         ZIndex: =6
 
     TextCanvas4_12 As Text:
@@ -176,8 +176,8 @@
         Text: ="Startzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
-        X: =703
-        Y: =95
+        X: =700
+        Y: =96
         ZIndex: =7
 
     TextCanvas4_13 As Text:
@@ -188,8 +188,8 @@
         Text: ="Endzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
-        X: =877
-        Y: =95
+        X: =874
+        Y: =96
         ZIndex: =8
 
     TextCanvas4_14 As Text:
@@ -201,8 +201,8 @@
         Text: ="Bearbeitungsdauer"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =199
-        X: =1029
-        Y: =95
+        X: =1027
+        Y: =96
         ZIndex: =9
 
     Arrow2 As arrow.backArrow:
@@ -210,7 +210,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Back()
-        X: =11
-        Y: =95
+        X: =12
+        Y: =102
         ZIndex: =10
 
