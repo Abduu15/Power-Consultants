@@ -11,11 +11,7 @@
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
-                If(
-                    IsBlank(gblSelectedEntry),
-                    Defaults('Yaveon Projecttasks'),
-                    gblSelectedEntry
-                ),
+                gblSelectedEntry,
                 {
                     //Projekt: ProjektCombo_Bearbeiten_ReportScreen.Selected.Value;
                     //Projektaufgabe: AufgabeCombo_Bearbeiten_ReportScreen.Selected.Value;
