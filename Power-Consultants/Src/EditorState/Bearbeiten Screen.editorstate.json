@@ -184,7 +184,7 @@
       "MetaDataIDKey": "",
       "Name": "AufgabeCombo_Bearbeiten_ReportScreen_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -653,7 +653,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -785,7 +785,7 @@
       "MetaDataIDKey": "",
       "Name": "EndzeitBearbeiten_Bearbeiten",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1165,7 +1165,7 @@
       "MetaDataIDKey": "",
       "Name": "ProjektCombo_Bearbeiten_ReportScreen_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1333,7 +1333,7 @@
       "MetaDataIDKey": "",
       "Name": "StartzeitBearbeiten_Bearbeiten",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1689,7 +1689,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_21",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1792,7 +1792,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_22",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1895,7 +1895,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_23",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

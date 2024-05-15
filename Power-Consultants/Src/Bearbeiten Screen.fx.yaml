@@ -6,8 +6,8 @@
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
-        FontSize: =40
-        Height: =54
+        FontSize: =34
+        Height: =76
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
@@ -46,10 +46,10 @@
             );
             UpdateContext({varStartTime: "00:00 00.00.0000"});
             UpdateContext({varCurrentTime: "00:00 00.00.0000"})
-        Text: ="Speichern"
-        Width: =228
-        X: =477
-        Y: =702
+        Text: ="Änderungen speichern"
+        Width: =396
+        X: =485
+        Y: =639
         ZIndex: =1
 
     TextCanvas4_20 As Text:
@@ -60,8 +60,8 @@
         Text: ="Projekt"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =163
-        X: =445
-        Y: =90
+        X: =265
+        Y: =160
         ZIndex: =2
 
     TextCanvas4_21 As Text:
@@ -72,8 +72,8 @@
         Text: ="Projektaufgabe"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =445
-        Y: =200
+        X: =265
+        Y: =315
         ZIndex: =3
 
     ProjektCombo_Bearbeiten_ReportScreen_1 As Combobox.pcfdataset:
@@ -84,8 +84,8 @@
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
         Width: =391
-        X: =445
-        Y: =147
+        X: =265
+        Y: =242
         ZIndex: =4
 
     AufgabeCombo_Bearbeiten_ReportScreen_1 As Combobox.pcfdataset:
@@ -102,33 +102,33 @@
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
         Width: =391
-        X: =445
-        Y: =256
+        X: =265
+        Y: =390
         ZIndex: =5
 
     TextCanvas4_22 As Text:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
-        Height: =52
+        Height: =57
         Size: =40
         Text: ="Startzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =445
-        Y: =305
+        X: =796
+        Y: =160
         ZIndex: =6
 
     TextCanvas4_23 As Text:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
-        Height: =50
+        Height: =56
         Size: |
             =40
         Text: ="Endzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =445
-        Y: =445
+        X: =796
+        Y: =315
         ZIndex: =7
 
     TextCanvas4_24 As Text:
@@ -140,8 +140,8 @@
         Text: ="Bearbeitungsdauer"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =364
-        X: =445
-        Y: =565
+        X: =501
+        Y: =471
         ZIndex: =8
 
     StartzeitBearbeiten_Bearbeiten As text:
@@ -162,8 +162,8 @@
         Reset: =App.ActiveScreen = 'Report Screen 3'
         Size: =13
         Width: =293
-        X: =445
-        Y: =370
+        X: =796
+        Y: =229
         ZIndex: =9
 
     EndzeitBearbeiten_Bearbeiten As text:
@@ -184,8 +184,8 @@
         Reset: =App.ActiveScreen = 'Report Screen 3'
         Size: =13
         Width: =293
-        X: =445
-        Y: =496
+        X: =796
+        Y: =378
         ZIndex: =10
 
     Bearbeitungsdauer_Bearbeiten As text:
@@ -208,8 +208,8 @@
         Size: |
             =13
         Width: =293
-        X: =445
-        Y: =623
+        X: =501
+        Y: =529
         ZIndex: =11
 
     Header1_3 As Kopfzeile:
