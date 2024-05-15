@@ -2,73 +2,122 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    Table2 As Tabelle.pcfdataset:
-        DisplayMode: =DisplayMode.Edit
-        Height: =550
-        Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
-        onCellValueChange: =false
-        onFilter: =false
-        onNavigate: =false
-        onRowSelect: =false
-        onSave: =false
-        OnSelect: =false
-        ShowFooter: ="no"
-        Width: =1067
-        X: =45
-        Y: =175
+    Gallery3 As gallery.galleryVertical:
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =614
+        Items: =FirstN(Sort('Yaveon Projecttasks', ID, SortOrder.Descending), 10)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =81
+        Width: =1235
+        X: =102
+        Y: =107
         ZIndex: =1
 
-        Projekt2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Projekt"
-            FieldName: ="Projekt"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =2
+        Label7 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Titel
+            X: =16
+            Y: =24
+            ZIndex: =1
+
+        Label8 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Projekt
+            Width: =235
+            X: =16
+            Y: =24
             ZIndex: =2
 
-        Projektaufgabe2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Projektaufgabe"
-            FieldName: ="Projektaufgabe"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =3
+        Label9 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Projektaufgabe
+            Width: =274
+            X: =283
+            Y: =24
             ZIndex: =3
 
-        Startzeit2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Startzeit"
-            FieldName: ="Startzeit"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =4
+        Label10 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Startzeit
+            X: =590
+            Y: =24
             ZIndex: =4
 
-        Endzeit2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Endzeit"
-            FieldName: ="Endzeit"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =5
+        Label11 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Endzeit
+            X: =763
+            Y: =24
             ZIndex: =5
 
-        Bearbeitungsdauer2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Bearbeitungsdauer"
-            FieldName: ="Bearbeitungsdauer"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =6
+        Label11_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Bearbeitungsdauer
+            X: =919
+            Y: =24
             ZIndex: =6
 
-    TextCanvas8 As Text:
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =30
-        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
-        Width: =132
-        X: =90
-        Y: =666
-        ZIndex: =2
+        Icon4 As icon.Edit:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.Edit
+            OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate('Bearbeiten Screen')
+            Width: =40
+            X: =1092
+            Y: =24
+            ZIndex: =7
 
-    Header1_1 As Kopfzeile:
+        Icon5 As icon.Trash:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Remove('Yaveon Projecttasks', ThisItem);
+                Notify("Datensatz erfolgreich gelöscht", NotificationType.Success, 1000)
+            Width: =40
+            X: =1165
+            Y: =24
+            ZIndex: =8
+
+    Header1_2 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -84,85 +133,84 @@
         Y: =0
         ZIndex: =3
 
-    Arrow1 As arrow.backArrow:
+    TextCanvas8_1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =25
+        Size: =20
+        Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
+        Width: =198
+        X: =126
+        Y: =721
+        ZIndex: =4
+
+    TextCanvas4_10 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Size: =20
+        Text: ="Projekt"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =240
+        X: =129
+        Y: =95
+        ZIndex: =5
+
+    TextCanvas4_11 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Size: =20
+        Text: ="Projektaufgabe"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =240
+        X: =390
+        Y: =95
+        ZIndex: =6
+
+    TextCanvas4_12 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Size: =20
+        Text: ="Startzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =126
+        X: =703
+        Y: =95
+        ZIndex: =7
+
+    TextCanvas4_13 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Size: =20
+        Text: ="Endzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =126
+        X: =877
+        Y: =95
+        ZIndex: =8
+
+    TextCanvas4_14 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Size: |
+            =20
+        Text: ="Bearbeitungsdauer"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =199
+        X: =1029
+        Y: =95
+        ZIndex: =9
+
+    Arrow2 As arrow.backArrow:
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        OnSelect: =Back(ScreenTransition.None)
-        X: =64
-        Y: =100
-        ZIndex: =4
-
-    ButtonCanvas3 As Schaltfläche:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =54
-        OnSelect: |-
-            =Patch(
-                'Yaveon Projecttasks',
-                Defaults('Yaveon Projecttasks'),
-                {
-                    Projekt: TextInput_Projekt.Text,
-                    Projektaufgabe: TextInput_Projektaufgabe.Text,
-                    Startzeit: TimeValue(TextInput_Startzeit.Value),
-                    Endzeit: TimeValue(TextInput_Endzeit.Value),
-                    Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
-                }
-            )
-        Text: ="Speichern"
-        Width: =228
-        X: =1112
-        Y: =501
+        OnSelect: =Back()
+        X: =11
+        Y: =95
         ZIndex: =10
-
-    TextInput_Projekt As Texteingabe:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =39
-        Width: =240
-        X: =1112
-        Y: =207
-        ZIndex: =11
-
-    TextInput_Projektaufgabe As Texteingabe:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =39
-        Width: =240
-        X: =1112
-        Y: =258
-        ZIndex: =12
-
-    TextInput_Startzeit As Texteingabe:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =39
-        Width: =240
-        X: =1112
-        Y: =306
-        ZIndex: =13
-
-    TextInput_Endzeit As Texteingabe:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =39
-        Width: =240
-        X: =1112
-        Y: =354
-        ZIndex: =14
-
-    TextInput_Bearbeitungsdauer As Texteingabe:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =39
-        Width: =240
-        X: =1112
-        Y: =403
-        ZIndex: =15
 

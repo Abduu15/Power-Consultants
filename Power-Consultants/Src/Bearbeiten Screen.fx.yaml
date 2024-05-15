@@ -155,7 +155,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen 3'
+        Reset: =App.ActiveScreen = 'Report Screen'
         Size: =13
         Width: =293
         X: =796
@@ -177,7 +177,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen 3'
+        Reset: =App.ActiveScreen = 'Report Screen'
         Size: =13
         Width: =293
         X: =796
@@ -200,7 +200,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Report Screen 3'
+        Reset: =App.ActiveScreen = 'Report Screen'
         Size: |
             =13
         Width: =293
