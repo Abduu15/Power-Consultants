@@ -112,7 +112,7 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "fac27e6c-6206-4b51-a67a-5399a64c89b4",
-    "Id": "fac27e6c-6206-4b51-a67a-5399a64c89b4",
+    "Id": "9c29f5f4-321b-4e56-82ad-086180eff32a",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
@@ -139,7 +139,7 @@
     "Screen3",
     "Report Screen 4",
     "Report Screen 2",
-    "Report Screen",
-    "Bearbeiten Screen"
+    "ReportScreen",
+    "BearbeitenScreen"
   ]
 }

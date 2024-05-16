@@ -2503,7 +2503,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Report Screen": {
+    "ReportScreen": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -2523,19 +2523,14 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Report Screen",
+      "Name": "ReportScreen",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2545,17 +2540,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "ImagePosition",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Orientation",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Size",
+          "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2566,6 +2556,16 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinner",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Orientation",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Size",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -3213,5 +3213,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Report Screen"
+  "TopParentName": "ReportScreen"
 }

@@ -1,4 +1,4 @@
-"'Report Screen' As screen":
+ReportScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
@@ -96,7 +96,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =40
             Icon: =Icon.Edit
-            OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate('Bearbeiten Screen')
+            OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate('BearbeitenScreen')
             Width: =40
             X: =1092
             Y: =24

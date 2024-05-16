@@ -456,7 +456,7 @@
         DisplayMode: =varDP
         FontColor: =
         Height: =50
-        OnSelect: =Navigate('Report Screen', ScreenTransition.None)
+        OnSelect: =Navigate(ReportScreen, ScreenTransition.None)
         Text: ="Reporting"
         Width: =111
         X: =285
@@ -469,7 +469,7 @@
         DisplayMode: =varDP
         FontColor: =
         Height: =50
-        OnSelect: =Navigate('Bearbeiten Screen', ScreenTransition.None)
+        OnSelect: =Navigate(BearbeitenScreen, ScreenTransition.None)
         Text: ="Bearbeiten"
         Width: =111
         X: =627

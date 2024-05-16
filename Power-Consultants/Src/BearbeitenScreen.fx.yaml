@@ -1,4 +1,4 @@
-"'Bearbeiten Screen' As screen":
+BearbeitenScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
@@ -11,7 +11,8 @@
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
-                gblSelectedEntry,
+                Defaults('Yaveon Projecttasks'),
+                //gblSelectedEntry;
                 {
                     Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
                     Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
@@ -31,18 +32,18 @@
                     NotificationType.Success
                 )
             );
-            Reset(ProjektCombo_Bearbeiten);
-            Reset(AufgabeCombo_Bearbeiten);
+            Reset(ProjektCombo_BearbeitenProjekt);
+            Reset(AufgabeCombo_BearbeitenAufgabe);
             Reset(Bearbeitungsdauer_Bearbeiten);
             Reset(StartzeitBearbeiten_Bearbeiten);
             Reset(EndzeitBearbeiten_Bearbeiten);
-            Set(
-                varDP,
-                DisplayMode.Edit
-            );
-            Navigate('Report Screen');
-            UpdateContext({varStartTime: "00:00 00.00.0000"});
-            UpdateContext({varCurrentTime: "00:00 00.00.0000"})
+            //Set(
+            //    varDP;
+            //    DisplayMode.Edit
+            //);;
+            Navigate('ReportScreen');
+            //UpdateContext({StartzeitBearbeiten_Bearbeiten: "00:00 00.00.0000"});;
+            //UpdateContext({EndzeitBearbeiten_Bearbeiten: "00:00 00.00.0000"})
         Text: ="Änderungen speichern"
         Width: =396
         X: =476
@@ -77,6 +78,7 @@
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =18
         Height: =43
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
@@ -89,6 +91,7 @@
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =18
         Height: =43
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
@@ -145,7 +148,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Startzeit
+        Default: =
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
@@ -156,7 +159,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
+        Reset: =
         Size: =13
         Width: =293
         X: =1013
@@ -167,7 +170,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Endzeit
+        Default: =
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -178,7 +181,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
+        Reset: =
         Size: =13
         Width: =293
         X: =1013
@@ -189,7 +192,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Bearbeitungsdauer
+        Default: =
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -201,7 +204,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'Bearbeiten Screen'
+        Reset: =
         Size: |
             =13
         Width: =293
@@ -230,7 +233,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        OnSelect: =Navigate('Report Screen')
+        OnSelect: =Navigate('ReportScreen')
         X: =12
         Y: =98
         ZIndex: =13
@@ -264,7 +267,7 @@
         FontColor: =
         Height: =67
         Size: =19
-        Text: =gblSelectedEntry.Projekt
+        Text: =
         Width: =334
         X: =30
         Y: =234
@@ -275,7 +278,7 @@
         FontColor: =
         Height: =67
         Size: =19
-        Text: =gblSelectedEntry.Projektaufgabe
+        Text: =
         Width: =334
         X: =30
         Y: =383
