@@ -11,8 +11,8 @@ ReportScreen As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
         Width: =1235
-        X: =101
-        Y: =126
+        X: =102
+        Y: =128
         ZIndex: =1
 
         Label7 As label:

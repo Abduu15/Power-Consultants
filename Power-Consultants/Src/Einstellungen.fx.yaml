@@ -1,0 +1,43 @@
+Einstellungen As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Arrow4 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        OnSelect: =Navigate(Zeiterfassung)
+        X: =12
+        Y: =99
+        ZIndex: =1
+
+    Header1_4 As Kopfzeile:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =75
+        Logo: ='cropped-yaveon-logo-negativ'
+        OnSelectLogo: =false
+        Title: ="Einstellungen"
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Width: =1344
+        X: =12
+        Y: =12
+        ZIndex: =2
+
+    Icon3 As icon.Information:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Information
+        OnSelect: =Navigate('Dokumentation')
+        Width: =50
+        X: =1292
+        Y: =99
+        ZIndex: =3
+
