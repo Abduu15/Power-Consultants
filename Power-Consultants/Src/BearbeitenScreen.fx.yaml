@@ -75,7 +75,7 @@ BearbeitenScreen As screen:
             //    varDP;
             //    DisplayMode.Edit
             //);;
-            Navigate('ReportScreen');
+            Navigate(ReportScreen);
             //UpdateContext({StartzeitBearbeiten_Bearbeiten: "00:00 00.00.0000"});;
             //UpdateContext({EndzeitBearbeiten_Bearbeiten: "00:00 00.00.0000"})
         Text: ="Änderungen speichern"
@@ -200,7 +200,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1013
@@ -229,7 +229,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: |
             =13
         Width: =44
@@ -258,7 +258,7 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        OnSelect: =Navigate('ReportScreen')
+        OnSelect: =Navigate(ReportScreen)
         X: =12
         Y: =98
         ZIndex: =13
@@ -341,7 +341,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1078
@@ -370,7 +370,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1173
@@ -399,7 +399,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1234
@@ -428,7 +428,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =4
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =61
         X: =1295
@@ -437,6 +437,7 @@ BearbeitenScreen As screen:
 
     TextCanvas9 As Text:
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =67
         Size: =30
         Text: |-
@@ -448,6 +449,7 @@ BearbeitenScreen As screen:
 
     TextCanvas10 As Text:
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =69
         Size: =30
         Text: ="."
@@ -489,7 +491,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1013
@@ -518,7 +520,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1078
@@ -547,7 +549,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1173
@@ -576,7 +578,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =1234
@@ -605,7 +607,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =4
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =61
         X: =1295
@@ -668,7 +670,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =593
@@ -697,7 +699,7 @@ BearbeitenScreen As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         MaxLength: =2
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
         X: =658

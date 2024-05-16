@@ -96,7 +96,7 @@ ReportScreen As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =40
             Icon: =Icon.Edit
-            OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate('BearbeitenScreen')
+            OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate(BearbeitenScreen)
             Width: =40
             X: =1092
             Y: =24
