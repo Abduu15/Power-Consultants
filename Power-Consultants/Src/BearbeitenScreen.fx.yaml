@@ -4,15 +4,25 @@ BearbeitenScreen As screen:
 
     ButtonCanvas3_3 As Schaltfläche:
         BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
+        DisplayMode: |-
+            =If(
+                And(
+                    !IsBlank(ProjektCombo_BearbeitenProjekt.Selected.Value),
+                    !IsBlank(AufgabeCombo_BearbeitenAufgabe.Selected.Value),
+                    !IsBlank(StartzeitBearbeiten_Bearbeiten.Text),
+                    !IsBlank(EndzeitBearbeiten_Bearbeiten.Text),
+                    !IsBlank(Bearbeitungsdauer_Bearbeiten.Text)
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
         FontColor: =
         FontSize: =34
         Height: =76
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
-                Defaults('Yaveon Projecttasks'),
-                //gblSelectedEntry;
+                gblSelectedEntry,
                 {
                     Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
                     Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
@@ -148,7 +158,12 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Startzeit
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                gblSelectedEntry.Startzeit,
+                Blank()
+            )
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
@@ -170,7 +185,12 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Endzeit
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                gblSelectedEntry.Endzeit,
+                Blank()
+            )
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -192,7 +212,12 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =gblSelectedEntry.Bearbeitungsdauer
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                gblSelectedEntry.Bearbeitungsdauer,
+                Blank()
+            )
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -267,7 +292,12 @@ BearbeitenScreen As screen:
         FontColor: =
         Height: =67
         Size: =19
-        Text: =gblSelectedEntry.Projekt
+        Text: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                gblSelectedEntry.Projekt,
+                Blank()
+            )
         Width: =334
         X: =30
         Y: =234
@@ -278,7 +308,12 @@ BearbeitenScreen As screen:
         FontColor: =
         Height: =67
         Size: =19
-        Text: =gblSelectedEntry.Projektaufgabe
+        Text: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                gblSelectedEntry.Projektaufgabe,
+                Blank()
+            )
         Width: =334
         X: =30
         Y: =383
