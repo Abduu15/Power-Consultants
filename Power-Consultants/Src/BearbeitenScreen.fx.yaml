@@ -9,9 +9,19 @@ BearbeitenScreen As screen:
                 And(
                     !IsBlank(ProjektCombo_BearbeitenProjekt.Selected.Value),
                     !IsBlank(AufgabeCombo_BearbeitenAufgabe.Selected.Value),
-                    !IsBlank(StartzeitBearbeiten_Bearbeiten.Text),
-                    !IsBlank(EndzeitBearbeiten_Bearbeiten.Text),
-                    !IsBlank(Bearbeitungsdauer_Bearbeiten.Text)
+                    !IsBlank(StartzeitBearbeiten_Stunden.Text),
+                    !IsBlank(StartzeitBearbeiten_Minuten.Text),
+                    !IsBlank(StartzeitBearbeiten_Tag.Text),
+                    !IsBlank(StartzeitBearbeiten_Monat.Text),
+                    !IsBlank(StartzeitBearbeiten_Jahr.Text),
+                    !IsBlank(EndzeitBearbeiten_Stunden.Text),
+                    !IsBlank(EndzeitBearbeiten_Minuten.Text),
+                    !IsBlank(EndzeitBearbeiten_Tag.Text),
+                    !IsBlank(EndzeitBearbeiten_Monat.Text),
+                    !IsBlank(StartzeitBearbeiten_Jahr.Text),
+                    !IsBlank(Bearbeitungsdauer_Stunde.Text),
+                    !IsBlank(Bearbeitungsdauer_Minute.Text),
+                    !IsBlank(Bearbeitungsdauer_Sekunde.Text)
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -26,9 +36,10 @@ BearbeitenScreen As screen:
                 {
                     Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
                     Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
-                    Startzeit: StartzeitBearbeiten_Bearbeiten.Text,
-                    Endzeit: EndzeitBearbeiten_Bearbeiten.Text,
-                    Bearbeitungsdauer: Bearbeitungsdauer_Bearbeiten.Text
+                    Startzeit: TimeValue(StartzeitBearbeiten_Stunden.Text & ":" & StartzeitBearbeiten_Minuten.Text) + Text(Date(StartzeitBearbeiten_Jahr.Text, StartzeitBearbeiten_Monat.Text,StartzeitBearbeiten_Tag.Text), "dd.mm.yyyy"),
+                    Endzeit: TimeValue(EndzeitBearbeiten_Stunden.Text & ":" & EndzeitBearbeiten_Minuten.Text) + Text(Date(EndzeitBearbeiten_Jahr.Text, EndzeitBearbeiten_Monat.Text, EndzeitBearbeiten_Tag.Text), "dd.mm.yyyy"),
+                    Bearbeitungsdauer: Text(TimeValue(Bearbeitungsdauer_Stunde.Text & ":" & Bearbeitungsdauer_Minute.Text & ":" & Bearbeitungsdauer_Sekunde.Text), "hh:mm.ss")
+            
                 }
             );
             If(
@@ -44,9 +55,22 @@ BearbeitenScreen As screen:
             );
             Reset(ProjektCombo_BearbeitenProjekt);
             Reset(AufgabeCombo_BearbeitenAufgabe);
-            Reset(Bearbeitungsdauer_Bearbeiten);
-            Reset(StartzeitBearbeiten_Bearbeiten);
-            Reset(EndzeitBearbeiten_Bearbeiten);
+            Reset(Bearbeitungsdauer_Stunde);
+            Reset(Bearbeitungsdauer_Minute);
+            Reset(Bearbeitungsdauer_Sekunde);
+            Reset(StartzeitBearbeiten_Stunden);
+            Reset(StartzeitBearbeiten_Minuten);
+            Reset(StartzeitBearbeiten_Tag);
+            Reset(StartzeitBearbeiten_Monat);
+            Reset(StartzeitBearbeiten_Jahr);
+            Reset(EndzeitBearbeiten_Stunden);
+            Reset(EndzeitBearbeiten_Minuten);
+            Reset(EndzeitBearbeiten_Tag);
+            Reset(EndzeitBearbeiten_Monat);
+            Reset(EndzeitBearbeiten_Jahr);
+            Reset(Bearbeitungsdauer_Stunde);
+            Reset(Bearbeitungsdauer_Minute);
+            Reset(Bearbeitungsdauer_Sekunde);
             //Set(
             //    varDP;
             //    DisplayMode.Edit
@@ -154,14 +178,14 @@ BearbeitenScreen As screen:
         Y: =464
         ZIndex: =8
 
-    StartzeitBearbeiten_Bearbeiten As text:
+    StartzeitBearbeiten_Stunden As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
-                gblSelectedEntry.Startzeit,
+                Text(Hour(gblSelectedEntry.Startzeit), "00"),
                 Blank()
             )
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
@@ -169,26 +193,28 @@ BearbeitenScreen As screen:
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
+        Format: =TextFormat.Number
         Height: =67
-        HintText: ="Uhrzeit"
+        HintText: ="hh"
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
         Reset: =App.ActiveScreen = 'BearbeitenScreen'
         Size: =13
-        Width: =293
+        Width: =44
         X: =1013
         Y: =234
         ZIndex: =9
 
-    EndzeitBearbeiten_Bearbeiten As text:
+    Bearbeitungsdauer_Stunde As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
-                gblSelectedEntry.Endzeit,
+                Text(Hour(gblSelectedEntry.Bearbeitungsdauer), "00"),
                 Blank()
             )
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -196,43 +222,17 @@ BearbeitenScreen As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
+        Format: =TextFormat.Number
         Height: =67
-        HintText: ="Uhrzeit"
+        HintText: ="hh"
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =App.ActiveScreen = 'BearbeitenScreen'
-        Size: =13
-        Width: =293
-        X: =1013
-        Y: =383
-        ZIndex: =10
-
-    Bearbeitungsdauer_Bearbeiten As text:
-        BorderColor: =App.Theme.Colors.Darker40
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: |-
-            =If(
-                !IsBlank(gblSelectedEntry),
-                gblSelectedEntry.Bearbeitungsdauer,
-                Blank()
-            )
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =App.Theme.Font
-        Height: =67
-        HintText: |-
-            ="hh:mm:ss"
-        HoverBorderColor: =App.Theme.Colors.Darker40
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
         Reset: =App.ActiveScreen = 'BearbeitenScreen'
         Size: |
             =13
-        Width: =293
+        Width: =44
         X: =528
         Y: =522
         ZIndex: =11
@@ -318,4 +318,413 @@ BearbeitenScreen As screen:
         X: =30
         Y: =383
         ZIndex: =17
+
+    StartzeitBearbeiten_Minuten As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Minute(gblSelectedEntry.Startzeit), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1078
+        Y: =234
+        ZIndex: =18
+
+    StartzeitBearbeiten_Tag As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Day(gblSelectedEntry.Startzeit),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Tag"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1173
+        Y: =234
+        ZIndex: =19
+
+    StartzeitBearbeiten_Monat As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Month(gblSelectedEntry.Startzeit), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Monat"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1234
+        Y: =234
+        ZIndex: =20
+
+    StartzeitBearbeiten_Jahr As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Year(gblSelectedEntry.Startzeit),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Jahr"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =4
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =61
+        X: =1295
+        Y: =234
+        ZIndex: =21
+
+    TextCanvas9 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =1064
+        Y: =230
+        ZIndex: =22
+
+    TextCanvas10 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1223
+        Y: =249
+        ZIndex: =23
+
+    TextCanvas10_1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1285
+        Y: =249
+        ZIndex: =24
+
+    EndzeitBearbeiten_Stunden As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Hour(gblSelectedEntry.Startzeit), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="hh"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1013
+        Y: =387
+        ZIndex: =25
+
+    EndzeitBearbeiten_Minuten As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Minute(gblSelectedEntry.Startzeit), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1078
+        Y: =387
+        ZIndex: =26
+
+    EndzeitBearbeiten_Tag As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Day(gblSelectedEntry.Startzeit),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Tag"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1173
+        Y: =387
+        ZIndex: =27
+
+    EndzeitBearbeiten_Monat As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Month(gblSelectedEntry.Startzeit), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Monat"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =1234
+        Y: =387
+        ZIndex: =28
+
+    EndzeitBearbeiten_Jahr As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Year(gblSelectedEntry.Startzeit),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Jahr"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =4
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =61
+        X: =1295
+        Y: =387
+        ZIndex: =29
+
+    TextCanvas9_1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =1064
+        Y: =383
+        ZIndex: =30
+
+    TextCanvas10_2 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1223
+        Y: =402
+        ZIndex: =31
+
+    TextCanvas10_3 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1285
+        Y: =402
+        ZIndex: =32
+
+    Bearbeitungsdauer_Minute As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Minute(gblSelectedEntry.Bearbeitungsdauer), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =593
+        Y: =522
+        ZIndex: =33
+
+    Bearbeitungsdauer_Sekunde As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =If(
+                !IsBlank(gblSelectedEntry),
+                Text(Second(gblSelectedEntry.Bearbeitungsdauer), "00"),
+                Blank()
+            )
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="ss"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
+        Size: =13
+        Width: =44
+        X: =658
+        Y: =522
+        ZIndex: =34
+
+    TextCanvas9_2 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =644
+        Y: =518
+        ZIndex: =35
+
+    TextCanvas9_3 As Text:
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =579
+        Y: =518
+        ZIndex: =36
 

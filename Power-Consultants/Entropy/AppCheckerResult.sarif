@@ -4325,19 +4325,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Bearbeiten.AccessibleLabel"
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Stunden.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Bearbeiten.AccessibleLabel",
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Stunden.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BearbeitenScreen",
-                "type": "BearbeitenScreen.StartzeitBearbeiten_Bearbeiten"
+                "type": "BearbeitenScreen.StartzeitBearbeiten_Stunden"
               }
             }
           ],
@@ -4385,19 +4385,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Bearbeiten.AccessibleLabel"
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Stunden.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Bearbeiten.AccessibleLabel",
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Stunden.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BearbeitenScreen",
-                "type": "BearbeitenScreen.EndzeitBearbeiten_Bearbeiten"
+                "type": "BearbeitenScreen.EndzeitBearbeiten_Stunden"
               }
             }
           ],
@@ -4445,19 +4445,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Bearbeiten.AccessibleLabel"
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Stunde.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Bearbeiten.AccessibleLabel",
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Stunde.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BearbeitenScreen",
-                "type": "BearbeitenScreen.Bearbeitungsdauer_Bearbeiten"
+                "type": "BearbeitenScreen.Bearbeitungsdauer_Stunde"
               }
             }
           ],
@@ -5129,6 +5129,306 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Minuten.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Minuten.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.StartzeitBearbeiten_Minuten"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Tag.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Tag.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.StartzeitBearbeiten_Tag"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Monat.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Monat.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.StartzeitBearbeiten_Monat"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Jahr.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.StartzeitBearbeiten_Jahr.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.StartzeitBearbeiten_Jahr"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Minuten.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Minuten.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.EndzeitBearbeiten_Minuten"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Tag.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Tag.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.EndzeitBearbeiten_Tag"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Monat.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Monat.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.EndzeitBearbeiten_Monat"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Jahr.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.EndzeitBearbeiten_Jahr.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.EndzeitBearbeiten_Jahr"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Minute.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Minute.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.Bearbeitungsdauer_Minute"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Sekunde.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.Bearbeitungsdauer_Sekunde.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.Bearbeitungsdauer_Sekunde"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 11
         },
         {
           "locations": [
