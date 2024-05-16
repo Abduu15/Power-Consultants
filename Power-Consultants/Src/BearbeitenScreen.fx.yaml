@@ -148,7 +148,7 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =
+        Default: =gblSelectedEntry.Startzeit
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
@@ -159,7 +159,7 @@ BearbeitenScreen As screen:
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
         Size: =13
         Width: =293
         X: =1013
@@ -170,7 +170,7 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =
+        Default: =gblSelectedEntry.Endzeit
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -181,7 +181,7 @@ BearbeitenScreen As screen:
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
         Size: =13
         Width: =293
         X: =1013
@@ -192,7 +192,7 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =
+        Default: =gblSelectedEntry.Bearbeitungsdauer
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -204,7 +204,7 @@ BearbeitenScreen As screen:
         HoverBorderColor: =App.Theme.Colors.Darker40
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
-        Reset: =
+        Reset: =App.ActiveScreen = 'BearbeitenScreen'
         Size: |
             =13
         Width: =293
@@ -267,7 +267,7 @@ BearbeitenScreen As screen:
         FontColor: =
         Height: =67
         Size: =19
-        Text: =
+        Text: =gblSelectedEntry.Projekt
         Width: =334
         X: =30
         Y: =234
@@ -278,7 +278,7 @@ BearbeitenScreen As screen:
         FontColor: =
         Height: =67
         Size: =19
-        Text: =
+        Text: =gblSelectedEntry.Projektaufgabe
         Width: =334
         X: =30
         Y: =383
