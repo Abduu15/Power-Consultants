@@ -2,7 +2,7 @@ BearbeitenScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Schaltfläche:
+    ButtonCanvas3_3 As Button:
         BasePaletteColor: =
         DisplayMode: |-
             =If(
@@ -246,7 +246,7 @@ BearbeitenScreen As screen:
         Y: =522
         ZIndex: =11
 
-    Header1_3 As Kopfzeile:
+    Header1_3 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =

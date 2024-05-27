@@ -1,0 +1,65 @@
+Dashboard As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Container3 As groupContainer.manualLayoutContainer:
+        ContentLanguage: |
+            =""Welcome, " & User().FullName & "!""
+        DropShadow: =DropShadow.Light
+        Height: =639
+        PaddingBottom: =12
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =12
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1205
+        X: =80
+        Y: =58
+        ZIndex: =1
+
+        "TextInputCanvas3_1 As 'Text input'":
+            Align: |
+                ="Total working hours: " & User().Bearbeitungsdauer & " hours"
+            BasePaletteColor: =
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =74
+            Value: |
+                ="Total working hours: " & User().Bearbeitungsdauer & " hours"
+            Width: =382
+            X: =734
+            Y: =210
+            ZIndex: =2
+
+        ButtonCanvas6 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FontSize: |+
+                =30
+                
+                
+                
+            Height: =74
+            Text: ="Great Job, Dein Gesamtarbeitszeit "
+            Width: =526
+            X: =74
+            Y: =210
+            ZIndex: =3
+
+        ButtonCanvas6_1 As Button:
+            BasePaletteColor: =
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            FontSize: |+
+                =40
+                
+            Height: =74
+            Text: |
+                ="Welcome, " & User().FullName & "!"
+            Width: =526
+            X: =74
+            Y: =68
+            ZIndex: =4
+

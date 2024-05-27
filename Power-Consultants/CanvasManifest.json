@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 40,
+    "BindingErrorCount": 44,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -118,7 +118,7 @@
     "ManualOfflineProfileId": "",
     "Name": "Power Consultants",
     "OriginatingVersion": "1.338",
-    "ParserErrorCount": 45,
+    "ParserErrorCount": 48,
     "ShowStatusBar": false
   },
   "PublishInfo": {
@@ -130,7 +130,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "de-DE"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Zeiterfassung",
@@ -142,6 +142,7 @@
     "ReportScreen",
     "BearbeitenScreen",
     "Einstellungen",
-    "Dokumentation"
+    "Dokumentation",
+    "Dashboard"
   ]
 }
