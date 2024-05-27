@@ -2,7 +2,7 @@ BearbeitenScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Button:
+    ButtonCanvas3_3 As Schaltfläche:
         BasePaletteColor: =
         DisplayMode: |-
             =If(
@@ -246,7 +246,7 @@ BearbeitenScreen As screen:
         Y: =522
         ZIndex: =11
 
-    Header1_3 As Header:
+    Header1_3 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -267,7 +267,26 @@ BearbeitenScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        OnSelect: =Navigate(ReportScreen)
+        OnSelect: |
+            =Reset(ProjektCombo_BearbeitenProjekt);
+            Reset(AufgabeCombo_BearbeitenAufgabe);
+            Reset(Bearbeitungsdauer_Stunde);
+            Reset(Bearbeitungsdauer_Minute);
+            Reset(Bearbeitungsdauer_Sekunde);
+            Reset(StartzeitBearbeiten_Stunden);
+            Reset(StartzeitBearbeiten_Minuten);
+            Reset(StartzeitBearbeiten_Tag);
+            Reset(StartzeitBearbeiten_Monat);
+            Reset(StartzeitBearbeiten_Jahr);
+            Reset(EndzeitBearbeiten_Stunden);
+            Reset(EndzeitBearbeiten_Minuten);
+            Reset(EndzeitBearbeiten_Tag);
+            Reset(EndzeitBearbeiten_Monat);
+            Reset(EndzeitBearbeiten_Jahr);
+            Reset(Bearbeitungsdauer_Stunde);
+            Reset(Bearbeitungsdauer_Minute);
+            Reset(Bearbeitungsdauer_Sekunde);
+            Navigate(ReportScreen)
         X: =12
         Y: =98
         ZIndex: =13

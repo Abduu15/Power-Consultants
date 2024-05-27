@@ -11,7 +11,7 @@ Dokumentation As screen:
         Y: =101
         ZIndex: =1
 
-    Header1_5 As Header:
+    Header1_5 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
