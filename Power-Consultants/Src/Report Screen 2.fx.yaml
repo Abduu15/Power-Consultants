@@ -199,8 +199,8 @@
         Text: ="Projekt"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =984
-        Y: =216
+        X: =972
+        Y: =54
         ZIndex: =3
 
     TextCanvas4_6 As Text:
@@ -211,8 +211,8 @@
         Text: ="Projektaufgabe"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =984
-        Y: =280
+        X: =972
+        Y: =123
         ZIndex: =4
 
     ProjektCombo_Bearbeiten As Combobox.pcfdataset:
@@ -223,8 +223,8 @@
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
         Width: =343
-        X: =984
-        Y: =248
+        X: =972
+        Y: =86
         ZIndex: =5
 
     AufgabeCombo_Bearbeiten As Combobox.pcfdataset:
@@ -240,8 +240,8 @@
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
         Width: =343
-        X: =984
-        Y: =307
+        X: =972
+        Y: =153
         ZIndex: =6
 
     TextCanvas4_7 As Text:
@@ -252,8 +252,8 @@
         Text: ="Startzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =984
-        Y: =355
+        X: =972
+        Y: =193
         ZIndex: =7
 
     TextCanvas4_8 As Text:
@@ -264,8 +264,8 @@
         Text: ="Endzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =984
-        Y: =411
+        X: =972
+        Y: =258
         ZIndex: =8
 
     TextCanvas4_9 As Text:
@@ -276,8 +276,8 @@
         Text: ="Bearbeitungsdauer"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =343
-        X: =984
-        Y: =485
+        X: =972
+        Y: =323
         ZIndex: =11
 
     StartzeitBearbeiten_Datum As text:
@@ -297,8 +297,8 @@
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =13
         Width: =163
-        X: =984
-        Y: =382
+        X: =972
+        Y: =220
         ZIndex: =31
 
     EndzeitBearbeiten_Datum As text:
@@ -318,8 +318,8 @@
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =13
         Width: =163
-        X: =984
-        Y: =436
+        X: =972
+        Y: =286
         ZIndex: =32
 
     Bearbeitungsdauer_Bearbeiten_Stunden As text:
@@ -339,7 +339,7 @@
         HoverFill: =App.Theme.Colors.Lighter70
         Size: =10
         Width: =163
-        X: =984
-        Y: =515
+        X: =972
+        Y: =353
         ZIndex: =37
 

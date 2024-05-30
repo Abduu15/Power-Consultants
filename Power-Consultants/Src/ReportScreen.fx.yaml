@@ -11,7 +11,7 @@ ReportScreen As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
         Width: =1235
-        X: =102
+        X: =81
         Y: =128
         ZIndex: =1
 
@@ -61,7 +61,7 @@ ReportScreen As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Startzeit
-            X: =590
+            X: =571
             Y: =24
             ZIndex: =4
 
@@ -73,7 +73,7 @@ ReportScreen As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Endzeit
-            X: =763
+            X: =742
             Y: =24
             ZIndex: =5
 
@@ -85,7 +85,7 @@ ReportScreen As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Bearbeitungsdauer
-            X: =919
+            X: =961
             Y: =24
             ZIndex: =6
 
@@ -94,10 +94,10 @@ ReportScreen As screen:
             Color: =App.Theme.Colors.Darker30
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =40
+            Height: =30
             Icon: =Icon.Edit
             OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate(BearbeitenScreen)
-            Width: =40
+            Width: =30
             X: =1092
             Y: =24
             ZIndex: =7
@@ -107,12 +107,12 @@ ReportScreen As screen:
             Color: =App.Theme.Colors.Darker30
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =40
+            Height: =30
             Icon: =Icon.Trash
             OnSelect: |-
                 =Remove('Yaveon Projecttasks', ThisItem);
                 Notify("Datensatz erfolgreich gelöscht", NotificationType.Success, 1000)
-            Width: =40
+            Width: =30
             X: =1165
             Y: =24
             ZIndex: =8
@@ -146,62 +146,62 @@ ReportScreen As screen:
 
     TextCanvas4_10 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
         Text: ="Projekt"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
-        X: =126
+        X: =105
         Y: =96
         ZIndex: =5
 
     TextCanvas4_11 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
         Text: ="Projektaufgabe"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
-        X: =394
+        X: =373
         Y: =96
         ZIndex: =6
 
     TextCanvas4_12 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
         Text: ="Startzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
-        X: =700
+        X: =679
         Y: =96
         ZIndex: =7
 
     TextCanvas4_13 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
         Text: ="Endzeit"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
-        X: =874
+        X: =853
         Y: =96
         ZIndex: =8
 
     TextCanvas4_14 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: |
             =20
         Text: ="Bearbeitungsdauer"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =199
-        X: =1027
+        X: =1006
         Y: =96
         ZIndex: =9
 
@@ -209,7 +209,9 @@ ReportScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
+        Height: =51
         OnSelect: =Navigate(Zeiterfassung)
+        Width: =57
         X: =12
         Y: =102
         ZIndex: =10
