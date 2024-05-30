@@ -297,7 +297,7 @@ BearbeitenScreen As screen:
         Text: ="Vorheriges Projekt"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =391
-        X: =37
+        X: =51
         Y: =165
         ZIndex: =14
 
@@ -309,7 +309,7 @@ BearbeitenScreen As screen:
         Text: ="Vorherige Projektaufgabe"
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =481
-        X: =37
+        X: =51
         Y: =320
         ZIndex: =15
 
