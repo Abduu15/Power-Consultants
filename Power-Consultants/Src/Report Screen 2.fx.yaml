@@ -172,7 +172,7 @@
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
-        Height: =54
+        Height: =37
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks', 
@@ -187,13 +187,13 @@
             )
         Text: ="Speichern"
         Width: =228
-        X: =1030
-        Y: =591
+        X: =973
+        Y: =412
         ZIndex: =2
 
     TextCanvas4_5 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
         Text: ="Projekt"
@@ -205,7 +205,7 @@
 
     TextCanvas4_6 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
         Text: ="Projektaufgabe"
@@ -230,6 +230,7 @@
     AufgabeCombo_Bearbeiten As Combobox.pcfdataset:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =30
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
@@ -246,7 +247,7 @@
 
     TextCanvas4_7 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
         Text: ="Startzeit"
@@ -258,7 +259,7 @@
 
     TextCanvas4_8 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
         Text: ="Endzeit"
@@ -270,7 +271,7 @@
 
     TextCanvas4_9 As Text:
         DisplayMode: =DisplayMode.Edit
-        FontColor: =
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
         Text: ="Bearbeitungsdauer"
@@ -330,6 +331,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
         Height: =29
