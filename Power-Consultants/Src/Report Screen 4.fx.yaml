@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    Table2 As Tabelle.pcfdataset:
+    Table2 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =621
         Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
@@ -59,16 +59,19 @@
             ZIndex: =6
 
     TextCanvas8 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =30
         Text: ="Letzten " & CountRows(FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)) & " Einträge"
         Width: =132
-        X: =90
-        Y: =666
+        X: =50
+        Y: =638
         ZIndex: =2
 
-    Header1_1 As Kopfzeile:
+    Header1_1 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -93,11 +96,21 @@
         Y: =86
         ZIndex: =4
 
-    ButtonCanvas3 As Schaltfläche:
+    ButtonCanvas3 As Button:
+        Align: =""
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         FontColor: =
         Height: =54
+        HoverBorderColor: =""
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
@@ -110,57 +123,99 @@
                     Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
                 }
             )
+        PressedBorderColor: =""
         Text: ="Speichern"
+        VerticalAlign: =""
         Width: =228
         X: =1090
         Y: =440
         ZIndex: =10
 
-    TextInput_Projekt As Texteingabe:
+    "TextInput_Projekt As 'Text input'":
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
+        HoverBorderColor: =""
+        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =185
         ZIndex: =11
 
-    TextInput_Projektaufgabe As Texteingabe:
+    "TextInput_Projektaufgabe As 'Text input'":
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
+        HoverBorderColor: =""
+        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =236
         ZIndex: =12
 
-    TextInput_Startzeit As Texteingabe:
+    "TextInput_Startzeit As 'Text input'":
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
+        HoverBorderColor: =""
+        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =284
         ZIndex: =13
 
-    TextInput_Endzeit As Texteingabe:
+    "TextInput_Endzeit As 'Text input'":
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
+        HoverBorderColor: =""
+        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =332
         ZIndex: =14
 
-    TextInput_Bearbeitungsdauer As Texteingabe:
+    "TextInput_Bearbeitungsdauer As 'Text input'":
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
+        HoverBorderColor: =""
+        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =381

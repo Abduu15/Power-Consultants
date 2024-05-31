@@ -28,7 +28,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Titel
+            Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 173
             X: =103
@@ -168,11 +168,21 @@
             Y: =15
             ZIndex: =10
 
-    ButtonCanvas3_1 As Schaltfläche:
+    ButtonCanvas3_1 As Button:
+        Align: =""
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         FontColor: =
         Height: =37
+        HoverBorderColor: =""
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks', 
@@ -185,14 +195,19 @@
                     Bearbeitungsdauer: Value(Bearbeitungsdauer_Bearbeiten_Stunden.Text)
                 }
             )
+        PressedBorderColor: =""
         Text: ="Speichern"
+        VerticalAlign: =""
         Width: =228
         X: =973
         Y: =412
         ZIndex: =2
 
     TextCanvas4_5 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
@@ -204,7 +219,10 @@
         ZIndex: =3
 
     TextCanvas4_6 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
@@ -216,22 +234,35 @@
         ZIndex: =4
 
     ProjektCombo_Bearbeiten As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
         DefaultSelectedItems: =
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         Height: =30
+        HoverBorderColor: =""
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        PressedBorderColor: =""
         Width: =343
         X: =972
         Y: =86
         ZIndex: =5
 
     AufgabeCombo_Bearbeiten As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         FontColor: =
         Height: =30
+        HoverBorderColor: =""
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
@@ -240,13 +271,17 @@
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
+        PressedBorderColor: =""
         Width: =343
         X: =972
         Y: =153
         ZIndex: =6
 
     TextCanvas4_7 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
@@ -258,7 +293,10 @@
         ZIndex: =7
 
     TextCanvas4_8 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16
@@ -270,7 +308,10 @@
         ZIndex: =8
 
     TextCanvas4_9 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =30
         Size: =16

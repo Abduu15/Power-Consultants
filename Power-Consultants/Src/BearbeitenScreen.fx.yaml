@@ -2,8 +2,12 @@ BearbeitenScreen As screen:
     Fill: =RGBA(0, 0, 0, 0)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Schaltfläche:
+    ButtonCanvas3_3 As Button:
+        Align: =""
         BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BorderColor: =""
+        BorderStyle: =""
+        DisabledBorderColor: =""
         DisplayMode: |-
             =If(
                 And(
@@ -26,9 +30,15 @@ BearbeitenScreen As screen:
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
+        FocusedBorderColor: =""
         FontColor: =RGBA(15, 84, 140, 1)
         FontSize: =34
         Height: =76
+        HoverBorderColor: =""
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: |
             =Patch(
                 'Yaveon Projecttasks',
@@ -87,14 +97,19 @@ BearbeitenScreen As screen:
             Reset(Bearbeitungsdauer_Minute);
             Reset(Bearbeitungsdauer_Sekunde);
             Navigate(ReportScreen)
+        PressedBorderColor: =""
         Text: ="Änderungen speichern"
+        VerticalAlign: =""
         Width: =396
         X: =490
         Y: =608
         ZIndex: =1
 
     TextCanvas4_20 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =57
         Size: =30
@@ -106,7 +121,10 @@ BearbeitenScreen As screen:
         ZIndex: =2
 
     TextCanvas4_21 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =56
         Size: =30
@@ -118,24 +136,37 @@ BearbeitenScreen As screen:
         ZIndex: =3
 
     ProjektCombo_BearbeitenProjekt As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
         DefaultSelectedItems: =
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
+        HoverBorderColor: =""
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        PressedBorderColor: =""
         Width: =409
         X: =479
         Y: =234
         ZIndex: =4
 
     AufgabeCombo_BearbeitenAufgabe As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderColor: =""
+        BorderStyle: =""
         DefaultSelectedItems: =
+        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
+        HoverBorderColor: =""
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
@@ -144,13 +175,17 @@ BearbeitenScreen As screen:
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
+        PressedBorderColor: =""
         Width: =409
         X: =484
         Y: =383
         ZIndex: =5
 
     TextCanvas4_22 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =57
         Size: =30
@@ -162,7 +197,10 @@ BearbeitenScreen As screen:
         ZIndex: =6
 
     TextCanvas4_23 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =56
         Size: =30
@@ -174,7 +212,10 @@ BearbeitenScreen As screen:
         ZIndex: =7
 
     TextCanvas4_24 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =58
         Size: =30
@@ -244,7 +285,7 @@ BearbeitenScreen As screen:
         Y: =508
         ZIndex: =11
 
-    Header1_3 As Kopfzeile:
+    Header1_3 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -290,7 +331,10 @@ BearbeitenScreen As screen:
         ZIndex: =13
 
     TextCanvas4_25 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =57
         Size: =30
@@ -302,7 +346,10 @@ BearbeitenScreen As screen:
         ZIndex: =14
 
     TextCanvas4_26 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
         Height: =56
         Size: =30
@@ -314,7 +361,10 @@ BearbeitenScreen As screen:
         ZIndex: =15
 
     TextCanvas7 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =19
@@ -330,7 +380,10 @@ BearbeitenScreen As screen:
         ZIndex: =16
 
     TextCanvas7_1 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =19
@@ -462,7 +515,10 @@ BearbeitenScreen As screen:
         ZIndex: =21
 
     TextCanvas9 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =30
@@ -474,7 +530,10 @@ BearbeitenScreen As screen:
         ZIndex: =22
 
     TextCanvas10 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =69
         Size: =30
@@ -485,7 +544,10 @@ BearbeitenScreen As screen:
         ZIndex: =23
 
     TextCanvas10_1 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =69
         Size: =30
@@ -641,7 +703,10 @@ BearbeitenScreen As screen:
         ZIndex: =29
 
     TextCanvas9_1 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =30
@@ -653,7 +718,10 @@ BearbeitenScreen As screen:
         ZIndex: =30
 
     TextCanvas10_2 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =69
         Size: =30
@@ -664,7 +732,10 @@ BearbeitenScreen As screen:
         ZIndex: =31
 
     TextCanvas10_3 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =69
         Size: =30
@@ -733,7 +804,10 @@ BearbeitenScreen As screen:
         ZIndex: =34
 
     TextCanvas9_2 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =30
@@ -745,7 +819,10 @@ BearbeitenScreen As screen:
         ZIndex: =35
 
     TextCanvas9_3 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =67
         Size: =30

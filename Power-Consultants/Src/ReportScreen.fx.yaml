@@ -22,7 +22,7 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Titel
+            Text: =ThisItem.Title
             X: =16
             Y: =24
             ZIndex: =1
@@ -117,7 +117,7 @@ ReportScreen As screen:
             Y: =24
             ZIndex: =8
 
-    Header1_2 As Kopfzeile:
+    Header1_2 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -134,7 +134,10 @@ ReportScreen As screen:
         ZIndex: =3
 
     TextCanvas8_1 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =
         Height: =25
         Size: =20
@@ -145,7 +148,10 @@ ReportScreen As screen:
         ZIndex: =4
 
     TextCanvas4_10 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
@@ -157,7 +163,10 @@ ReportScreen As screen:
         ZIndex: =5
 
     TextCanvas4_11 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
@@ -169,7 +178,10 @@ ReportScreen As screen:
         ZIndex: =6
 
     TextCanvas4_12 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
@@ -181,7 +193,10 @@ ReportScreen As screen:
         ZIndex: =7
 
     TextCanvas4_13 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: =20
@@ -193,7 +208,10 @@ ReportScreen As screen:
         ZIndex: =8
 
     TextCanvas4_14 As Text:
+        BorderColor: =""
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
+        Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =32
         Size: |
