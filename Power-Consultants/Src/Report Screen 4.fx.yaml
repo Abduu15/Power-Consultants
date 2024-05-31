@@ -112,17 +112,13 @@
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |-
-            =Patch(
-                'Yaveon Projecttasks',
-                Defaults('Yaveon Projecttasks'),
-                {
+            = {
                     Projekt: TextInput_Projekt.Text,
                     Projektaufgabe: TextInput_Projektaufgabe.Text,
                     Startzeit: TimeValue(TextInput_Startzeit.Value),
                     Endzeit: TimeValue(TextInput_Endzeit.Value),
                     Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
                 }
-            )
         PressedBorderColor: =""
         Text: ="Speichern"
         VerticalAlign: =""
@@ -140,7 +136,7 @@
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FocusedBorderColor: =""
-        FontColor: =RGBA(15, 108, 189, 1)
+        FontColor: =RGBA(9, 33, 98, 1)
         Height: =39
         HoverBorderColor: =""
         PressedBorderColor: =""
