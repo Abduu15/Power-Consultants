@@ -1,9 +1,12 @@
 BearbeitenScreen As screen:
+    BackgroundImage: ='905138318'
     Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Center
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     ButtonCanvas3_3 As Button:
         Align: =""
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
         BorderColor: =""
         BorderStyle: =""
@@ -31,13 +34,13 @@ BearbeitenScreen As screen:
                 DisplayMode.Disabled
             )
         FocusedBorderColor: =""
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(12, 59, 94, 1)
         FontSize: =34
         Height: =76
         HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
-        IconStyle: ="Outline"
+        IconStyle: ='ButtonCanvas.IconStyle'.Filled
         Layout: ="Icon before"
         OnSelect: |
             =Patch(
@@ -296,9 +299,8 @@ BearbeitenScreen As screen:
         UserEmail: =User().Email
         UserImage: =User().Image
         UserName: =User().FullName
-        Width: |
-            =1344
-        X: =12
+        Width: =1364
+        X: =0
         Y: =12
         ZIndex: =12
 
