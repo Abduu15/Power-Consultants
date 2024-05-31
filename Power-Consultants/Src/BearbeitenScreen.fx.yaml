@@ -101,8 +101,8 @@ BearbeitenScreen As screen:
         Text: ="Änderungen speichern"
         VerticalAlign: =""
         Width: =396
-        X: =490
-        Y: =608
+        X: =480
+        Y: =618
         ZIndex: =1
 
     TextCanvas4_20 As Text:
@@ -110,7 +110,7 @@ BearbeitenScreen As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =57
         Size: =30
         Text: ="Projekt ändern"
@@ -125,7 +125,7 @@ BearbeitenScreen As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =56
         Size: =30
         Text: ="Projektaufgabe ändern"
@@ -186,7 +186,7 @@ BearbeitenScreen As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =57
         Size: =30
         Text: ="Startzeit"
@@ -201,7 +201,7 @@ BearbeitenScreen As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =56
         Size: =30
         Text: ="Endzeit"
@@ -216,7 +216,7 @@ BearbeitenScreen As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =58
         Size: =30
         Text: ="Bearbeitungsdauer"
@@ -229,14 +229,14 @@ BearbeitenScreen As screen:
     StartzeitBearbeiten_Stunden As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
                 Text(Hour(gblSelectedEntry.Startzeit), "00"),
                 Blank()
             )
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
@@ -258,7 +258,7 @@ BearbeitenScreen As screen:
     Bearbeitungsdauer_Stunde As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -281,8 +281,8 @@ BearbeitenScreen As screen:
         Size: |
             =13
         Width: =44
-        X: =493
-        Y: =508
+        X: =483
+        Y: =518
         ZIndex: =11
 
     Header1_3 As Header:
@@ -330,36 +330,6 @@ BearbeitenScreen As screen:
         Y: =98
         ZIndex: =13
 
-    TextCanvas4_25 As Text:
-        BorderColor: =""
-        BorderStyle: =""
-        DisplayMode: =DisplayMode.Edit
-        Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
-        Height: =57
-        Size: =30
-        Text: ="Vorheriges Projekt"
-        Weight: ='TextCanvas.Weight'.Semibold
-        Width: =391
-        X: =51
-        Y: =165
-        ZIndex: =14
-
-    TextCanvas4_26 As Text:
-        BorderColor: =""
-        BorderStyle: =""
-        DisplayMode: =DisplayMode.Edit
-        Fill: =
-        FontColor: =RGBA(15, 84, 140, 1)
-        Height: =56
-        Size: =30
-        Text: ="Vorherige Projektaufgabe"
-        Weight: ='TextCanvas.Weight'.Semibold
-        Width: =481
-        X: =51
-        Y: =320
-        ZIndex: =15
-
     TextCanvas7 As Text:
         BorderColor: =""
         BorderStyle: =""
@@ -401,14 +371,14 @@ BearbeitenScreen As screen:
     StartzeitBearbeiten_Minuten As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
                 Text(Minute(gblSelectedEntry.Startzeit), "00"),
                 Blank()
             )
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
@@ -430,14 +400,14 @@ BearbeitenScreen As screen:
     StartzeitBearbeiten_Tag As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
                 Day(gblSelectedEntry.Startzeit),
                 Blank()
             )
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
@@ -459,14 +429,14 @@ BearbeitenScreen As screen:
     StartzeitBearbeiten_Monat As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
                 Text(Month(gblSelectedEntry.Startzeit), "00"),
                 Blank()
             )
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
@@ -495,7 +465,7 @@ BearbeitenScreen As screen:
                 Year(gblSelectedEntry.Startzeit),
                 Blank()
             )
-        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(149, 150, 150, 1)
         FocusedBorderThickness: =4
@@ -560,7 +530,7 @@ BearbeitenScreen As screen:
     EndzeitBearbeiten_Stunden As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -589,7 +559,7 @@ BearbeitenScreen As screen:
     EndzeitBearbeiten_Minuten As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -618,7 +588,7 @@ BearbeitenScreen As screen:
     EndzeitBearbeiten_Tag As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -647,7 +617,7 @@ BearbeitenScreen As screen:
     EndzeitBearbeiten_Monat As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -676,7 +646,7 @@ BearbeitenScreen As screen:
     EndzeitBearbeiten_Jahr As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -748,7 +718,7 @@ BearbeitenScreen As screen:
     Bearbeitungsdauer_Minute As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -770,14 +740,14 @@ BearbeitenScreen As screen:
         Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
-        X: =558
-        Y: =508
+        X: =548
+        Y: =518
         ZIndex: =33
 
     Bearbeitungsdauer_Sekunde As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -799,8 +769,8 @@ BearbeitenScreen As screen:
         Reset: =App.ActiveScreen = BearbeitenScreen
         Size: =13
         Width: =44
-        X: =623
-        Y: =508
+        X: =613
+        Y: =518
         ZIndex: =34
 
     TextCanvas9_2 As Text:
@@ -814,8 +784,8 @@ BearbeitenScreen As screen:
         Text: |-
             =":"
         Width: =21
-        X: =609
-        Y: =504
+        X: =599
+        Y: =514
         ZIndex: =35
 
     TextCanvas9_3 As Text:
@@ -829,7 +799,37 @@ BearbeitenScreen As screen:
         Text: |-
             =":"
         Width: =21
-        X: =544
-        Y: =504
+        X: =534
+        Y: =514
         ZIndex: =36
+
+    TextCanvas4_25 As Text:
+        BorderColor: =""
+        BorderStyle: =""
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(12, 73, 171, 1)
+        Height: =57
+        Size: =30
+        Text: ="Vorheriges Projekt"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =391
+        X: =71
+        Y: =185
+        ZIndex: =37
+
+    TextCanvas4_26 As Text:
+        BorderColor: =""
+        BorderStyle: =""
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(12, 73, 171, 1)
+        Height: =58
+        Size: =30
+        Text: ="Vorherige Projektaufgabe"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =365
+        X: =71
+        Y: =318
+        ZIndex: =38
 
