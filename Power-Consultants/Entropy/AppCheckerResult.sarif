@@ -6578,6 +6578,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.905138318"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.905138318",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "905138318",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.155359133_super"
                 }
               ],

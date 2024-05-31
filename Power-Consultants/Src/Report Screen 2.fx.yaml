@@ -1,4 +1,5 @@
 "'Report Screen 2' As screen":
+    BackgroundImage: =
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 

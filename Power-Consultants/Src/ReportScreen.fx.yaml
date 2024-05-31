@@ -1,5 +1,7 @@
 ReportScreen As screen:
+    BackgroundImage: =
     Fill: =Color.White
+    ImagePosition: =ImagePosition.Center
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     Gallery3 As gallery.galleryVertical:
@@ -162,7 +164,7 @@ ReportScreen As screen:
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
         X: =105
-        Y: =96
+        Y: =113
         ZIndex: =5
 
     TextCanvas4_11 As Text:
@@ -177,7 +179,7 @@ ReportScreen As screen:
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =240
         X: =373
-        Y: =96
+        Y: =113
         ZIndex: =6
 
     TextCanvas4_12 As Text:
@@ -192,7 +194,7 @@ ReportScreen As screen:
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
         X: =679
-        Y: =96
+        Y: =113
         ZIndex: =7
 
     TextCanvas4_13 As Text:
@@ -207,7 +209,7 @@ ReportScreen As screen:
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =126
         X: =853
-        Y: =96
+        Y: =113
         ZIndex: =8
 
     TextCanvas4_14 As Text:
@@ -223,7 +225,7 @@ ReportScreen As screen:
         Weight: ='TextCanvas.Weight'.Semibold
         Width: =199
         X: =1006
-        Y: =96
+        Y: =113
         ZIndex: =9
 
     Arrow2 As arrow.backArrow:

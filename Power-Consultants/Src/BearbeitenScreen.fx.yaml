@@ -1,7 +1,7 @@
 BearbeitenScreen As screen:
-    BackgroundImage: ='905138318'
+    BackgroundImage: =
     Fill: =RGBA(0, 0, 0, 0)
-    ImagePosition: =ImagePosition.Center
+    ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     ButtonCanvas3_3 As Button:
