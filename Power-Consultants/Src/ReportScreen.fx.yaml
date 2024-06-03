@@ -12,6 +12,7 @@ ReportScreen As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
+        Transition: =Transition.Pop
         Width: =1235
         X: =81
         Y: =128

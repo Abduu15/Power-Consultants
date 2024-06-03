@@ -391,7 +391,7 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =25
         Icon: =Icon.Reset
-        OnSelect: =Reset(ProjektCombo);Reset(AufgabeCombo);Reset(TextInput3);Reset(TextInput3_1)
+        OnSelect: =Reset(ProjektCombo);Reset(AufgabeCombo);Reset(TextInput3);Reset(TextInput3_1);Set(ButtonEnabled,false)
         Width: =22
         X: =330
         Y: =130
@@ -594,11 +594,11 @@
         Color: =App.Theme.Colors.Darker30
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =50
+        Height: =40
         Icon: =Icon.Settings
         OnSelect: =Navigate(Einstellungen)
-        Width: =50
-        X: =921
-        Y: =130
+        Width: =40
+        X: =953
+        Y: =115
         ZIndex: =11
 
