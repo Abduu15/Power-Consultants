@@ -20,7 +20,7 @@ Dashboard As screen:
         Y: =58
         ZIndex: =1
 
-        TextInputCanvas3_1 As Texteingabe:
+        "TextInputCanvas3_1 As 'Text input'":
             Align: |
                 ="Total working hours: " & User().Bearbeitungsdauer & " hours"
             Appearance: ="FilledDarker"
@@ -42,7 +42,7 @@ Dashboard As screen:
             Y: =210
             ZIndex: =2
 
-        ButtonCanvas6 As Schaltfläche:
+        ButtonCanvas6 As Button:
             Align: =""
             BasePaletteColor: =
             BorderColor: =""
@@ -70,7 +70,7 @@ Dashboard As screen:
             Y: =210
             ZIndex: =3
 
-        ButtonCanvas6_1 As Schaltfläche:
+        ButtonCanvas6_1 As Button:
             Align: =""
             BasePaletteColor: =
             BorderColor: =""

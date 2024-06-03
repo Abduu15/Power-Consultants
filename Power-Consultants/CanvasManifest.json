@@ -131,7 +131,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "de-DE"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Zeiterfassung",
@@ -144,6 +144,7 @@
     "BearbeitenScreen",
     "Einstellungen",
     "Dokumentation",
-    "Dashboard"
+    "Dashboard",
+    "PowerBIReport"
   ]
 }
