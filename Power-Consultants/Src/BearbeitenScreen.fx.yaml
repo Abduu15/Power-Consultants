@@ -536,7 +536,7 @@ BearbeitenScreen As screen:
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
-                Text(Hour(gblSelectedEntry.Startzeit), "00"),
+                Text(Hour(gblSelectedEntry.Endzeit), "00"),
                 Blank()
             )
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
@@ -565,7 +565,7 @@ BearbeitenScreen As screen:
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
-                Text(Minute(gblSelectedEntry.Startzeit), "00"),
+                Text(Minute(gblSelectedEntry.Endzeit), "00"),
                 Blank()
             )
         DisabledBorderColor: =RGBA(168, 168, 168, 1)
@@ -834,4 +834,32 @@ BearbeitenScreen As screen:
         X: =71
         Y: =318
         ZIndex: =38
+
+    "DatePickerCanvas2 As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =33
+        SelectedDate: |
+            =If(
+                !IsBlank(gblSelectedEntry),
+                DateValue(gblSelectedEntry.Startzeit),
+                Blank()
+            )
+        Width: =183
+        X: =1124
+        Y: =313
+        ZIndex: =39
+
+    "DatePickerCanvas2_1 As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =33
+        SelectedDate: |
+            =If(
+                !IsBlank(gblSelectedEntry),
+                DateValue(gblSelectedEntry.Endzeit),
+                Blank()
+            )
+        Width: =183
+        X: =1124
+        Y: =465
+        ZIndex: =40
 
