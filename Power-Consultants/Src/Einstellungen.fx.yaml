@@ -8,7 +8,7 @@ Einstellungen As screen:
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Navigate(Zeiterfassung)
         X: =12
-        Y: =99
+        Y: =102
         ZIndex: =1
 
     Header1_4 As Kopfzeile:

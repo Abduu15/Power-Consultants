@@ -233,9 +233,7 @@ ReportScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
-        Height: =51
         OnSelect: =Navigate(Zeiterfassung)
-        Width: =57
         X: =12
         Y: =102
         ZIndex: =10

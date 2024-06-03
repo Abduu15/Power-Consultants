@@ -331,7 +331,7 @@ BearbeitenScreen As screen:
             Reset(DatePickerCanvas2_1);
             Navigate(ReportScreen)
         X: =12
-        Y: =98
+        Y: =102
         ZIndex: =13
 
     TextCanvas7 As Text:
