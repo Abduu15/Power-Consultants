@@ -39,7 +39,7 @@
       "MetaDataIDKey": "",
       "Name": "Arrow2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2683,7 +2683,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2818,7 +2818,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2953,7 +2953,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3088,7 +3088,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3223,7 +3223,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_14",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

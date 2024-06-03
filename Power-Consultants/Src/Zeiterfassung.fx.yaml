@@ -138,6 +138,12 @@
                     HoverBorderColor: =""
                     InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
                     Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+                    OnChange: |
+                        =If(
+                            !IsBlank(ProjektCombo.Selected) && !IsBlank(AufgabeCombo.Selected),
+                            Set(ButtonEnabled, true),
+                            Set(ButtonEnabled, false)
+                        )
                     PressedBorderColor: =""
                     Width: =320
                     X: =30
@@ -161,6 +167,12 @@
                             "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
                             "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                             "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+                        )
+                    OnChange: |
+                        =If(
+                            !IsBlank(ProjektCombo.Selected) && !IsBlank(AufgabeCombo.Selected),
+                            Set(ButtonEnabled, true),
+                            Set(ButtonEnabled, false)
                         )
                     PressedBorderColor: =""
                     Width: =320
@@ -210,6 +222,7 @@
                     FontColor: =RGBA(53, 61, 63, 1)
                     Height: =32
                     HoverBorderColor: =""
+                    OnChange: =
                     PressedBorderColor: =""
                     Value: =varCurrentTime
                     Width: =320
@@ -244,6 +257,8 @@
                     FontColor: =RGBA(53, 61, 63, 1)
                     Height: =32
                     HoverBorderColor: =""
+                    OnChange: |
+                        =
                     PressedBorderColor: =""
                     Value: =varStartTime
                     Width: =320
@@ -438,7 +453,12 @@
         BorderColor: =""
         BorderStyle: =""
         DisabledBorderColor: =""
-        DisplayMode: =varDP
+        DisplayMode: |
+            =If(
+                ButtonEnabled,
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
         FocusedBorderColor: =""
         FontColor: =
         Height: =32
@@ -448,7 +468,7 @@
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |-
-            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDPStop, DisplayMode.Edit);Set(varDP, DisplayMode.Disabled);
+            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDPStop, DisplayMode.Edit);Set(ButtonEnabled, false)
         PressedBorderColor: =""
         Text: ="Start"
         VerticalAlign: =""
@@ -509,7 +529,8 @@
                 DisplayMode.Edit
             );
             UpdateContext({varStartTime: "00:00 00.00.0000"});
-            UpdateContext({varCurrentTime: "00:00 00.00.0000"})
+            UpdateContext({varCurrentTime: "00:00 00.00.0000"});
+            Set(varDPBuchen,DisplayMode.Disabled)
         PressedBorderColor: =""
         Text: ="Buchen"
         VerticalAlign: =""

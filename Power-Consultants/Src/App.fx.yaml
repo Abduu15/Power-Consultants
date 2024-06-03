@@ -2,7 +2,7 @@ App As appinfo:
     BackEnabled: =true
     Formulas: |-
         =tabListItems = Table({ name: "Zeiterfassung", Screen: Zeiterfassung},{ name: "Report", Screen: Report});
-    OnStart: =Set(varDPStop, DisplayMode.Disabled)
+    OnStart: =Set(varDPStop, DisplayMode.Disabled);Set(varDPBuchen,DisplayMode.Disabled)
     SizeBreakpoints: =[600. 900. 1200]
     Theme: =Yaveon
 
