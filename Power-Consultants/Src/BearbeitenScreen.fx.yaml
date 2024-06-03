@@ -4,7 +4,7 @@ BearbeitenScreen As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Button:
+    ButtonCanvas3_3 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
@@ -288,7 +288,7 @@ BearbeitenScreen As screen:
         Y: =518
         ZIndex: =11
 
-    Header1_3 As Header:
+    Header1_3 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -462,7 +462,7 @@ BearbeitenScreen As screen:
     StartzeitBearbeiten_Jahr As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(71, 158, 245, 1)
         Default: |-
             =If(
                 !IsBlank(gblSelectedEntry),
@@ -837,7 +837,7 @@ BearbeitenScreen As screen:
         Y: =318
         ZIndex: =38
 
-    "DatePickerCanvas2 As 'Date picker'":
+    DatePickerCanvas2 As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: |
@@ -851,7 +851,7 @@ BearbeitenScreen As screen:
         Y: =313
         ZIndex: =39
 
-    "DatePickerCanvas2_1 As 'Date picker'":
+    DatePickerCanvas2_1 As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: |
