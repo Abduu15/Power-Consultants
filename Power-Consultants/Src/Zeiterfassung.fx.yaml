@@ -468,7 +468,7 @@
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |-
-            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDPStop, DisplayMode.Edit);Set(ButtonEnabled, false)
+            =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDPStop, DisplayMode.Edit);Set(ButtonEnabled, false);Set(varDP, DisplayMode.Disabled)
         PressedBorderColor: =""
         Text: ="Start"
         VerticalAlign: =""
@@ -530,7 +530,8 @@
             );
             UpdateContext({varStartTime: "00:00 00.00.0000"});
             UpdateContext({varCurrentTime: "00:00 00.00.0000"});
-            Set(varDPBuchen,DisplayMode.Disabled)
+            Set(varDPBuchen,DisplayMode.Disabled);
+            Set(varDP, DisplayMode.Edit)
         PressedBorderColor: =""
         Text: ="Buchen"
         VerticalAlign: =""
@@ -542,7 +543,7 @@
     ButtonCanvas4 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(222, 160, 16, 1)
+        BasePaletteColor: =RGBA(224, 28, 7, 1)
         BorderColor: =""
         BorderStyle: =""
         DisabledBorderColor: =""
@@ -555,10 +556,8 @@
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
-        OnSelect: |-
+        OnSelect: |
             =Navigate(ReportScreen, ScreenTransition.None);
-            Set(varDPStop, DisplayMode.Edit);
-            Set(ButtonEnabled, false)
         PressedBorderColor: =""
         Text: ="Reporting"
         VerticalAlign: =""
@@ -570,7 +569,7 @@
     ButtonCanvas4_1 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =RGBA(222, 160, 16, 1)
+        BasePaletteColor: =RGBA(224, 28, 7, 1)
         BorderColor: =""
         BorderStyle: =""
         DisabledBorderColor: =""
@@ -583,10 +582,8 @@
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
-        OnSelect: |-
+        OnSelect: |
             =Navigate(BearbeitenScreen, ScreenTransition.None);
-            Set(varDPStop, DisplayMode.Edit);
-            Set(ButtonEnabled, false)
         PressedBorderColor: =""
         Text: ="Bearbeiten"
         VerticalAlign: =""
