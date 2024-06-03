@@ -377,7 +377,7 @@
                     FontUnderline: =false
                     Height: =40
                     Size: =16
-                    Text: ="Heutige erledigte Aufgaben"
+                    Text: =" Heutige erledigte Aufgaben"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =334
                     X: =0
