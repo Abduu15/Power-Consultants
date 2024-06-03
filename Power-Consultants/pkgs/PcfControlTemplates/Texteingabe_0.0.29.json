@@ -446,40 +446,40 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Text input",
+  "Name": "Texteingabe",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "Start",
-      "Description": "Display text using the selected text alignment.",
+      "Description": "Text mit der ausgewählten Textausrichtung anzeigen.",
       "DescriptionResourceString": "TextInputCanvas_Align_Desc",
-      "DisplayName": "Align",
+      "DisplayName": "Ausrichten",
       "DisplayNameResourceString": "TextInputCanvas_Align",
       "EnumValues": [
         {
-          "Description": "Start",
-          "DisplayName": "Start",
+          "Description": "Beginn",
+          "DisplayName": "Beginn",
           "IsDefaultValue": true,
           "Name": "Start",
           "Value": "Start"
         },
         {
-          "Description": "End",
-          "DisplayName": "End",
+          "Description": "Ende",
+          "DisplayName": "Ende",
           "IsDefaultValue": false,
           "Name": "End",
           "Value": "End"
         },
         {
-          "Description": "Center",
-          "DisplayName": "Center",
+          "Description": "Zentrieren",
+          "DisplayName": "Zentrieren",
           "IsDefaultValue": false,
           "Name": "Center",
           "Value": "Center"
         },
         {
-          "Description": "Justify",
-          "DisplayName": "Justify",
+          "Description": "Blocksatz",
+          "DisplayName": "Blocksatz",
           "IsDefaultValue": false,
           "Name": "Justify",
           "Value": "Justify"
@@ -508,9 +508,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Label for screen readers.",
+      "Description": "Beschriftung für Bildschirmausgabe.",
       "DescriptionResourceString": "TextInputCanvas_AccessibleLabel_Desc",
-      "DisplayName": "Accessible label",
+      "DisplayName": "Beschriftung für Bedienungshilfen",
       "DisplayNameResourceString": "TextInputCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
@@ -536,9 +536,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).",
+      "Description": "Bei „True“ wird die Benutzereingabe nach einer halbe Sekunde Verzögerung registriert. Dies ist nützlich für verzögerungsintensive Vorgänge, bis der Benutzer die Texteingabe abschließt (z.\u00A0B. zum Filtern, wenn Eingaben in anderen Formeln verwendet werden).",
       "DescriptionResourceString": "TextInputCanvas_DelayOutput_Desc",
-      "DisplayName": "Delay output",
+      "DisplayName": "Ausgabe verzögern",
       "DisplayNameResourceString": "TextInputCanvas_DelayOutput",
       "EnumValues": [],
       "HelperUI": "",
@@ -564,9 +564,9 @@
     {
       "Category": "data",
       "DefaultValue": "-1",
-      "Description": "The maximum content length of the Text input.",
+      "Description": "Die maximale Länge des Inhalts der Texteingabe.",
       "DescriptionResourceString": "TextInputCanvas_MaxLength_Desc",
-      "DisplayName": "Maximum length",
+      "DisplayName": "Maximale Länge",
       "DisplayNameResourceString": "TextInputCanvas_MaxLength",
       "EnumValues": [],
       "HelperUI": "",
@@ -592,21 +592,21 @@
     {
       "Category": "data",
       "DefaultValue": "SingleLine",
-      "Description": "Type of text input: single line or multiline.",
+      "Description": "Typ der Texteingabe: einzeilig oder mehrzeilig.",
       "DescriptionResourceString": "TextInputCanvas_Mode_Desc",
-      "DisplayName": "Mode",
+      "DisplayName": "Modus",
       "DisplayNameResourceString": "TextInputCanvas_Mode",
       "EnumValues": [
         {
-          "Description": "Single line",
-          "DisplayName": "Single line",
+          "Description": "Einzeilig",
+          "DisplayName": "Einzeilig",
           "IsDefaultValue": true,
           "Name": "SingleLine",
           "Value": "SingleLine"
         },
         {
-          "Description": "Multiline",
-          "DisplayName": "Multiline",
+          "Description": "Mehrzeilig",
+          "DisplayName": "Mehrzeilig",
           "IsDefaultValue": false,
           "Name": "Multiline",
           "Value": "Multiline"
@@ -635,9 +635,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The placeholder text of the text input.",
+      "Description": "Der Platzhaltertext der Texteingabe.",
       "DescriptionResourceString": "TextInputCanvas_Placeholder_Desc",
-      "DisplayName": "Placeholder text",
+      "DisplayName": "Platzhaltertext",
       "DisplayNameResourceString": "TextInputCanvas_Placeholder",
       "EnumValues": [],
       "HelperUI": null,
@@ -663,9 +663,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Whether this control must contain text.",
+      "Description": "Gibt an, ob dieses Steuerelement Text enthalten muss.",
       "DescriptionResourceString": "TextInputCanvas_Required_Desc",
-      "DisplayName": "Required",
+      "DisplayName": "Erforderlich",
       "DisplayNameResourceString": "TextInputCanvas_Required",
       "EnumValues": [],
       "HelperUI": "",
@@ -691,21 +691,21 @@
     {
       "Category": "data",
       "DefaultValue": "Text",
-      "Description": "Content type of text input: plain text, password, or search.",
+      "Description": "Inhaltstyp der Texteingabe: Klartext, Kennwort oder Suche.",
       "DescriptionResourceString": "TextInputCanvas_Type_Desc",
-      "DisplayName": "Type",
+      "DisplayName": "Typ",
       "DisplayNameResourceString": "TextInputCanvas_Type",
       "EnumValues": [
         {
-          "Description": "Password",
-          "DisplayName": "Password",
+          "Description": "Kennwort",
+          "DisplayName": "Kennwort",
           "IsDefaultValue": false,
           "Name": "Password",
           "Value": "Password"
         },
         {
-          "Description": "Search",
-          "DisplayName": "Search",
+          "Description": "Suche",
+          "DisplayName": "Suche",
           "IsDefaultValue": false,
           "Name": "Search",
           "Value": "Search"
@@ -741,21 +741,21 @@
     {
       "Category": "data",
       "DefaultValue": "None",
-      "Description": "The current status of the Text input, with regard to validation.",
+      "Description": "Der aktuelle Status der Texteingabe in Bezug auf die Überprüfung.",
       "DescriptionResourceString": "TextInputCanvas_ValidationState_Desc",
-      "DisplayName": "Validation state",
+      "DisplayName": "Überprüfungsstatus",
       "DisplayNameResourceString": "TextInputCanvas_ValidationState",
       "EnumValues": [
         {
-          "Description": "Error",
-          "DisplayName": "Error",
+          "Description": "Fehler",
+          "DisplayName": "Fehler",
           "IsDefaultValue": false,
           "Name": "Error",
           "Value": "Error"
         },
         {
-          "Description": "None",
-          "DisplayName": "None",
+          "Description": "Keine",
+          "DisplayName": "Keine",
           "IsDefaultValue": true,
           "Name": "None",
           "Value": "None"
@@ -784,9 +784,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Text that appears on a control or that the user types into a control.",
+      "Description": "Text, der in einem Steuerelement erscheint oder den der Benutzer in ein Steuerelement eingibt.",
       "DescriptionResourceString": "TextInputCanvas_Value_Desc",
-      "DisplayName": "Value",
+      "DisplayName": "Wert",
       "DisplayNameResourceString": "TextInputCanvas_Value",
       "EnumValues": [],
       "HelperUI": "",
@@ -812,9 +812,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Choose a color palette that's different from the theme.",
+      "Description": "Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Color palette",
+      "DisplayName": "Farbpalette",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -840,9 +840,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The name of the family of fonts in which text appears",
+      "Description": "Der Name der Schriftfamilie, in der Text angezeigt wird",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Font",
+      "DisplayName": "Schriftart",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -868,9 +868,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Set the font size for displayed text.",
+      "Description": "Legen Sie die Schriftgröße für den angezeigten Text fest.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Font size",
+      "DisplayName": "Schriftgröße",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -896,9 +896,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The color of text in the control",
+      "Description": "Die Farbe des Texts im Steuerelement",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Font color",
+      "DisplayName": "Schriftfarbe",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -924,9 +924,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The weight of the text in a control",
+      "Description": "Die Gewichtung des Texts in einem Steuerelement",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Font weight",
+      "DisplayName": "Schriftstärke",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -952,9 +952,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Italic",
+      "Description": "Kursiv",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Italic",
+      "DisplayName": "Kursiv",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -980,9 +980,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Underline",
+      "Description": "Unterstrichen",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Underline",
+      "DisplayName": "Unterstrichen",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -1008,9 +1008,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Strikethrough",
+      "Description": "Durchgestrichen",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Strikethrough",
+      "DisplayName": "Durchgestrichen",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -1036,9 +1036,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Background color of the control.",
+      "Description": "Hintergrundfarbe des Steuerelements.",
       "DescriptionResourceString": "Fill_Description",
-      "DisplayName": "Fill",
+      "DisplayName": "Füllung",
       "DisplayNameResourceString": "Fill",
       "EnumValues": [],
       "HelperUI": null,
@@ -1064,28 +1064,28 @@
     {
       "Category": "data",
       "DefaultValue": "FilledDarker",
-      "Description": "Appearance of the control's borders and fill",
+      "Description": "Erscheinungsbild der Rahmen und Auffüllung des Steuerelements",
       "DescriptionResourceString": "Appearance_Description",
-      "DisplayName": "Appearance",
+      "DisplayName": "Erscheinungsbild",
       "DisplayNameResourceString": "Appearance",
       "EnumValues": [
         {
-          "Description": "Filled Darker",
-          "DisplayName": "Filled Darker",
+          "Description": "Dunklere Auffüllung",
+          "DisplayName": "Dunklere Auffüllung",
           "IsDefaultValue": true,
           "Name": "FilledDarker",
           "Value": "FilledDarker"
         },
         {
-          "Description": "Filled Lighter",
-          "DisplayName": "Filled Lighter",
+          "Description": "Hellere Auffüllung",
+          "DisplayName": "Hellere Auffüllung",
           "IsDefaultValue": false,
           "Name": "FilledLighter",
           "Value": "FilledLighter"
         },
         {
-          "Description": "Outline",
-          "DisplayName": "Outline",
+          "Description": "Kontur",
+          "DisplayName": "Kontur",
           "IsDefaultValue": false,
           "Name": "Outline",
           "Value": "Outline"
@@ -1114,9 +1114,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Style of borders around the control",
+      "Description": "Stil der Rahmen um das Steuerelement",
       "DescriptionResourceString": "BorderStyle_Description",
-      "DisplayName": "Border style",
+      "DisplayName": "Rahmenformat",
       "DisplayNameResourceString": "BorderStyle",
       "EnumValues": [],
       "HelperUI": "",
@@ -1142,9 +1142,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Thickness or width of borders around the control.",
+      "Description": "Stärke oder Breite von Rahmen um das Steuerelement.",
       "DescriptionResourceString": "BorderThickness_Description",
-      "DisplayName": "Border thickness",
+      "DisplayName": "Rahmenbreite",
       "DisplayNameResourceString": "BorderThickness",
       "EnumValues": [],
       "HelperUI": "",
@@ -1171,9 +1171,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color of borders around the control.",
+      "Description": "Farbe der Rahmen um das Steuerelement.",
       "DescriptionResourceString": "BorderColor_Description",
-      "DisplayName": "Border color",
+      "DisplayName": "Rahmenfarbe",
       "DisplayNameResourceString": "BorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1199,9 +1199,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Roundedness of the control's corners. A value of 0 is perfectly square.",
+      "Description": "Rundung in der Ecke des Steuerelements. Der Wert „0“ ist perfekt quadratisch.",
       "DescriptionResourceString": "BorderRadius_Description",
-      "DisplayName": "Border radius",
+      "DisplayName": "Rahmenradius",
       "DisplayNameResourceString": "BorderRadius",
       "EnumValues": [],
       "HelperUI": "",
@@ -1228,9 +1228,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The value of the control's top padding.",
+      "Description": "Der Wert für die obere Auffüllung des Steuerelements.",
       "DescriptionResourceString": "PaddingTop_Description",
-      "DisplayName": "Padding top",
+      "DisplayName": "Auffüllung oben",
       "DisplayNameResourceString": "PaddingTop",
       "EnumValues": [],
       "HelperUI": "",
@@ -1257,9 +1257,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The value of the control's right padding.",
+      "Description": "Der Wert für die rechte Auffüllung des Steuerelements.",
       "DescriptionResourceString": "PaddingRight_Description",
-      "DisplayName": "Padding right",
+      "DisplayName": "Auffüllung rechts",
       "DisplayNameResourceString": "PaddingRight",
       "EnumValues": [],
       "HelperUI": "",
@@ -1286,9 +1286,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The value of the control's bottom padding.",
+      "Description": "Der Wert für die untere Auffüllung des Steuerelements.",
       "DescriptionResourceString": "PaddingBottom_Description",
-      "DisplayName": "Padding bottom",
+      "DisplayName": "Auffüllung unten",
       "DisplayNameResourceString": "PaddingBottom",
       "EnumValues": [],
       "HelperUI": "",
@@ -1315,9 +1315,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The value of the control's left padding.",
+      "Description": "Der Wert für die linke Auffüllung des Steuerelements.",
       "DescriptionResourceString": "PaddingLeft_Description",
-      "DisplayName": "Padding left",
+      "DisplayName": "Auffüllung links",
       "DisplayNameResourceString": "PaddingLeft",
       "EnumValues": [],
       "HelperUI": "",
@@ -1344,9 +1344,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color of borders while hovering over the control.",
+      "Description": "Farbe der Rahmen beim Zeigen auf das Steuerelement.",
       "DescriptionResourceString": "HoverBorderColor_Description",
-      "DisplayName": "Hover border color",
+      "DisplayName": "Rahmenfarbe beim Zeigen",
       "DisplayNameResourceString": "HoverBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1372,9 +1372,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color of borders while pressing or selecting the control.",
+      "Description": "Farbe der Rahmen beim Drücken oder Auswählen des Steuerelements.",
       "DescriptionResourceString": "PressedBorderColor_Description",
-      "DisplayName": "Pressed border color",
+      "DisplayName": "Rahmenfarbe der gedrückten Schaltfläche",
       "DisplayNameResourceString": "PressedBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1400,9 +1400,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color of borders while the control is disabled.",
+      "Description": "Farbe der Rahmen bei deaktiviertem Steuerelement.",
       "DescriptionResourceString": "DisabledBorderColor_Description",
-      "DisplayName": "Disabled border color",
+      "DisplayName": "Deaktivierte Rahmenfarbe",
       "DisplayNameResourceString": "DisabledBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1428,9 +1428,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color of borders while the control has focus.",
+      "Description": "Farbe der Rahmen bei fokussiertem Steuerelement.",
       "DescriptionResourceString": "FocusedBorderColor_Description",
-      "DisplayName": "Focused border color",
+      "DisplayName": "Fokussierte Rahmenfarbe",
       "DisplayNameResourceString": "FocusedBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1942,7 +1942,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Text input\",\"TextInputCanvas_Align\":\"Align\",\"TextInputCanvas_Align_Desc\":\"Display text using the selected text alignment.\",\"TextInputCanvas_Align_Start\":\"Start\",\"TextInputCanvas_Align_End\":\"End\",\"TextInputCanvas_Align_Center\":\"Center\",\"TextInputCanvas_Align_Justify\":\"Justify\",\"TextInputCanvas_AccessibleLabel\":\"Accessible label\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Label for screen readers.\",\"TextInputCanvas_DelayOutput\":\"Delay output\",\"TextInputCanvas_DelayOutput_Desc\":\"When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).\",\"TextInputCanvas_Mode\":\"Mode\",\"TextInputCanvas_Mode_Desc\":\"Type of text input: single line or multiline.\",\"TextInputCanvas_Mode_SingleLine\":\"Single line\",\"TextInputCanvas_Mode_Multiline\":\"Multiline\",\"TextInputCanvas_Required\":\"Required\",\"TextInputCanvas_Required_Desc\":\"Whether this control must contain text.\",\"TextInputCanvas_Value\":\"Value\",\"TextInputCanvas_Value_Desc\":\"Text that appears on a control or that the user types into a control.\",\"TextInputCanvas_Placeholder\":\"Placeholder text\",\"TextInputCanvas_Placeholder_Desc\":\"The placeholder text of the text input.\",\"TextInputCanvas_Type\":\"Type\",\"TextInputCanvas_Type_Desc\":\"Content type of text input: plain text, password, or search.\",\"TextInputCanvas_Type_Text\":\"Text\",\"TextInputCanvas_Type_Password\":\"Password\",\"TextInputCanvas_Type_Search\":\"Search\",\"TextInputCanvas_MaxLength\":\"Maximum length\",\"TextInputCanvas_MaxLength_Desc\":\"The maximum content length of the Text input.\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"TextInputCanvas_ValidationState\":\"Validation state\",\"TextInputCanvas_ValidationState_Desc\":\"The current status of the Text input, with regard to validation.\",\"TextInputCanvas_ValidationState_None\":\"None\",\"TextInputCanvas_ValidationState_Error\":\"Error\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\",\"Fill\":\"Fill\",\"Fill_Description\":\"Background color of the control.\",\"BorderStyle\":\"Border style\",\"BorderStyle_Description\":\"Style of borders around the control\",\"BorderStyle_Dashed\":\"Dashed\",\"BorderStyle_Dotted\":\"Dotted\",\"BorderStyle_None\":\"None\",\"BorderStyle_Solid\":\"Solid\",\"BorderThickness\":\"Border thickness\",\"BorderThickness_Description\":\"Thickness or width of borders around the control.\",\"BorderColor\":\"Border color\",\"BorderColor_Description\":\"Color of borders around the control.\",\"BorderRadius\":\"Border radius\",\"BorderRadius_Description\":\"Roundedness of the control's corners. A value of 0 is perfectly square.\",\"PaddingTop\":\"Padding top\",\"PaddingTop_Description\":\"The value of the control's top padding.\",\"PaddingRight\":\"Padding right\",\"PaddingRight_Description\":\"The value of the control's right padding.\",\"PaddingBottom\":\"Padding bottom\",\"PaddingBottom_Description\":\"The value of the control's bottom padding.\",\"PaddingLeft\":\"Padding left\",\"PaddingLeft_Description\":\"The value of the control's left padding.\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderColor_Description\":\"Color of borders while hovering over the control.\",\"PressedBorderColor\":\"Pressed border color\",\"PressedBorderColor_Description\":\"Color of borders while pressing or selecting the control.\",\"FocusedBorderColor\":\"Focused border color\",\"FocusedBorderColor_Description\":\"Color of borders while the control has focus.\",\"DisabledBorderColor\":\"Disabled border color\",\"DisabledBorderColor_Description\":\"Color of borders while the control is disabled.\",\"Appearance\":\"Appearance\",\"Appearance_Description\":\"Appearance of the control's borders and fill\",\"Appearance_FilledDarker\":\"Filled Darker\",\"Appearance_FilledLighter\":\"Filled Lighter\",\"Appearance_Outline\":\"Outline\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Texteingabe\",\"TextInputCanvas_Align\":\"Ausrichten\",\"TextInputCanvas_Align_Desc\":\"Text mit der ausgewählten Textausrichtung anzeigen.\",\"TextInputCanvas_Align_Start\":\"Beginn\",\"TextInputCanvas_Align_End\":\"Ende\",\"TextInputCanvas_Align_Center\":\"Zentrieren\",\"TextInputCanvas_Align_Justify\":\"Blocksatz\",\"TextInputCanvas_AccessibleLabel\":\"Beschriftung für Bedienungshilfen\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Beschriftung für Bildschirmausgabe.\",\"TextInputCanvas_DelayOutput\":\"Ausgabe verzögern\",\"TextInputCanvas_DelayOutput_Desc\":\"Bei „True“ wird die Benutzereingabe nach einer halbe Sekunde Verzögerung registriert. Dies ist nützlich für verzögerungsintensive Vorgänge, bis der Benutzer die Texteingabe abschließt (z.\u00A0B. zum Filtern, wenn Eingaben in anderen Formeln verwendet werden).\",\"TextInputCanvas_Mode\":\"Modus\",\"TextInputCanvas_Mode_Desc\":\"Typ der Texteingabe: einzeilig oder mehrzeilig.\",\"TextInputCanvas_Mode_SingleLine\":\"Einzeilig\",\"TextInputCanvas_Mode_Multiline\":\"Mehrzeilig\",\"TextInputCanvas_Required\":\"Erforderlich\",\"TextInputCanvas_Required_Desc\":\"Gibt an, ob dieses Steuerelement Text enthalten muss.\",\"TextInputCanvas_Value\":\"Wert\",\"TextInputCanvas_Value_Desc\":\"Text, der in einem Steuerelement erscheint oder den der Benutzer in ein Steuerelement eingibt.\",\"TextInputCanvas_Placeholder\":\"Platzhaltertext\",\"TextInputCanvas_Placeholder_Desc\":\"Der Platzhaltertext der Texteingabe.\",\"TextInputCanvas_Type\":\"Typ\",\"TextInputCanvas_Type_Desc\":\"Inhaltstyp der Texteingabe: Klartext, Kennwort oder Suche.\",\"TextInputCanvas_Type_Text\":\"Text\",\"TextInputCanvas_Type_Password\":\"Kennwort\",\"TextInputCanvas_Type_Search\":\"Suche\",\"TextInputCanvas_MaxLength\":\"Maximale Länge\",\"TextInputCanvas_MaxLength_Desc\":\"Die maximale Länge des Inhalts der Texteingabe.\",\"Base_Palette_Color\":\"Farbpalette\",\"Base_Palette_Color_description\":\"Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.\",\"TextInputCanvas_ValidationState\":\"Überprüfungsstatus\",\"TextInputCanvas_ValidationState_Desc\":\"Der aktuelle Status der Texteingabe in Bezug auf die Überprüfung.\",\"TextInputCanvas_ValidationState_None\":\"Keine\",\"TextInputCanvas_ValidationState_Error\":\"Fehler\",\"Font_Size\":\"Schriftgröße\",\"Font_Size_description\":\"Legen Sie die Schriftgröße für den angezeigten Text fest.\",\"Font\":\"Schriftart\",\"Font_description\":\"Der Name der Schriftfamilie, in der Text angezeigt wird\",\"Font_Color\":\"Schriftfarbe\",\"Font_Color_description\":\"Die Farbe des Texts im Steuerelement\",\"Font_Weight\":\"Schriftstärke\",\"Font_Weight_description\":\"Die Gewichtung des Texts in einem Steuerelement\",\"Italic\":\"Kursiv\",\"Underline\":\"Unterstrichen\",\"Strikethrough\":\"Durchgestrichen\",\"Fill\":\"Füllung\",\"Fill_Description\":\"Hintergrundfarbe des Steuerelements.\",\"BorderStyle\":\"Rahmenformat\",\"BorderStyle_Description\":\"Stil der Rahmen um das Steuerelement\",\"BorderStyle_Dashed\":\"Gestrichelt\",\"BorderStyle_Dotted\":\"Gepunktet\",\"BorderStyle_None\":\"Keine\",\"BorderStyle_Solid\":\"Durchgezogen\",\"BorderThickness\":\"Rahmenbreite\",\"BorderThickness_Description\":\"Stärke oder Breite von Rahmen um das Steuerelement.\",\"BorderColor\":\"Rahmenfarbe\",\"BorderColor_Description\":\"Farbe der Rahmen um das Steuerelement.\",\"BorderRadius\":\"Rahmenradius\",\"BorderRadius_Description\":\"Rundung in der Ecke des Steuerelements. Der Wert „0“ ist perfekt quadratisch.\",\"PaddingTop\":\"Auffüllung oben\",\"PaddingTop_Description\":\"Der Wert für die obere Auffüllung des Steuerelements.\",\"PaddingRight\":\"Auffüllung rechts\",\"PaddingRight_Description\":\"Der Wert für die rechte Auffüllung des Steuerelements.\",\"PaddingBottom\":\"Auffüllung unten\",\"PaddingBottom_Description\":\"Der Wert für die untere Auffüllung des Steuerelements.\",\"PaddingLeft\":\"Auffüllung links\",\"PaddingLeft_Description\":\"Der Wert für die linke Auffüllung des Steuerelements.\",\"HoverBorderColor\":\"Rahmenfarbe beim Zeigen\",\"HoverBorderColor_Description\":\"Farbe der Rahmen beim Zeigen auf das Steuerelement.\",\"PressedBorderColor\":\"Rahmenfarbe der gedrückten Schaltfläche\",\"PressedBorderColor_Description\":\"Farbe der Rahmen beim Drücken oder Auswählen des Steuerelements.\",\"FocusedBorderColor\":\"Fokussierte Rahmenfarbe\",\"FocusedBorderColor_Description\":\"Farbe der Rahmen bei fokussiertem Steuerelement.\",\"DisabledBorderColor\":\"Deaktivierte Rahmenfarbe\",\"DisabledBorderColor_Description\":\"Farbe der Rahmen bei deaktiviertem Steuerelement.\",\"Appearance\":\"Erscheinungsbild\",\"Appearance_Description\":\"Erscheinungsbild der Rahmen und Auffüllung des Steuerelements\",\"Appearance_FilledDarker\":\"Dunklere Auffüllung\",\"Appearance_FilledLighter\":\"Hellere Auffüllung\",\"Appearance_Outline\":\"Kontur\"}}}",
       "Type": 3
     },
     {

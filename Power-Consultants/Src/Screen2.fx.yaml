@@ -30,7 +30,7 @@ Screen2 As screen:
         Y: =65
         ZIndex: =1
 
-    "DatePickerCanvas1 As 'Date picker'":
+    DatePickerCanvas1 As Datumsauswahl:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         BorderColor: =""
@@ -48,7 +48,7 @@ Screen2 As screen:
         Y: =127
         ZIndex: =8
 
-    DropdownCanvas1 As Dropdown.pcfdataset:
+    DropdownCanvas1 As Dropdownmenü.pcfdataset:
         AccessibleLabel: ="Folgende Einträge sind verfügbar"
         Appearance: ="FilledDarker"
         BorderColor: =""
@@ -78,7 +78,7 @@ Screen2 As screen:
         Y: =190
         ZIndex: =10
 
-    DropdownCanvas2 As Dropdown.pcfdataset:
+    DropdownCanvas2 As Dropdownmenü.pcfdataset:
         Appearance: ="FilledDarker"
         BorderColor: =""
         BorderStyle: =""
@@ -94,7 +94,7 @@ Screen2 As screen:
         Y: =307
         ZIndex: =11
 
-    "TextInputCanvas1 As 'Text input'":
+    TextInputCanvas1 As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         BorderColor: =""
@@ -113,7 +113,7 @@ Screen2 As screen:
         Y: =359
         ZIndex: =12
 
-    "TextInputCanvas2 As 'Text input'":
+    TextInputCanvas2 As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         BorderColor: =""
