@@ -197,6 +197,11 @@ BearbeitenScreen As screen:
         OnSelect: |
             =Reset(ProjektCombo_BearbeitenProjekt);
             Reset(AufgabeCombo_BearbeitenAufgabe);
+            Reset(BearbeitungsDauer);
+            Reset(EndInput);
+            Reset(EndDate);
+            Reset(StartInput);
+            Reset(DateStarttime);
             Navigate(ReportScreen)
         X: =12
         Y: =102

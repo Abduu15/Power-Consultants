@@ -124,6 +124,12 @@ NeueAufgabenScreen As screen:
         OnSelect: |
             =Reset(ProjektCombo_NeuesProjekt);
             Reset(AufgabeCombo_NeueAufgabe);
+            Reset(BearbeitungsdauerNeu);
+            Reset(EndInputNeu);
+            Reset(EndDateNeu);
+            Reset(StartInputNeu);
+            Reset(DateStarttimeNeu);
+            Reset(BearbeitungsdauerNeu);
             Navigate(Zeiterfassung)
         X: =12
         Y: =102
