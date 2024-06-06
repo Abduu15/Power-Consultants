@@ -12,8 +12,8 @@ NeueAufgabenScreen As screen:
         DisplayMode: |-
             =If(
                 And(
-                    !IsBlank(ProjektCombo_BearbeitenProjekt_1.Selected.Value),
-                    !IsBlank(AufgabeCombo_BearbeitenAufgabe_1.Selected.Value),
+                    !IsBlank(ProjektCombo_NeuesProjekt.Selected.Value),
+                    !IsBlank(AufgabeCombo_NeueAufgabe.Selected.Value),
                     !IsBlank(StartzeitNeu_Stunden.Text),
                     !IsBlank(StartzeitNeu_Minuten.Text),
                     !IsBlank(StartzeitNeu_Tag.Text),
@@ -21,12 +21,12 @@ NeueAufgabenScreen As screen:
                     !IsBlank(StartzeitNeu_Jahr.Text),
                     !IsBlank(EndzeitNeu_Stunden.Text),
                     !IsBlank(EndzeitNeu_Minuten.Text),
-                    !IsBlank(EndzeitBearbeiten_Tag_1.Text),
-                    !IsBlank(EndzeitBearbeiten_Monat_1.Text),
+                    !IsBlank(EndzeitNeu_Tag.Text),
+                    !IsBlank(EndzeitNeu_Monat.Text),
                     !IsBlank(StartzeitNeu_Jahr.Text),
-                    !IsBlank(Bearbeitungsdauer_Stunde_1.Text),
-                    !IsBlank(Bearbeitungsdauer_Minute_1.Text),
-                    !IsBlank(Bearbeitungsdauer_Sekunde_1.Text)
+                    !IsBlank(BearbeitungsdauerNeu_Stunde.Text),
+                    !IsBlank(BearbeitungsdauerNeu_Minute.Text),
+                    !IsBlank(BearbeitungsdauerNeu_Sekunde.Text)
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -43,21 +43,20 @@ NeueAufgabenScreen As screen:
         OnSelect: |
             =Patch(
                 'Yaveon Projecttasks',
-                gblSelectedEntry,
                 {
-                    Projekt: ProjektCombo_BearbeitenProjekt_1.Selected.Value,
-                    Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
+                    Projekt: ProjektCombo_NeuesProjekt.Selected.Value,
+                    Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
                     Startzeit: Text(
-                        StartzeitBearbeiten_Stunden.Text & ":" & StartzeitBearbeiten_Minuten.Text & " " & StartzeitBearbeiten_Tag.Text & "." & StartzeitBearbeiten_Monat.Text & "." & StartzeitBearbeiten_Jahr.Text,
+                        StartzeitNeu_Stunden.Text & ":" & StartzeitNeu_Minuten.Text & " " & StartzeitNeu_Tag.Text & "." & StartzeitNeu_Monat.Text & "." & StartzeitNeu_Jahr.Text,
                         "HH:mm dd.MM.yyyy"
                     ),
                     Endzeit: Text(
-                        EndzeitBearbeiten_Stunden.Text & ":" & EndzeitBearbeiten_Minuten.Text & " " & EndzeitBearbeiten_Tag.Text & "." & EndzeitBearbeiten_Monat.Text & "." & EndzeitBearbeiten_Jahr.Text,
+                        EndzeitNeu_Stunden.Text & ":" & EndzeitNeu_Minuten.Text & " " & EndzeitNeu_Tag.Text & "." & EndzeitNeu_Monat.Text & "." & EndzeitNeu_Jahr.Text,
                         "HH:mm dd.MM.yyyy"
                     ),
                     Bearbeitungsdauer: Text(
                         TimeValue(
-                            Bearbeitungsdauer_Stunde.Text & ":" & Bearbeitungsdauer_Minute.Text & ":" & Bearbeitungsdauer_Sekunde.Text
+                            BearbeitungsdauerNeu_Stunde.Text & ":" & BearbeitungsdauerNeu_Minute.Text & ":" & BearbeitungsdauerNeu_Sekunde.Text
                         ), 
                         "hh:mm:ss"
                     )
@@ -136,7 +135,7 @@ NeueAufgabenScreen As screen:
         Y: =320
         ZIndex: =3
 
-    ProjektCombo_BearbeitenProjekt_1 As Combobox.pcfdataset:
+    ProjektCombo_NeuesProjekt As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         BorderColor: =""
@@ -156,7 +155,7 @@ NeueAufgabenScreen As screen:
         Y: =234
         ZIndex: =4
 
-    AufgabeCombo_BearbeitenAufgabe_1 As Combobox.pcfdataset:
+    AufgabeCombo_NeueAufgabe As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         BorderColor: =""
@@ -171,7 +170,7 @@ NeueAufgabenScreen As screen:
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
-                ProjektCombo_BearbeitenProjekt_1.Selected.Value,
+                ProjektCombo_NeuesProjekt.Selected.Value,
                 "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
@@ -251,7 +250,7 @@ NeueAufgabenScreen As screen:
         Y: =234
         ZIndex: =9
 
-    Bearbeitungsdauer_Stunde_1 As text:
+    BearbeitungsdauerNeu_Stunde As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)
@@ -298,11 +297,11 @@ NeueAufgabenScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
         OnSelect: |
-            =Reset(ProjektCombo_BearbeitenProjekt_1);
-            Reset(AufgabeCombo_BearbeitenAufgabe_1);
-            Reset(Bearbeitungsdauer_Stunde_1);
-            Reset(Bearbeitungsdauer_Minute_1);
-            Reset(Bearbeitungsdauer_Sekunde_1);
+            =Reset(ProjektCombo_NeuesProjekt);
+            Reset(AufgabeCombo_NeueAufgabe);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
             Reset(StartzeitNeu_Stunden);
             Reset(StartzeitNeu_Minuten);
             Reset(StartzeitNeu_Tag);
@@ -310,15 +309,15 @@ NeueAufgabenScreen As screen:
             Reset(StartzeitNeu_Jahr);
             Reset(EndzeitNeu_Stunden);
             Reset(EndzeitNeu_Minuten);
-            Reset(EndzeitBearbeiten_Tag_1);
-            Reset(EndzeitBearbeiten_Monat_1);
-            Reset(EndzeitBearbeiten_Jahr_1);
-            Reset(Bearbeitungsdauer_Stunde_1);
-            Reset(Bearbeitungsdauer_Minute_1);
-            Reset(Bearbeitungsdauer_Sekunde_1);
+            Reset(EndzeitNeu_Tag);
+            Reset(EndzeitNeu_Monat);
+            Reset(EndzeitNeu_Jahr);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
             Reset(DatePickerCanvas2_2);
             Reset(DatePickerCanvas2_3);
-            Navigate(ReportScreen)
+            Navigate(Zeiterfassung)
         X: =12
         Y: =102
         ZIndex: =12
@@ -513,7 +512,7 @@ NeueAufgabenScreen As screen:
         Y: =387
         ZIndex: =23
 
-    EndzeitBearbeiten_Tag_1 As text:
+    EndzeitNeu_Tag As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)
@@ -538,7 +537,7 @@ NeueAufgabenScreen As screen:
         Y: =387
         ZIndex: =24
 
-    EndzeitBearbeiten_Monat_1 As text:
+    EndzeitNeu_Monat As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)
@@ -563,7 +562,7 @@ NeueAufgabenScreen As screen:
         Y: =387
         ZIndex: =25
 
-    EndzeitBearbeiten_Jahr_1 As text:
+    EndzeitNeu_Jahr As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)
@@ -631,7 +630,7 @@ NeueAufgabenScreen As screen:
         Y: =402
         ZIndex: =29
 
-    Bearbeitungsdauer_Minute_1 As text:
+    BearbeitungsdauerNeu_Minute As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)
@@ -656,7 +655,7 @@ NeueAufgabenScreen As screen:
         Y: =548
         ZIndex: =30
 
-    Bearbeitungsdauer_Sekunde_1 As text:
+    BearbeitungsdauerNeu_Sekunde As text:
         BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =2
         Color: =RGBA(71, 158, 245, 1)

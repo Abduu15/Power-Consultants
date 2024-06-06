@@ -583,7 +583,7 @@
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |
-            =Navigate(BearbeitenScreen, ScreenTransition.None);
+            =Navigate(NeueAufgabenScreen, ScreenTransition.None);
         PressedBorderColor: =""
         Text: ="Bearbeiten"
         VerticalAlign: =""

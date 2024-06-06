@@ -6068,19 +6068,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.AufgabeCombo_BearbeitenAufgabe_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.AufgabeCombo_NeueAufgabe.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.AufgabeCombo_BearbeitenAufgabe_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.AufgabeCombo_NeueAufgabe.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.AufgabeCombo_BearbeitenAufgabe_1"
+                "type": "NeueAufgabenScreen.AufgabeCombo_NeueAufgabe"
               }
             }
           ],
@@ -6158,19 +6158,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Minute_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Minute.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Minute_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Minute.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.Bearbeitungsdauer_Minute_1"
+                "type": "NeueAufgabenScreen.BearbeitungsdauerNeu_Minute"
               }
             }
           ],
@@ -6248,19 +6248,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Stunde_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Stunde.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Stunde_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Stunde.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.Bearbeitungsdauer_Stunde_1"
+                "type": "NeueAufgabenScreen.BearbeitungsdauerNeu_Stunde"
               }
             }
           ],
@@ -6398,19 +6398,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Tag_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Tag.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Tag_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Tag.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.EndzeitBearbeiten_Tag_1"
+                "type": "NeueAufgabenScreen.EndzeitNeu_Tag"
               }
             }
           ],
@@ -6428,19 +6428,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Monat_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Monat.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Monat_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Monat.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.EndzeitBearbeiten_Monat_1"
+                "type": "NeueAufgabenScreen.EndzeitNeu_Monat"
               }
             }
           ],
@@ -6458,19 +6458,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Jahr_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Jahr.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitBearbeiten_Jahr_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.EndzeitNeu_Jahr.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.EndzeitBearbeiten_Jahr_1"
+                "type": "NeueAufgabenScreen.EndzeitNeu_Jahr"
               }
             }
           ],
@@ -6488,19 +6488,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.ProjektCombo_BearbeitenProjekt_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.ProjektCombo_NeuesProjekt.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.ProjektCombo_BearbeitenProjekt_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.ProjektCombo_NeuesProjekt.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.ProjektCombo_BearbeitenProjekt_1"
+                "type": "NeueAufgabenScreen.ProjektCombo_NeuesProjekt"
               }
             }
           ],
@@ -6548,19 +6548,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Sekunde_1.AccessibleLabel"
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Sekunde.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NeueAufgabenScreen.Bearbeitungsdauer_Sekunde_1.AccessibleLabel",
+                  "fullyQualifiedName": "NeueAufgabenScreen.BearbeitungsdauerNeu_Sekunde.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "NeueAufgabenScreen",
-                "type": "NeueAufgabenScreen.Bearbeitungsdauer_Sekunde_1"
+                "type": "NeueAufgabenScreen.BearbeitungsdauerNeu_Sekunde"
               }
             }
           ],
