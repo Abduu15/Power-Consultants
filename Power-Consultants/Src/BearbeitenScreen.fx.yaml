@@ -6,18 +6,22 @@ BearbeitenScreen As screen:
 
     ButtonCanvas3_3 As Schaltfläche:
         Align: =""
-        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
         DisplayMode: |-
             =If(
                 And(
-                    !IsBlank(ProjektCombo_NeuesProjekt.Selected.Value),
-                    !IsBlank(AufgabeCombo_NeueAufgabe.Selected.Value)
+                    !IsBlank(ProjektCombo_BearbeitenProjekt.Selected.Value),
+                    !IsBlank(AufgabeCombo_BearbeitenAufgabe.Selected.Value),
+                    !IsBlank(StartInput.Value),
+                    !IsBlank(EndInput.Value),
+                    !IsBlank(DateStarttime.SelectedDate),
+                    !IsBlank(EndDate.SelectedDate)
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
-        FontColor: =RGBA(12, 59, 94, 1)
+        FontColor: =RGBA(0, 0, 0, 1)
         FontSize: =34
         Height: =76
         Icon: =""

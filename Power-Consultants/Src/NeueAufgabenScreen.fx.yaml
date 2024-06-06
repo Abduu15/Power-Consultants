@@ -168,10 +168,7 @@ NeueAufgabenScreen As screen:
                 DisplayMode.Disabled
             )
         Height: =37
-        Value: |-
-            =If(
-            DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
-            )
+        Value: =DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
         Width: =151
         X: =548
         Y: =548
@@ -229,17 +226,17 @@ NeueAufgabenScreen As screen:
                     Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
                     Starttime: DateTimeValue(
                         Text(
-                            DateStarttime.SelectedDate,
+                            DateStarttimeNeu.SelectedDate,
                             "[$-de-DE]dd.mm.yyyy"
-                        ) & " " & StartInput.Value
+                        ) & " " & StartInputNeu.Value
                     ),
                     Endtime: DateTimeValue(
                         Text(
-                            EndDate.SelectedDate,
+                            EndDateNeu.SelectedDate,
                             "[$-de-DE]dd.mm.yyyy"
-                        ) & " " & EndInput.Value
+                        ) & " " & EndInputNeu.Value
                     ),
-                    BearbeitungsDauer: BearbeitungsDauer.Value
+                    BearbeitungsDauer: BearbeitungsdauerNeu.Value
                 }
             );
             If(
@@ -247,21 +244,21 @@ NeueAufgabenScreen As screen:
                     Patch(
                         'Yaveon Projecttasks',
                         {
-                            Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
-                            Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
+                            Projekt: ProjektCombo_NeuesProjekt.Selected.Value,
+                            Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
                             Starttime: DateTimeValue(
                                 Text(
-                                    DateStarttime.SelectedDate,
+                                    DateStarttimeNeu.SelectedDate,
                                     "[$-de-DE]dd.mm.yyyy"
-                                ) & " " & StartInput.Value
+                                ) & " " & StartInputNeu.Value
                             ),
                             Endtime: DateTimeValue(
                                 Text(
-                                    EndDate.SelectedDate,
+                                    EndDateNeu.SelectedDate,
                                     "[$-de-DE]dd.mm.yyyy"
-                                ) & " " & EndInput.Value
+                                ) & " " & EndInputNeu.Value
                             ),
-                            BearbeitungsDauer: BearbeitungsDauer.Value
+                            BearbeitungsDauer: BearbeitungsdauerNeu.Value
                         }
                     )
                 ),
@@ -281,6 +278,7 @@ NeueAufgabenScreen As screen:
             Reset(EndDateNeu);
             Reset(StartInputNeu);
             Reset(DateStarttimeNeu);
+            Reset(BearbeitungsdauerNeu);
             Navigate(Zeiterfassung)
         Text: ="Neuen Eintrag speichern"
         VerticalAlign: =""
