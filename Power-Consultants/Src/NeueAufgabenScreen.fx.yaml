@@ -196,7 +196,7 @@ NeueAufgabenScreen As screen:
 
     ButtonCanvas3_4 As Schaltfläche:
         Align: =""
-        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
         DisplayMode: |-
             =If(
@@ -211,7 +211,7 @@ NeueAufgabenScreen As screen:
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
-        FontColor: =RGBA(12, 59, 94, 1)
+        FontColor: =RGBA(0, 0, 0, 1)
         FontSize: =34
         Height: =93
         Icon: =""
