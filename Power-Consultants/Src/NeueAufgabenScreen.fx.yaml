@@ -2,13 +2,10 @@ NeueAufgabenScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_4 As Schaltfläche:
+    ButtonCanvas3_4 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: |-
             =If(
                 And(
@@ -31,11 +28,9 @@ NeueAufgabenScreen As screen:
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
-        FocusedBorderColor: =""
         FontColor: =RGBA(12, 59, 94, 1)
         FontSize: =34
         Height: =76
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ='ButtonCanvas.IconStyle'.Filled
@@ -118,7 +113,6 @@ NeueAufgabenScreen As screen:
             Reset(BearbeitungsdauerNeu_Minute);
             Reset(BearbeitungsdauerNeu_Sekunde);
             Navigate(Zeiterfassung)
-        PressedBorderColor: =""
         Text: ="Änderungen speichern"
         VerticalAlign: =""
         Width: =396
@@ -127,8 +121,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =1
 
     TextCanvas4_27 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -142,8 +134,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =2
 
     TextCanvas4_28 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -159,18 +149,12 @@ NeueAufgabenScreen As screen:
     ProjektCombo_NeuesProjekt As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
         DefaultSelectedItems: =
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
-        HoverBorderColor: =""
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
-        PressedBorderColor: =""
         Width: =409
         X: =200
         Y: =234
@@ -179,15 +163,10 @@ NeueAufgabenScreen As screen:
     AufgabeCombo_NeueAufgabe As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
         DefaultSelectedItems: =
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
-        HoverBorderColor: =""
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
@@ -196,15 +175,12 @@ NeueAufgabenScreen As screen:
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
-        PressedBorderColor: =""
         Width: =409
         X: =200
         Y: =383
         ZIndex: =5
 
     TextCanvas4_29 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -218,8 +194,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =6
 
     TextCanvas4_30 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -233,8 +207,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =7
 
     TextCanvas4_31 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -297,7 +269,7 @@ NeueAufgabenScreen As screen:
         Y: =548
         ZIndex: =10
 
-    Header1_6 As Kopfzeile:
+    Header1_6 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -441,8 +413,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =18
 
     TextCanvas9_4 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -456,8 +426,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =19
 
     TextCanvas10_4 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -470,8 +438,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =20
 
     TextCanvas10_5 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -609,8 +575,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =26
 
     TextCanvas9_5 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -624,8 +588,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =27
 
     TextCanvas10_6 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -638,8 +600,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =28
 
     TextCanvas10_7 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -702,8 +662,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =31
 
     TextCanvas9_6 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -717,8 +675,6 @@ NeueAufgabenScreen As screen:
         ZIndex: =32
 
     TextCanvas9_7 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -731,7 +687,7 @@ NeueAufgabenScreen As screen:
         Y: =544
         ZIndex: =33
 
-    DatePickerCanvas2_2 As Datumsauswahl:
+    "DatePickerCanvas2_2 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =
@@ -740,7 +696,7 @@ NeueAufgabenScreen As screen:
         Y: =313
         ZIndex: =36
 
-    DatePickerCanvas2_3 As Datumsauswahl:
+    "DatePickerCanvas2_3 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =

@@ -20,21 +20,15 @@ Dashboard As screen:
         Y: =58
         ZIndex: =1
 
-        TextInputCanvas3_1 As Texteingabe:
+        "TextInputCanvas3_1 As 'Text input'":
             Align: |
                 ="Total working hours: " & User().Bearbeitungsdauer & " hours"
             Appearance: ="FilledDarker"
             BasePaletteColor: =
-            BorderColor: =""
-            BorderStyle: =""
-            DisabledBorderColor: =""
             DisplayMode: =DisplayMode.Edit
             Fill: =
-            FocusedBorderColor: =""
             FontColor: =
             Height: =74
-            HoverBorderColor: =""
-            PressedBorderColor: =""
             Value: |
                 ="Total working hours: " & User().Bearbeitungsdauer & " hours"
             Width: =382
@@ -42,14 +36,10 @@ Dashboard As screen:
             Y: =210
             ZIndex: =2
 
-        ButtonCanvas6 As Schaltfläche:
+        ButtonCanvas6 As Button:
             Align: =""
             BasePaletteColor: =
-            BorderColor: =""
-            BorderStyle: =""
-            DisabledBorderColor: =""
             DisplayMode: =DisplayMode.Edit
-            FocusedBorderColor: =""
             FontColor: =
             FontSize: |+
                 =30
@@ -57,12 +47,10 @@ Dashboard As screen:
                 
                 
             Height: =74
-            HoverBorderColor: =""
             Icon: =""
             IconRotation: =0
             IconStyle: ="Outline"
             Layout: ="Icon before"
-            PressedBorderColor: =""
             Text: ="Great Job, Dein Gesamtarbeitszeit "
             VerticalAlign: =""
             Width: =526
@@ -70,25 +58,19 @@ Dashboard As screen:
             Y: =210
             ZIndex: =3
 
-        ButtonCanvas6_1 As Schaltfläche:
+        ButtonCanvas6_1 As Button:
             Align: =""
             BasePaletteColor: =
-            BorderColor: =""
-            BorderStyle: =""
-            DisabledBorderColor: =""
             DisplayMode: =DisplayMode.Edit
-            FocusedBorderColor: =""
             FontColor: =
             FontSize: |+
                 =40
                 
             Height: =74
-            HoverBorderColor: =""
             Icon: =""
             IconRotation: =0
             IconStyle: ="Outline"
             Layout: ="Icon before"
-            PressedBorderColor: =""
             Text: |
                 ="Welcome, " & User().FullName & "!"
             VerticalAlign: =""

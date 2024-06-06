@@ -4,13 +4,10 @@ BearbeitenScreen As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Schaltfläche:
+    ButtonCanvas3_3 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: |-
             =If(
                 And(
@@ -33,16 +30,14 @@ BearbeitenScreen As screen:
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
-        FocusedBorderColor: =""
         FontColor: =RGBA(12, 59, 94, 1)
         FontSize: =34
         Height: =76
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ='ButtonCanvas.IconStyle'.Filled
         Layout: ="Icon before"
-        OnSelect: |
+        OnSelect: |-
             =Patch(
                 'Yaveon Projecttasks',
                 gblSelectedEntry,
@@ -58,18 +53,23 @@ BearbeitenScreen As screen:
                         "HH:mm dd.MM.yyyy"
                     ),
                     Bearbeitungsdauer: Text(
-                        TimeValue(
-                            Bearbeitungsdauer_Stunde.Text & ":" & Bearbeitungsdauer_Minute.Text & ":" & Bearbeitungsdauer_Sekunde.Text
-                        ), 
+                        TimeValue(Bearbeitungsdauer_Stunde.Text & ":" & Bearbeitungsdauer_Minute.Text & ":" & Bearbeitungsdauer_Sekunde.Text),
                         "hh:mm:ss"
-                    )
+                    ),
+                    Starttime: DateTimeValue(
+                        Text(
+                            DateStarttime.SelectedDate,
+                            "[$-de-DE]dd.mm.yyyy"
+                        ) & " " & StartInput.Value
+                    ),
+                    Endtime: DateTimeValue(
+                        Text(
+                            EndDate.SelectedDate,
+                            "[$-de-DE]dd.mm.yyyy"
+                        ) & " " & EndInput.Value
+                    ),BearbeitungsDauer: BearbeitungsDauer.Value
                 }
             );
-            
-            
-            
-            
-            
             If(
                 IsBlank(gblSelectedEntry) || IsError(gblSelectedEntry),
                 Notify(
@@ -99,8 +99,12 @@ BearbeitenScreen As screen:
             Reset(Bearbeitungsdauer_Stunde);
             Reset(Bearbeitungsdauer_Minute);
             Reset(Bearbeitungsdauer_Sekunde);
+            Reset(BearbeitungsDauer);
+            Reset(EndInput);
+            Reset(EndDate);
+            Reset(StartInput);
+            Reset(DateStarttime);
             Navigate(ReportScreen)
-        PressedBorderColor: =""
         Text: ="Änderungen speichern"
         VerticalAlign: =""
         Width: =396
@@ -109,8 +113,6 @@ BearbeitenScreen As screen:
         ZIndex: =1
 
     TextCanvas4_20 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -124,8 +126,6 @@ BearbeitenScreen As screen:
         ZIndex: =2
 
     TextCanvas4_21 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -141,18 +141,12 @@ BearbeitenScreen As screen:
     ProjektCombo_BearbeitenProjekt As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
         DefaultSelectedItems: =
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
-        HoverBorderColor: =""
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
-        PressedBorderColor: =""
         Width: =409
         X: =479
         Y: =234
@@ -161,15 +155,10 @@ BearbeitenScreen As screen:
     AufgabeCombo_BearbeitenAufgabe As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
         DefaultSelectedItems: =
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontSize: =18
         Height: =43
-        HoverBorderColor: =""
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
             =Switch(
@@ -178,15 +167,12 @@ BearbeitenScreen As screen:
                 "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
                 "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
             )
-        PressedBorderColor: =""
         Width: =409
         X: =484
         Y: =383
         ZIndex: =5
 
     TextCanvas4_22 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -200,8 +186,6 @@ BearbeitenScreen As screen:
         ZIndex: =6
 
     TextCanvas4_23 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -215,8 +199,6 @@ BearbeitenScreen As screen:
         ZIndex: =7
 
     TextCanvas4_24 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -288,7 +270,7 @@ BearbeitenScreen As screen:
         Y: =518
         ZIndex: =11
 
-    Header1_3 As Kopfzeile:
+    Header1_3 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -327,16 +309,12 @@ BearbeitenScreen As screen:
             Reset(Bearbeitungsdauer_Stunde);
             Reset(Bearbeitungsdauer_Minute);
             Reset(Bearbeitungsdauer_Sekunde);
-            Reset(DatePickerCanvas2);
-            Reset(DatePickerCanvas2_1);
             Navigate(ReportScreen)
         X: =12
         Y: =102
         ZIndex: =13
 
     TextCanvas7 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -354,8 +332,6 @@ BearbeitenScreen As screen:
         ZIndex: =16
 
     TextCanvas7_1 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -489,8 +465,6 @@ BearbeitenScreen As screen:
         ZIndex: =21
 
     TextCanvas9 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -504,8 +478,6 @@ BearbeitenScreen As screen:
         ZIndex: =22
 
     TextCanvas10 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -518,8 +490,6 @@ BearbeitenScreen As screen:
         ZIndex: =23
 
     TextCanvas10_1 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -677,8 +647,6 @@ BearbeitenScreen As screen:
         ZIndex: =29
 
     TextCanvas9_1 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -692,8 +660,6 @@ BearbeitenScreen As screen:
         ZIndex: =30
 
     TextCanvas10_2 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -706,8 +672,6 @@ BearbeitenScreen As screen:
         ZIndex: =31
 
     TextCanvas10_3 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -778,8 +742,6 @@ BearbeitenScreen As screen:
         ZIndex: =34
 
     TextCanvas9_2 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -793,8 +755,6 @@ BearbeitenScreen As screen:
         ZIndex: =35
 
     TextCanvas9_3 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -808,8 +768,6 @@ BearbeitenScreen As screen:
         ZIndex: =36
 
     TextCanvas4_25 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(12, 73, 171, 1)
@@ -823,8 +781,6 @@ BearbeitenScreen As screen:
         ZIndex: =37
 
     TextCanvas4_26 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(12, 73, 171, 1)
@@ -837,31 +793,61 @@ BearbeitenScreen As screen:
         Y: =318
         ZIndex: =38
 
-    DatePickerCanvas2 As Datumsauswahl:
+    TextCanvas11 As Text:
         DisplayMode: =DisplayMode.Edit
-        Height: =33
-        SelectedDate: |
-            =If(
-                !IsBlank(gblSelectedEntry),
-                DateValue(gblSelectedEntry.Startzeit),
-                Blank()
-            )
-        Width: =183
-        X: =1124
-        Y: =313
-        ZIndex: =39
+        Height: =32
+        Text: =
+        Width: =96
+        X: =163
+        Y: =618
+        ZIndex: =41
 
-    DatePickerCanvas2_1 As Datumsauswahl:
+    "StartInput As 'Text input'":
         DisplayMode: =DisplayMode.Edit
-        Height: =33
-        SelectedDate: |
-            =If(
-                !IsBlank(gblSelectedEntry),
-                DateValue(gblSelectedEntry.Endzeit),
-                Blank()
-            )
-        Width: =183
+        Height: =36
+        Value: |-
+            =Text(gblSelectedEntry.Starttime,"HH:mm")
+        Width: =72
+        X: =964
+        Y: =304
+        ZIndex: =42
+
+    "EndInput As 'Text input'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =42
+        Value: |
+            =Text(gblSelectedEntry.Endtime,"HH:mm")
+        Width: =63
+        X: =962
+        Y: =461
+        ZIndex: =43
+
+    "BearbeitungsDauer As 'Text input'":
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.View
+        Height: =37
+        Value: =DateDiff(StartInput.Value,EndInput.Value,TimeUnit.Minutes)& " minuten"
+        Width: =151
+        X: =663
+        Y: =533
+        ZIndex: =44
+
+    "DateStarttime As 'Date picker'":
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =43
+        SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
+        Width: =231
         X: =1124
-        Y: =465
-        ZIndex: =40
+        Y: =311
+        ZIndex: =45
+
+    "EndDate As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =43
+        SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")
+        Width: =231
+        X: =1124
+        Y: =470
+        ZIndex: =46
 

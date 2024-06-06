@@ -36,7 +36,7 @@
             RadiusTopRight: =4
             ZIndex: =2
 
-            Header1 As Kopfzeile:
+            Header1 As Header:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FillPortions: =1
@@ -82,8 +82,6 @@
                 ZIndex: =1
 
                 TextCanvas3 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -97,8 +95,6 @@
                     ZIndex: =1
 
                 TextCanvas4 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -112,8 +108,6 @@
                     ZIndex: =4
 
                 TextCanvas4_1 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -129,13 +123,8 @@
                 ProjektCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
-                    BorderColor: =""
-                    BorderStyle: =""
-                    DisabledBorderColor: =""
                     DisplayMode: =DisplayMode.Edit
-                    FocusedBorderColor: =""
                     Height: =32
-                    HoverBorderColor: =""
                     InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
                     Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
                     OnChange: |
@@ -144,7 +133,6 @@
                             Set(ButtonEnabled, true),
                             Set(ButtonEnabled, false)
                         )
-                    PressedBorderColor: =""
                     Width: =320
                     X: =30
                     Y: =100
@@ -153,13 +141,8 @@
                 AufgabeCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
-                    BorderColor: =""
-                    BorderStyle: =""
-                    DisabledBorderColor: =""
                     DisplayMode: =DisplayMode.Edit
-                    FocusedBorderColor: =""
                     Height: =32
-                    HoverBorderColor: =""
                     InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
                     Items: |
                         =Switch(
@@ -174,15 +157,12 @@
                             Set(ButtonEnabled, true),
                             Set(ButtonEnabled, false)
                         )
-                    PressedBorderColor: =""
                     Width: =320
                     X: =30
                     Y: =164
                     ZIndex: =7
 
                 TextCanvas4_2 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -196,8 +176,6 @@
                     ZIndex: =8
 
                 TextCanvas4_3 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -210,20 +188,14 @@
                     Y: =132
                     ZIndex: =9
 
-                EndZeitInput As Texteingabe:
+                "EndZeitInput As 'Text input'":
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
-                    BorderColor: =""
-                    BorderStyle: =""
-                    DisabledBorderColor: =""
                     DisplayMode: =DisplayMode.View
                     Fill: =
-                    FocusedBorderColor: =""
                     FontColor: =RGBA(53, 61, 63, 1)
                     Height: =32
-                    HoverBorderColor: =""
                     OnChange: =
-                    PressedBorderColor: =""
                     Value: =varCurrentTime
                     Width: =320
                     X: =382
@@ -231,8 +203,6 @@
                     ZIndex: =10
 
                 TextCanvas4_4 As Text:
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -245,21 +215,15 @@
                     Y: =240
                     ZIndex: =11
 
-                StartZeitInput As Texteingabe:
+                "StartZeitInput As 'Text input'":
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
-                    BorderColor: =""
-                    BorderStyle: =""
-                    DisabledBorderColor: =""
                     DisplayMode: =DisplayMode.View
                     Fill: =
-                    FocusedBorderColor: =""
                     FontColor: =RGBA(53, 61, 63, 1)
                     Height: =32
-                    HoverBorderColor: =""
                     OnChange: |
                         =
-                    PressedBorderColor: =""
                     Value: =varStartTime
                     Width: =320
                     X: =382
@@ -280,7 +244,7 @@
                 "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                     BorderColor: =App.Theme.Colors.Lighter60
                     DelayItemLoading: =true
-                    Items: =Filter('Yaveon Projecttasks', 'Erstellt von'.DisplayName = User().FullName && Text(Today(),"[$-en-US]dd.mm.yyyy") in Endzeit)
+                    Items: =Filter('Yaveon Projecttasks', 'Created By'.DisplayName = User().FullName && Text(Today(),"[$-en-US]dd.mm.yyyy") in Endzeit)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -367,8 +331,6 @@
 
                 TextCanvas5 As Text:
                     AutoHeight: =false
-                    BorderColor: =""
-                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     Font: =Font.Lato
@@ -421,24 +383,18 @@
         Y: =376
         ZIndex: =3
 
-    ButtonCanvas1 As Schaltfläche:
+    ButtonCanvas1 As Button:
         Align: =""
         BasePaletteColor: =RGBA(249, 83, 109, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =varDPStop
-        FocusedBorderColor: =""
         FontColor: =
         Height: =32
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |-
             =UpdateContext({varCurrentTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer,false);Set(varDPStop, DisplayMode.Disabled);Set(varDPBuchen, DisplayMode.Edit)
-        PressedBorderColor: =""
         Text: ="Stop"
         VerticalAlign: =""
         Width: =96
@@ -446,30 +402,24 @@
         Y: =368
         ZIndex: =6
 
-    ButtonCanvas1_1 As Schaltfläche:
+    ButtonCanvas1_1 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(8, 222, 8, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: |
             =If(
                 ButtonEnabled,
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
-        FocusedBorderColor: =""
         FontColor: =
         Height: =32
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |-
             =UpdateContext({varStartTime: Text(Now(), "hh:mm dd.mm.yyyy")});Set(varTimer, true);Set(varDPStop, DisplayMode.Edit);Set(ButtonEnabled, false);Set(varDP, DisplayMode.Disabled)
-        PressedBorderColor: =""
         Text: ="Start"
         VerticalAlign: =""
         Width: =96
@@ -477,18 +427,13 @@
         Y: =368
         ZIndex: =7
 
-    ButtonCanvas2 As Schaltfläche:
+    ButtonCanvas2 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =varDPBuchen
-        FocusedBorderColor: =""
         FontColor: =
         Height: =32
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
@@ -504,7 +449,9 @@
                         Projektaufgabe: AufgabeCombo.Selected.Value,
                         Startzeit: StartZeitInput.Value,
                         Endzeit: EndZeitInput.Value,
-                        Bearbeitungsdauer: Timer2.Text
+                        Bearbeitungsdauer: Timer2.Text,
+                        Endtime: DateValue(EndZeitInput.Value) + TimeValue(EndZeitInput.Value),
+                        Starttime: DateValue(StartZeitInput.Value) + TimeValue(StartZeitInput.Value),BearbeitungsDauer:DateDiff(StartZeitInput.Value,EndZeitInput.Value,TimeUnit.Minutes)& " minuten"
                     }
                 )
             );
@@ -532,7 +479,6 @@
             UpdateContext({varCurrentTime: "00:00 00.00.0000"});
             Set(varDPBuchen,DisplayMode.Disabled);
             Set(varDP, DisplayMode.Edit)
-        PressedBorderColor: =""
         Text: ="Buchen"
         VerticalAlign: =""
         Width: =96
@@ -540,25 +486,19 @@
         Y: =455
         ZIndex: =8
 
-    ButtonCanvas4 As Schaltfläche:
+    ButtonCanvas4 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(224, 28, 7, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =varDP
-        FocusedBorderColor: =""
         FontColor: =
         Height: =50
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |
             =Navigate(ReportScreen, ScreenTransition.None);
-        PressedBorderColor: =""
         Text: ="Reporting"
         VerticalAlign: =""
         Width: =111
@@ -566,25 +506,19 @@
         Y: =527
         ZIndex: =9
 
-    ButtonCanvas4_1 As Schaltfläche:
+    ButtonCanvas4_1 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(224, 28, 7, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =varDP
-        FocusedBorderColor: =""
         FontColor: =
         Height: =50
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |
             =Navigate(NeueAufgabenScreen, ScreenTransition.None);
-        PressedBorderColor: =""
         Text: ="Bearbeiten"
         VerticalAlign: =""
         Width: =111
@@ -605,25 +539,19 @@
         Y: =115
         ZIndex: =11
 
-    ButtonCanvas4_2 As Schaltfläche:
+    ButtonCanvas4_2 As Button:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(224, 28, 7, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =varDP
-        FocusedBorderColor: =""
         FontColor: =
         Height: =69
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |
             =Navigate(PowerBIReport, ScreenTransition.None);
-        PressedBorderColor: =""
         Text: ="PowerBI Reporting test"
         VerticalAlign: =""
         Width: =111

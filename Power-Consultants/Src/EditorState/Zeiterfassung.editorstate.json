@@ -34,12 +34,6 @@
           "NameMapSourceSchema": "?"
         },
         "Appearance",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -81,36 +75,6 @@
         {
           "Category": "Data",
           "PropertyName": "Appearance",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -436,12 +400,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -476,42 +434,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -626,12 +554,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -671,42 +593,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -821,12 +713,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -866,42 +752,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -957,7 +813,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -1016,12 +872,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -1061,42 +911,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1211,12 +1031,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -1256,42 +1070,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1406,12 +1190,6 @@
         "Layout",
         "IconRotation",
         "IconStyle",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         "Align",
         "VerticalAlign"
       ],
@@ -1451,42 +1229,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "Align",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "VerticalAlign",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1995,12 +1743,6 @@
         },
         "Fill",
         "Appearance",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -2047,36 +1789,6 @@
         {
           "Category": "Data",
           "PropertyName": "Appearance",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -3326,12 +3038,6 @@
           "NameMapSourceSchema": "?"
         },
         "Appearance",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3373,36 +3079,6 @@
         {
           "Category": "Data",
           "PropertyName": "Appearance",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -3912,12 +3588,6 @@
         },
         "Fill",
         "Appearance",
-        "BorderStyle",
-        "BorderColor",
-        "HoverBorderColor",
-        "PressedBorderColor",
-        "DisabledBorderColor",
-        "FocusedBorderColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3964,36 +3634,6 @@
         {
           "Category": "Data",
           "PropertyName": "Appearance",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DisabledBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "FocusedBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "PressedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4308,9 +3948,7 @@
           "NameMapSourceSchema": "?"
         },
         "FontColor",
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4349,16 +3987,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4429,9 +4057,7 @@
           "NameMapSourceSchema": "?"
         },
         "FontColor",
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4470,16 +4096,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4550,9 +4166,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4591,16 +4205,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4671,9 +4275,7 @@
           "NameMapSourceSchema": "?"
         },
         "FontColor",
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4712,16 +4314,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4792,9 +4384,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4833,16 +4423,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -4913,9 +4493,7 @@
           "NameMapSourceSchema": "?"
         },
         "FontColor",
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -4954,16 +4532,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -5066,9 +4634,7 @@
           "NameMapSourceSchema": "?"
         },
         "FontColor",
-        "Fill",
-        "BorderStyle",
-        "BorderColor"
+        "Fill"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -5127,16 +4693,6 @@
         {
           "Category": "Data",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {

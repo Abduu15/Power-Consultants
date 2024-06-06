@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    Table2 As Tabelle.pcfdataset:
+    Table2 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =621
         Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
@@ -18,49 +18,67 @@
         Y: =147
         ZIndex: =1
 
-        Projekt2 As pcfDataField.textualColumn:
+        Projekt2 As PowerAppsOneGridTemplate_dataField.textualColumn:
             FieldDisplayName: ="Projekt"
             FieldName: ="Projekt"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
+            Height: =100
             Order: =2
+            Width: =0
+            X: =0
+            Y: =0
             ZIndex: =2
 
-        Projektaufgabe2 As pcfDataField.textualColumn:
+        Projektaufgabe2 As PowerAppsOneGridTemplate_dataField.textualColumn:
             FieldDisplayName: ="Projektaufgabe"
             FieldName: ="Projektaufgabe"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
+            Height: =100
             Order: =3
+            Width: =0
+            X: =0
+            Y: =0
             ZIndex: =3
 
-        Startzeit2 As pcfDataField.textualColumn:
+        Startzeit2 As PowerAppsOneGridTemplate_dataField.textualColumn:
             FieldDisplayName: ="Startzeit"
             FieldName: ="Startzeit"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
+            Height: =100
             Order: =4
+            Width: =0
+            X: =0
+            Y: =0
             ZIndex: =4
 
-        Endzeit2 As pcfDataField.textualColumn:
+        Endzeit2 As PowerAppsOneGridTemplate_dataField.textualColumn:
             FieldDisplayName: ="Endzeit"
             FieldName: ="Endzeit"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
+            Height: =100
             Order: =5
+            Width: =0
+            X: =0
+            Y: =0
             ZIndex: =5
 
-        Bearbeitungsdauer2 As pcfDataField.textualColumn:
+        Bearbeitungsdauer2 As PowerAppsOneGridTemplate_dataField.textualColumn:
             FieldDisplayName: ="Bearbeitungsdauer"
             FieldName: ="Bearbeitungsdauer"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
+            Height: =100
             Order: =6
+            Width: =0
+            X: =0
+            Y: =0
             ZIndex: =6
 
     TextCanvas8 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -71,7 +89,7 @@
         Y: =638
         ZIndex: =2
 
-    Header1_1 As Kopfzeile:
+    Header1_1 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -96,17 +114,12 @@
         Y: =86
         ZIndex: =4
 
-    ButtonCanvas3 As Schaltfläche:
+    ButtonCanvas3 As Button:
         Align: =""
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontColor: =
         Height: =54
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
@@ -119,7 +132,6 @@
                     Endzeit: TimeValue(TextInput_Endzeit.Value),
                     Bearbeitungsdauer: TextInput_Bearbeitungsdauer.Value
                 }
-        PressedBorderColor: =""
         Text: ="Speichern"
         VerticalAlign: =""
         Width: =228
@@ -127,91 +139,61 @@
         Y: =440
         ZIndex: =10
 
-    TextInput_Projekt As Texteingabe:
+    "TextInput_Projekt As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FocusedBorderColor: =""
         FontColor: =RGBA(9, 33, 98, 1)
         Height: =39
-        HoverBorderColor: =""
-        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =185
         ZIndex: =11
 
-    TextInput_Projektaufgabe As Texteingabe:
+    "TextInput_Projektaufgabe As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
-        HoverBorderColor: =""
-        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =236
         ZIndex: =12
 
-    TextInput_Startzeit As Texteingabe:
+    "TextInput_Startzeit As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
-        HoverBorderColor: =""
-        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =284
         ZIndex: =13
 
-    TextInput_Endzeit As Texteingabe:
+    "TextInput_Endzeit As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
-        HoverBorderColor: =""
-        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =332
         ZIndex: =14
 
-    TextInput_Bearbeitungsdauer As Texteingabe:
+    "TextInput_Bearbeitungsdauer As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
-        FocusedBorderColor: =""
         FontColor: =RGBA(15, 108, 189, 1)
         Height: =39
-        HoverBorderColor: =""
-        PressedBorderColor: =""
         Width: =240
         X: =1084
         Y: =381

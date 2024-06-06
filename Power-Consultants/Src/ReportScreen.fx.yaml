@@ -9,12 +9,7 @@ ReportScreen As screen:
         DelayItemLoading: =true
         Height: =571
         Items: |+
-            =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
-            
-            
-            
-            
-            
+            =FirstN(Sort('Yaveon Projecttasks', Modified, SortOrder.Descending), 10)
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -32,7 +27,7 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Titel
+            Text: =ThisItem.Title
             X: =16
             Y: =24
             ZIndex: =1
@@ -70,7 +65,8 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Startzeit
+            Text: |-
+                =Text(ThisItem.Starttime, "[$-de-DE]HH:mm dd.mm.yyyy")
             X: =571
             Y: =24
             ZIndex: =4
@@ -82,7 +78,8 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Endzeit
+            Text: |
+                =Text(ThisItem.Endtime, "[$-de-DE]HH:mm dd.mm.yyyy")
             X: =742
             Y: =24
             ZIndex: =5
@@ -94,7 +91,7 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Bearbeitungsdauer
+            Text: =ThisItem.BearbeitungsDauer
             X: =961
             Y: =24
             ZIndex: =6
@@ -129,7 +126,16 @@ ReportScreen As screen:
             Y: =24
             ZIndex: =8
 
-    Header1_2 As Kopfzeile:
+        Rectangle1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Primary
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =1225
+            Y: =80
+            ZIndex: =9
+
+    Header1_2 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -146,8 +152,6 @@ ReportScreen As screen:
         ZIndex: =3
 
     TextCanvas8_1 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 84, 140, 1)
@@ -161,8 +165,6 @@ ReportScreen As screen:
         ZIndex: =4
 
     TextCanvas4_10 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -176,8 +178,6 @@ ReportScreen As screen:
         ZIndex: =5
 
     TextCanvas4_11 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -191,8 +191,6 @@ ReportScreen As screen:
         ZIndex: =6
 
     TextCanvas4_12 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -206,8 +204,6 @@ ReportScreen As screen:
         ZIndex: =7
 
     TextCanvas4_13 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -221,8 +217,6 @@ ReportScreen As screen:
         ZIndex: =8
 
     TextCanvas4_14 As Text:
-        BorderColor: =""
-        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
