@@ -9,7 +9,7 @@ ReportScreen As screen:
         DelayItemLoading: =true
         Height: =571
         Items: |+
-            =FirstN(Sort('Yaveon Projecttasks', Geändert, SortOrder.Descending), 10)
+            =FirstN(Sort('Yaveon Projecttasks', Starttime, SortOrder.Descending), 10)
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data

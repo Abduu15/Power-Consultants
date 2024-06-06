@@ -133,9 +133,11 @@ NeueAufgabenScreen As screen:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =36
-        Value: |-
-            =Text(gblSelectedEntry.Starttime,"HH:mm")
-        Width: =72
+        Placeholder: |-
+            ="HH:mm"
+        Value: |
+            =//Text(gblSelectedEntry.Starttime;"HH:mm")
+        Width: =80
         X: =763
         Y: =237
         ZIndex: =14
@@ -143,16 +145,28 @@ NeueAufgabenScreen As screen:
     EndInputNeu As Texteingabe:
         DisplayMode: =DisplayMode.Edit
         Height: =36
-        Value: |
-            =Text(gblSelectedEntry.Endtime,"HH:mm")
-        Width: =72
+        Placeholder: |-
+            ="HH:mm"
+        Value: |-
+            =//Text(gblSelectedEntry.Endtime;"HH:mm")
+        Width: =80
         X: =763
         Y: =386
         ZIndex: =15
 
     BearbeitungsdauerNeu As Texteingabe:
         BasePaletteColor: =
-        DisplayMode: =DisplayMode.View
+        DisplayMode: |-
+            =//DisplayMode.View
+            
+            If(
+                And(
+                    !IsBlank(StartInputNeu),
+                    !IsBlank(EndInputNeu)
+                ),
+                DisplayMode.View,
+                DisplayMode.Disabled
+            )
         Height: =37
         Value: =DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
         Width: =151
@@ -164,16 +178,17 @@ NeueAufgabenScreen As screen:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =43
-        SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
+        SelectedDate: =//Text(gblSelectedEntry.Starttime; "[$-en-US]dd.mm.yyyy")
         Width: =231
         X: =905
         Y: =234
         ZIndex: =17
 
     EndDateNeu As Datumsauswahl:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =43
-        SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")
+        SelectedDate: =//Text(gblSelectedEntry.Endtime; "[$-en-US]dd.mm.yyyy")
         Width: =231
         X: =905
         Y: =383
@@ -187,7 +202,11 @@ NeueAufgabenScreen As screen:
             =If(
                 And(
                     !IsBlank(ProjektCombo_NeuesProjekt.Selected.Value),
-                    !IsBlank(AufgabeCombo_NeueAufgabe.Selected.Value)
+                    !IsBlank(AufgabeCombo_NeueAufgabe.Selected.Value),
+                    !IsBlank(StartInputNeu.Value),
+                    !IsBlank(EndInputNeu.Value),
+                    !IsBlank(DateStarttimeNeu.SelectedDate),
+                    !IsBlank(EndDateNeu.SelectedDate)
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -203,8 +222,8 @@ NeueAufgabenScreen As screen:
             =Patch(
                 'Yaveon Projecttasks',
                 {
-                    Projekt: ProjektCombo_BearbeitenProjekt.Selected.Value,
-                    Projektaufgabe: AufgabeCombo_BearbeitenAufgabe.Selected.Value,
+                    Projekt: ProjektCombo_NeuesProjekt.Selected.Value,
+                    Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
                     Starttime: DateTimeValue(
                         Text(
                             DateStarttime.SelectedDate,

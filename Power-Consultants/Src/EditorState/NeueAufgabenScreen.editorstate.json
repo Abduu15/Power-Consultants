@@ -361,7 +361,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisplayMode",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -606,7 +606,7 @@
         {
           "Category": "Data",
           "PropertyName": "SelectedDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -658,6 +658,14 @@
           "InvariantPropertyName": "SelectedDate",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BasePaletteColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -677,6 +685,11 @@
         {
           "Category": "Data",
           "PropertyName": "SelectedDate",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BasePaletteColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -750,6 +763,14 @@
           "InvariantPropertyName": "Value",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Placeholder",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -769,6 +790,11 @@
         {
           "Category": "Data",
           "PropertyName": "Value",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Placeholder",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1149,8 +1175,22 @@
       "ControlPropertyState": [
         "X",
         "Y",
-        "Width",
-        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisplayMode",
         "ZIndex",
         {
@@ -1166,6 +1206,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "BasePaletteColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Placeholder",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -1192,6 +1240,11 @@
         {
           "Category": "Data",
           "PropertyName": "Value",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Placeholder",
           "RuleProviderType": "Unknown"
         },
         {

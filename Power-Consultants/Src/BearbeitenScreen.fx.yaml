@@ -11,8 +11,8 @@ BearbeitenScreen As screen:
         DisplayMode: |-
             =If(
                 And(
-                    !IsBlank(ProjektCombo_BearbeitenProjekt.Selected.Value),
-                    !IsBlank(AufgabeCombo_BearbeitenAufgabe.Selected.Value)
+                    !IsBlank(ProjektCombo_NeuesProjekt.Selected.Value),
+                    !IsBlank(AufgabeCombo_NeueAufgabe.Selected.Value)
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled

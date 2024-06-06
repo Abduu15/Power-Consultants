@@ -12591,6 +12591,36 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BearbeitenScreen.ButtonCanvas3_3.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BearbeitenScreen.ButtonCanvas3_3.DisplayMode",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "BearbeitenScreen",
+                "type": "BearbeitenScreen.ButtonCanvas3_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
         }
       ],
       "tool": {
@@ -12847,6 +12877,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Ein \"Grenzwert für Datenzeilen\" von mehr als 500 kann bei Ausführung nicht delegierbarer Abfragen zu einer langsameren App führen, weil die App jede Zeile selbst verarbeiten muss, anstatt die Abfrage auf dem Server auszuführen."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Ineffizientes verzögertes Laden"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Verwenden Sie Variablen, Sammlungen und Navigationskontext, um den Zustand stattdessen bildschirmübergreifend freizugeben."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Steuerelemente, die auf Steuerelemente in anderen Bildschirmen verweisen, können das Laden von Apps und das Navigieren darin verlangsamen. In diesen Fällen ist die App möglicherweise gezwungen, die anderen Bildschirme sofort zu laden, statt zu warten, bis der Benutzer zum jeweiligen Bildschirm navigiert."
               }
             }
           ],
