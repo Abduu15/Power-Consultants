@@ -168,7 +168,10 @@ NeueAufgabenScreen As screen:
                 DisplayMode.Disabled
             )
         Height: =37
-        Value: =DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
+        Value: |-
+            =If(
+            DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
+            )
         Width: =151
         X: =548
         Y: =548
