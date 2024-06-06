@@ -7,15 +7,22 @@ ReportScreen As screen:
     Gallery3 As gallery.galleryVertical:
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
-        Height: =595
-        Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
+        Height: =571
+        Items: |+
+            =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
+            
+            
+            
+            
+            
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
         Transition: =Transition.Pop
         Width: =1235
         X: =81
-        Y: =128
+        Y: =152
         ZIndex: =1
 
         Label7 As label:

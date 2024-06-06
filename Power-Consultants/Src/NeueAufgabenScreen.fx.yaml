@@ -64,11 +64,30 @@ NeueAufgabenScreen As screen:
             );
             
             
-            
-            
-            
             If(
-                IsBlank(gblSelectedEntry) || IsError(gblSelectedEntry),
+                IsError(
+                    Patch(
+                        'Yaveon Projecttasks',
+                        {
+                            Projekt: ProjektCombo_NeuesProjekt.Selected.Value,
+                            Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
+                            Startzeit: Text(
+                                StartzeitNeu_Stunden.Text & ":" & StartzeitNeu_Minuten.Text & " " & StartzeitNeu_Tag.Text & "." & StartzeitNeu_Monat.Text & "." & StartzeitNeu_Jahr.Text,
+                                "HH:mm dd.MM.yyyy"
+                            ),
+                            Endzeit: Text(
+                                EndzeitNeu_Stunden.Text & ":" & EndzeitNeu_Minuten.Text & " " & EndzeitNeu_Tag.Text & "." & EndzeitNeu_Monat.Text & "." & EndzeitNeu_Jahr.Text,
+                                "HH:mm dd.MM.yyyy"
+                            ),
+                            Bearbeitungsdauer: Text(
+                                TimeValue(
+                                    BearbeitungsdauerNeu_Stunde.Text & ":" & BearbeitungsdauerNeu_Minute.Text & ":" & BearbeitungsdauerNeu_Sekunde.Text
+                                ), 
+                                "hh:mm:ss"
+                            )
+                        }
+                    )
+                ),
                 Notify(
                     "Neuer Datensatz wurde nicht gebucht, da kein Datensatz ausgewählt wurde",
                     NotificationType.Error
@@ -78,6 +97,8 @@ NeueAufgabenScreen As screen:
                     NotificationType.Success
                 )
             );
+            
+            
             Reset(ProjektCombo_NeuesProjekt);
             Reset(AufgabeCombo_NeueAufgabe);
             Reset(BearbeitungsdauerNeu_Stunde);
