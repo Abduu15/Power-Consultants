@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    Table2 As Table.pcfdataset:
+    Table2 As Tabelle.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =621
         Items: =FirstN(Sort('Yaveon Projecttasks', Startzeit, SortOrder.Descending), 10)
@@ -89,7 +89,7 @@
         Y: =638
         ZIndex: =2
 
-    Header1_1 As Header:
+    Header1_1 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -114,7 +114,7 @@
         Y: =86
         ZIndex: =4
 
-    ButtonCanvas3 As Button:
+    ButtonCanvas3 As Schaltfläche:
         Align: =""
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -139,7 +139,7 @@
         Y: =440
         ZIndex: =10
 
-    "TextInput_Projekt As 'Text input'":
+    TextInput_Projekt As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -151,7 +151,7 @@
         Y: =185
         ZIndex: =11
 
-    "TextInput_Projektaufgabe As 'Text input'":
+    TextInput_Projektaufgabe As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -163,7 +163,7 @@
         Y: =236
         ZIndex: =12
 
-    "TextInput_Startzeit As 'Text input'":
+    TextInput_Startzeit As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -175,7 +175,7 @@
         Y: =284
         ZIndex: =13
 
-    "TextInput_Endzeit As 'Text input'":
+    TextInput_Endzeit As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -187,7 +187,7 @@
         Y: =332
         ZIndex: =14
 
-    "TextInput_Bearbeitungsdauer As 'Text input'":
+    TextInput_Bearbeitungsdauer As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit

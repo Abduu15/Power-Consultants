@@ -1,0 +1,756 @@
+NeueAufgabenScreen_Backup As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ButtonCanvas3_5 As Schaltfläche:
+        Align: =""
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        BasePaletteColor: =RGBA(5, 102, 178, 1)
+        DisplayMode: |-
+            =If(
+                And(
+                    !IsBlank(ProjektCombo_NeuesProjekt_1.Selected.Value),
+                    !IsBlank(AufgabeCombo_NeueAufgabe_1.Selected.Value),
+                    !IsBlank(StartzeitNeu_Stunden_1.Text),
+                    !IsBlank(StartzeitNeu_Minuten_1.Text),
+                    !IsBlank(StartzeitNeu_Tag_1.Text),
+                    !IsBlank(StartzeitNeu_Monat_1.Text),
+                    !IsBlank(StartzeitNeu_Jahr_1.Text),
+                    !IsBlank(EndzeitNeu_Stunden_1.Text),
+                    !IsBlank(EndzeitNeu_Minuten_1.Text),
+                    !IsBlank(EndzeitNeu_Tag_1.Text),
+                    !IsBlank(EndzeitNeu_Monat_1.Text),
+                    !IsBlank(StartzeitNeu_Jahr_1.Text),
+                    !IsBlank(BearbeitungsdauerNeu_Stunde_1.Text),
+                    !IsBlank(BearbeitungsdauerNeu_Minute_1.Text),
+                    !IsBlank(BearbeitungsdauerNeu_Sekunde_1.Text)
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        FontColor: =RGBA(12, 59, 94, 1)
+        FontSize: =34
+        Height: =76
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+        Layout: ="Icon before"
+        OnSelect: |
+            =Patch(
+                'Yaveon Projecttasks',
+                {
+                    Projekt: ProjektCombo_NeuesProjekt_1.Selected.Value,
+                    Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
+                    Startzeit: Text(
+                        StartzeitNeu_Stunden.Text & ":" & StartzeitNeu_Minuten.Text & " " & StartzeitNeu_Tag.Text & "." & StartzeitNeu_Monat.Text & "." & StartzeitNeu_Jahr.Text,
+                        "HH:mm dd.MM.yyyy"
+                    ),
+                    Endzeit: Text(
+                        EndzeitNeu_Stunden.Text & ":" & EndzeitNeu_Minuten.Text & " " & EndzeitNeu_Tag.Text & "." & EndzeitNeu_Monat.Text & "." & EndzeitNeu_Jahr.Text,
+                        "HH:mm dd.MM.yyyy"
+                    ),
+                    Bearbeitungsdauer: Text(
+                        TimeValue(
+                            BearbeitungsdauerNeu_Stunde.Text & ":" & BearbeitungsdauerNeu_Minute.Text & ":" & BearbeitungsdauerNeu_Sekunde.Text
+                        ), 
+                        "hh:mm:ss"
+                    )
+                }
+            );
+            
+            
+            If(
+                IsError(
+                    Patch(
+                        'Yaveon Projecttasks',
+                        {
+                            Projekt: ProjektCombo_NeuesProjekt.Selected.Value,
+                            Projektaufgabe: AufgabeCombo_NeueAufgabe.Selected.Value,
+                            Startzeit: Text(
+                                StartzeitNeu_Stunden.Text & ":" & StartzeitNeu_Minuten.Text & " " & StartzeitNeu_Tag.Text & "." & StartzeitNeu_Monat.Text & "." & StartzeitNeu_Jahr.Text,
+                                "HH:mm dd.MM.yyyy"
+                            ),
+                            Endzeit: Text(
+                                EndzeitNeu_Stunden.Text & ":" & EndzeitNeu_Minuten.Text & " " & EndzeitNeu_Tag.Text & "." & EndzeitNeu_Monat.Text & "." & EndzeitNeu_Jahr.Text,
+                                "HH:mm dd.MM.yyyy"
+                            ),
+                            Bearbeitungsdauer: Text(
+                                TimeValue(
+                                    BearbeitungsdauerNeu_Stunde.Text & ":" & BearbeitungsdauerNeu_Minute.Text & ":" & BearbeitungsdauerNeu_Sekunde.Text
+                                ), 
+                                "hh:mm:ss"
+                            )
+                        }
+                    )
+                ),
+                Notify(
+                    "Neuer Datensatz wurde nicht gebucht, da kein Datensatz ausgewählt wurde",
+                    NotificationType.Error
+                ),
+                Notify(
+                    "Datensatz erfolgreich geändert.",
+                    NotificationType.Success
+                )
+            );
+            
+            
+            Reset(ProjektCombo_NeuesProjekt);
+            Reset(AufgabeCombo_NeueAufgabe);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
+            Reset(StartzeitNeu_Stunden);
+            Reset(StartzeitNeu_Minuten);
+            Reset(StartzeitNeu_Tag);
+            Reset(StartzeitNeu_Monat);
+            Reset(StartzeitNeu_Jahr);
+            Reset(EndzeitNeu_Stunden);
+            Reset(EndzeitNeu_Minuten);
+            Reset(EndzeitNeu_Tag);
+            Reset(EndzeitNeu_Monat);
+            Reset(EndzeitNeu_Jahr);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
+            Navigate(Zeiterfassung)
+        Text: ="Änderungen speichern"
+        VerticalAlign: =""
+        Width: =396
+        X: =420
+        Y: =648
+        ZIndex: =1
+
+    TextCanvas4_32 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(71, 158, 245, 1)
+        Height: =57
+        Size: =30
+        Text: ="Projekt ändern"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =391
+        X: =200
+        Y: =165
+        ZIndex: =2
+
+    TextCanvas4_34 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(71, 158, 245, 1)
+        Height: =56
+        Size: =30
+        Text: ="Projektaufgabe ändern"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =443
+        X: =200
+        Y: =320
+        ZIndex: =3
+
+    ProjektCombo_NeuesProjekt_1 As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
+        BasePaletteColor: =
+        DefaultSelectedItems: =
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =18
+        Height: =43
+        InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
+        Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        Width: =409
+        X: =200
+        Y: =234
+        ZIndex: =4
+
+    AufgabeCombo_NeueAufgabe_1 As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
+        BasePaletteColor: =
+        DefaultSelectedItems: =
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =18
+        Height: =43
+        InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
+        Items: |
+            =Switch(
+                ProjektCombo_NeuesProjekt_1.Selected.Value,
+                "Yaveon - Zeiterfassungstool", ["Benutzeroberfläche entwerfen", "Backend-Dienste implementieren", "Testen und Debuggen"],
+                "OctoCon - Urlaubsanfragen", ["Antragsformular entwickeln", "Genehmigungsworkflow erstellen", "Mit dem Kalender integrieren"],
+                "Hochschule Albstadt - SCRUM Tool", ["Projektboard einrichten", "Benutzergeschichten definieren", "Sprints planen"]
+            )
+        Width: =409
+        X: =200
+        Y: =383
+        ZIndex: =5
+
+    TextCanvas4_33 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(71, 158, 245, 1)
+        Height: =57
+        Size: =30
+        Text: ="Startzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =750
+        Y: =165
+        ZIndex: =6
+
+    TextCanvas4_35 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(71, 158, 245, 1)
+        Height: =56
+        Size: =30
+        Text: ="Endzeit"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =343
+        X: =750
+        Y: =320
+        ZIndex: =7
+
+    TextCanvas4_36 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =RGBA(71, 158, 245, 1)
+        Height: =58
+        Size: =30
+        Text: ="Bearbeitungsdauer"
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =364
+        X: =504
+        Y: =480
+        ZIndex: =8
+
+    StartzeitNeu_Stunden_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="hh"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =764
+        Y: =234
+        ZIndex: =9
+
+    BearbeitungsdauerNeu_Stunde_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="hh"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: |
+            =13
+        Width: =44
+        X: =503
+        Y: =548
+        ZIndex: =10
+
+    Header1_7 As Kopfzeile:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =75
+        Logo: ='cropped-yaveon-logo-negativ'
+        OnSelectLogo: =false
+        Title: ="Einfügen eines neuen Eintrags"
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Width: =1364
+        X: =0
+        Y: =12
+        ZIndex: =11
+
+    Arrow3_2 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        OnSelect: |
+            =Reset(ProjektCombo_NeuesProjekt_1);
+            Reset(AufgabeCombo_NeueAufgabe_1);
+            Reset(BearbeitungsdauerNeu_Stunde_1);
+            Reset(BearbeitungsdauerNeu_Minute_1);
+            Reset(BearbeitungsdauerNeu_Sekunde_1);
+            Reset(StartzeitNeu_Stunden_1);
+            Reset(StartzeitNeu_Minuten_1);
+            Reset(StartzeitNeu_Tag_1);
+            Reset(StartzeitNeu_Monat_1);
+            Reset(StartzeitNeu_Jahr_1);
+            Reset(EndzeitNeu_Stunden_1);
+            Reset(EndzeitNeu_Minuten_1);
+            Reset(EndzeitNeu_Tag_1);
+            Reset(EndzeitNeu_Monat_1);
+            Reset(EndzeitNeu_Jahr_1);
+            Reset(BearbeitungsdauerNeu_Stunde_1);
+            Reset(BearbeitungsdauerNeu_Minute_1);
+            Reset(BearbeitungsdauerNeu_Sekunde_1);
+            Reset(DatePickerCanvas2_4);
+            Reset(DatePickerCanvas2_5);
+            Navigate(Zeiterfassung)
+        X: =12
+        Y: =102
+        ZIndex: =12
+
+    StartzeitNeu_Minuten_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =829
+        Y: =234
+        ZIndex: =15
+
+    StartzeitNeu_Tag_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Tag"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =924
+        Y: =234
+        ZIndex: =16
+
+    StartzeitNeu_Monat_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Monat"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =985
+        Y: =234
+        ZIndex: =17
+
+    StartzeitNeu_Jahr_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(255, 191, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Jahr"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =4
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =61
+        X: =1046
+        Y: =234
+        ZIndex: =18
+
+    TextCanvas9_8 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =815
+        Y: =230
+        ZIndex: =19
+
+    TextCanvas10_8 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =974
+        Y: =249
+        ZIndex: =20
+
+    TextCanvas10_9 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1036
+        Y: =249
+        ZIndex: =21
+
+    EndzeitNeu_Stunden_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="hh"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =764
+        Y: =387
+        ZIndex: =22
+
+    EndzeitNeu_Minuten_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =829
+        Y: =387
+        ZIndex: =23
+
+    EndzeitNeu_Tag_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Tag"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =924
+        Y: =387
+        ZIndex: =24
+
+    EndzeitNeu_Monat_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Monat"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =985
+        Y: =387
+        ZIndex: =25
+
+    EndzeitNeu_Jahr_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="Jahr"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =4
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =61
+        X: =1046
+        Y: =387
+        ZIndex: =26
+
+    TextCanvas9_9 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =815
+        Y: =383
+        ZIndex: =27
+
+    TextCanvas10_10 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =974
+        Y: =402
+        ZIndex: =28
+
+    TextCanvas10_11 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =69
+        Size: =30
+        Text: ="."
+        Width: =17
+        X: =1036
+        Y: =402
+        ZIndex: =29
+
+    BearbeitungsdauerNeu_Minute_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="mm"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =568
+        Y: =548
+        ZIndex: =30
+
+    BearbeitungsdauerNeu_Sekunde_1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(71, 158, 245, 1)
+        Default: |
+            =
+        DisabledBorderColor: =RGBA(168, 168, 168, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(149, 150, 150, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Format: =TextFormat.Number
+        Height: =67
+        HintText: ="ss"
+        HoverBorderColor: =App.Theme.Colors.Darker40
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        MaxLength: =2
+        Reset: =App.ActiveScreen = BearbeitenScreen
+        Size: =13
+        Width: =44
+        X: =633
+        Y: =548
+        ZIndex: =31
+
+    TextCanvas9_11 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =619
+        Y: =544
+        ZIndex: =32
+
+    TextCanvas9_10 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Fill: =
+        FontColor: =
+        Height: =67
+        Size: =30
+        Text: |-
+            =":"
+        Width: =21
+        X: =554
+        Y: =544
+        ZIndex: =33
+
+    DatePickerCanvas2_4 As Datumsauswahl:
+        DisplayMode: =DisplayMode.Edit
+        Height: =33
+        SelectedDate: =
+        Width: =183
+        X: =924
+        Y: =313
+        ZIndex: =36
+
+    DatePickerCanvas2_5 As Datumsauswahl:
+        DisplayMode: =DisplayMode.Edit
+        Height: =33
+        SelectedDate: =
+        Width: =183
+        X: =924
+        Y: =465
+        ZIndex: =37
+
+    StartInput_2 As Texteingabe:
+        DisplayMode: =DisplayMode.Edit
+        Height: =36
+        Value: |-
+            =Text(gblSelectedEntry.Starttime,"HH:mm")
+        Width: =72
+        X: =986
+        Y: =261
+        ZIndex: =38
+
+    EndInput_2 As Texteingabe:
+        DisplayMode: =DisplayMode.Edit
+        Height: =42
+        Value: |
+            =Text(gblSelectedEntry.Endtime,"HH:mm")
+        Width: =63
+        X: =979
+        Y: =397
+        ZIndex: =39
+
+    BearbeitungsDauer_2 As Texteingabe:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.View
+        Height: =37
+        Value: =DateDiff(StartInput_2.Value,EndInput_2.Value,TimeUnit.Minutes)& " minuten"
+        Width: =151
+        X: =494
+        Y: =533
+        ZIndex: =40
+
+    DateStarttime_2 As Datumsauswahl:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =43
+        SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
+        Width: =231
+        X: =1124
+        Y: =262
+        ZIndex: =41
+
+    EndDate_2 As Datumsauswahl:
+        DisplayMode: =DisplayMode.Edit
+        Height: =43
+        SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")
+        Width: =231
+        X: =1124
+        Y: =414
+        ZIndex: =42
+
