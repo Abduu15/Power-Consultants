@@ -123,7 +123,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "3f410b9f-2bea-4410-9dc4-da3592efefa5",
+    "AppName": "Power Consultants",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -145,6 +145,7 @@
     "Einstellungen",
     "Dokumentation",
     "Dashboard",
-    "PowerBIReport"
+    "PowerBIReport",
+    "NeueAufgabenScreen"
   ]
 }
