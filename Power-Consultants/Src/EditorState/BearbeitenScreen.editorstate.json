@@ -1806,7 +1806,7 @@
       "MetaDataIDKey": "",
       "Name": "EndDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 32,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1877,7 +1877,7 @@
       "MetaDataIDKey": "",
       "Name": "EndInput",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6155,7 +6155,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 28,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6265,7 +6265,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas10_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 29,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6911,7 +6911,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_24",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 30,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
