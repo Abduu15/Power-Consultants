@@ -78,25 +78,25 @@ NeueAufgabenScreen As screen:
                     NotificationType.Success
                 )
             );
-            Reset(ProjektCombo_BearbeitenProjekt);
-            Reset(AufgabeCombo_BearbeitenAufgabe);
-            Reset(Bearbeitungsdauer_Stunde);
-            Reset(Bearbeitungsdauer_Minute);
-            Reset(Bearbeitungsdauer_Sekunde);
-            Reset(StartzeitBearbeiten_Stunden);
-            Reset(StartzeitBearbeiten_Minuten);
-            Reset(StartzeitBearbeiten_Tag);
-            Reset(StartzeitBearbeiten_Monat);
-            Reset(StartzeitBearbeiten_Jahr);
-            Reset(EndzeitBearbeiten_Stunden);
-            Reset(EndzeitBearbeiten_Minuten);
-            Reset(EndzeitBearbeiten_Tag);
-            Reset(EndzeitBearbeiten_Monat);
-            Reset(EndzeitBearbeiten_Jahr);
-            Reset(Bearbeitungsdauer_Stunde);
-            Reset(Bearbeitungsdauer_Minute);
-            Reset(Bearbeitungsdauer_Sekunde);
-            Navigate(ReportScreen)
+            Reset(ProjektCombo_NeuesProjekt);
+            Reset(AufgabeCombo_NeueAufgabe);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
+            Reset(StartzeitNeu_Stunden);
+            Reset(StartzeitNeu_Minuten);
+            Reset(StartzeitNeu_Tag);
+            Reset(StartzeitNeu_Monat);
+            Reset(StartzeitNeu_Jahr);
+            Reset(EndzeitNeu_Stunden);
+            Reset(EndzeitNeu_Minuten);
+            Reset(EndzeitNeu_Tag);
+            Reset(EndzeitNeu_Monat);
+            Reset(EndzeitNeu_Jahr);
+            Reset(BearbeitungsdauerNeu_Stunde);
+            Reset(BearbeitungsdauerNeu_Minute);
+            Reset(BearbeitungsdauerNeu_Sekunde);
+            Navigate(Zeiterfassung)
         PressedBorderColor: =""
         Text: ="Änderungen speichern"
         VerticalAlign: =""

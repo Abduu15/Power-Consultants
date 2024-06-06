@@ -135,17 +135,17 @@
   },
   "ScreenOrder": [
     "Zeiterfassung",
-    "Screen1",
-    "Screen2",
-    "Screen3",
-    "Report Screen 4",
-    "Report Screen 2",
     "ReportScreen",
     "BearbeitenScreen",
+    "NeueAufgabenScreen",
     "Einstellungen",
     "Dokumentation",
     "Dashboard",
     "PowerBIReport",
-    "NeueAufgabenScreen"
+    "Report Screen 2",
+    "Report Screen 4",
+    "Screen1",
+    "Screen2",
+    "Screen3"
   ]
 }
