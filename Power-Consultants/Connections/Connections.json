@@ -1,4 +1,38 @@
 {
+  "07b58241-9c6c-48b7-a6b8-e0d438233859": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Zeitlimit_Benachrichtigung"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "1d7499c7-62fe-403b-8f8a-00e7c5261065"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Zeitlimit_Benachrichtigung"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "1d7499c7-62fe-403b-8f8a-00e7c5261065"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Zeitlimit_Benachrichtigung"
+    ],
+    "dependencies": {
+      "shared_sendmail": "f114c4eb-9722-4b7d-bb12-3548e0ffa83e"
+    },
+    "dependents": [],
+    "id": "07b58241-9c6c-48b7-a6b8-e0d438233859"
+  },
   "773e1a9f-c58f-41e2-bedb-610e5a4d7522": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -20,5 +54,19 @@
     "dependencies": {},
     "dependents": [],
     "id": "773e1a9f-c58f-41e2-bedb-610e5a4d7522"
+  },
+  "f114c4eb-9722-4b7d-bb12-3548e0ffa83e": {
+    "connectionRef": {
+      "displayName": "Mail",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/killSendgrid-gcc/1.0.1693.3747/sendmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sendmail"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "07b58241-9c6c-48b7-a6b8-e0d438233859"
+    ],
+    "id": "f114c4eb-9722-4b7d-bb12-3548e0ffa83e"
   }
 }
