@@ -7921,6 +7921,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ReportScreen.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportScreen.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 175,
+                  "snippet": {
+                    "text": "Text(Projekt)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ReportScreen",
+                "type": "ReportScreen.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReportScreen.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportScreen.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 189,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ReportScreen",
+                "type": "ReportScreen.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Einstellungen.Icon3.AccessibleLabel"
                 }
               ],
@@ -11872,6 +11952,96 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReportScreen.ProjektCombo_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportScreen.ProjektCombo_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReportScreen",
+                "type": "ReportScreen.ProjektCombo_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReportScreen.Icon6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportScreen.Icon6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReportScreen",
+                "type": "ReportScreen.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReportScreen.Icon6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportScreen.Icon6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ReportScreen",
+                "type": "ReportScreen.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 11
         },
         {
           "locations": [

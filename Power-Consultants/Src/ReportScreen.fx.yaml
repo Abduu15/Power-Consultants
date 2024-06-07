@@ -8,9 +8,13 @@ ReportScreen As screen:
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =571
-        Items: |+
-            =FirstN(Sort('Yaveon Projecttasks', Starttime, SortOrder.Descending), 10)
-            
+        Items: |-
+            =If(
+                IsBlank(ProjektCombo_1.Selected),
+                FirstN(Sort('Yaveon Projecttasks', Starttime, SortOrder.Descending), 10),
+                FirstN(Sort(
+                    Filter('Yaveon Projecttasks', Text(Projekt) = Text(ProjektCombo_1.Selected.Value)),Starttime, SortOrder.Descending), 10)
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =81
@@ -238,4 +242,36 @@ ReportScreen As screen:
         X: =12
         Y: =102
         ZIndex: =10
+
+    ProjektCombo_1 As Combobox.pcfdataset:
+        Appearance: ="FilledDarker"
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        InputTextPlaceholder: ="Projekt zum Filtern auswählen"
+        Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
+        OnChange: |
+            =If(
+                !IsBlank(ProjektCombo_1.Selected) && !IsBlank(AufgabeCombo.Selected),
+                Set(ButtonEnabled, true),
+                Set(ButtonEnabled, false)
+            )
+        Width: =320
+        X: =345
+        Y: =33
+        ZIndex: =11
+
+    Icon6 As icon.Undo:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =Color.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =Color.Transparent
+        Height: =27
+        Icon: =Icon.Undo
+        OnSelect: =Reset(ProjektCombo_1)
+        Width: =36
+        X: =679
+        Y: =36
+        ZIndex: =12
 
