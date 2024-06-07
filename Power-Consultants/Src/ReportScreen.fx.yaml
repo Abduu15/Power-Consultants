@@ -27,7 +27,7 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Titel
+            Text: =ThisItem.Title
             X: =16
             Y: =24
             ZIndex: =1
@@ -135,7 +135,7 @@ ReportScreen As screen:
             Y: =80
             ZIndex: =9
 
-    Header1_2 As Kopfzeile:
+    Header1_2 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =

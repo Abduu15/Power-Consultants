@@ -11,7 +11,7 @@ Einstellungen As screen:
         Y: =102
         ZIndex: =1
 
-    Header1_4 As Kopfzeile:
+    Header1_4 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =

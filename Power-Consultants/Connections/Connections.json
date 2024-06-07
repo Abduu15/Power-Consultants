@@ -5,6 +5,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "f114c4eb-9722-4b7d-bb12-3548e0ffa83e": {
+          "value": "shared_sendmail"
+        },
         "workflowDisplayName": {
           "value": "Zeitlimit_Benachrichtigung"
         },
@@ -14,6 +17,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "f114c4eb-9722-4b7d-bb12-3548e0ffa83e"
+        },
         "workflowDisplayName": {
           "value": "Zeitlimit_Benachrichtigung"
         },
