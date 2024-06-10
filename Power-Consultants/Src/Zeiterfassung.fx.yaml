@@ -506,9 +506,9 @@
             =Navigate(ReportScreen, ScreenTransition.None);
         Text: ="Reporting"
         VerticalAlign: =""
-        Width: =111
-        X: =895
-        Y: =190
+        Width: =140
+        X: =853
+        Y: =192
         ZIndex: =9
 
     ButtonCanvas4_1 As Schaltfläche:
@@ -527,9 +527,9 @@
             =Navigate(NeueAufgabenScreen, ScreenTransition.None);
         Text: ="Neuer Eintrag"
         VerticalAlign: =""
-        Width: =111
-        X: =895
-        Y: =280
+        Width: =140
+        X: =853
+        Y: =277
         ZIndex: =10
 
     Icon2 As icon.Settings:
@@ -551,6 +551,8 @@
         BasePaletteColor: =RGBA(141, 229, 250, 1)
         DisplayMode: =varDP
         FontColor: =
+        FontSize: |
+            =18
         Height: =69
         Icon: =""
         IconRotation: =0
@@ -560,9 +562,9 @@
             =Navigate(PowerBIReport, ScreenTransition.None);
         Text: ="PowerBI Reporting test"
         VerticalAlign: =""
-        Width: =111
-        X: =895
-        Y: =370
+        Width: =140
+        X: =853
+        Y: =362
         ZIndex: =12
 
     "Chatbot1 As 'Chatbot (Vorschauversion)'":
