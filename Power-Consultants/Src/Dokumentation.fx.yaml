@@ -7,6 +7,7 @@ Dokumentation As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Navigate(Einstellungen)
+        Tooltip: ="Zurück zu den Einstellungen"
         X: =12
         Y: =102
         ZIndex: =1

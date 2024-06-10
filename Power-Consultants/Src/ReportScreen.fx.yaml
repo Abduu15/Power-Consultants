@@ -108,6 +108,7 @@ ReportScreen As screen:
             Height: =30
             Icon: =Icon.Edit
             OnSelect: =Set(gblSelectedEntry, ThisItem); Navigate(BearbeitenScreen)
+            Tooltip: ="Bearbeiten des Eintrags"
             Width: =30
             X: =1092
             Y: =24
@@ -125,6 +126,7 @@ ReportScreen As screen:
             OnSelect: |-
                 =Remove('Yaveon Projecttasks', ThisItem);
                 Notify("Datensatz erfolgreich gelöscht", NotificationType.Success, 1000)
+            Tooltip: ="Löschen des Eintrags"
             Width: =30
             X: =1165
             Y: =24
@@ -239,6 +241,7 @@ ReportScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Navigate(Zeiterfassung)
+        Tooltip: ="Zurück zum Hauptfenster"
         X: =12
         Y: =102
         ZIndex: =10
@@ -270,6 +273,7 @@ ReportScreen As screen:
         Height: =27
         Icon: =Icon.Undo
         OnSelect: =Reset(ProjektCombo_1)
+        Tooltip: ="Projektfilter zurücksetzten"
         Width: =36
         X: =679
         Y: =36

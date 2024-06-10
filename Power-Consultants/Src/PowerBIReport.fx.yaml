@@ -11,3 +11,15 @@ PowerBIReport As screen:
         WorkspaceId: ="__my-workspace"
         ZIndex: =1
 
+    Arrow6 As arrow.backArrow:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =App.Theme.Colors.Primary
+        Height: =30
+        OnSelect: =Navigate(Zeiterfassung, ScreenTransition.None);
+        Tooltip: ="Zurück zum Hauptfenster"
+        Width: =30
+        X: =2
+        Y: =2
+        ZIndex: =2
+

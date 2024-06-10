@@ -7,6 +7,7 @@ Einstellungen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =App.Theme.Colors.Primary
         OnSelect: =Navigate(Zeiterfassung)
+        Tooltip: ="Zurück zum Hauptfenster"
         X: =12
         Y: =102
         ZIndex: =1
@@ -36,6 +37,7 @@ Einstellungen As screen:
         Height: =50
         Icon: =Icon.Information
         OnSelect: =Navigate(Dokumentation)
+        Tooltip: ="Zur Dokumentation"
         Width: =50
         X: =1292
         Y: =99

@@ -131,6 +131,7 @@ NeueAufgabenScreen As screen:
             Reset(DateStarttimeNeu);
             Reset(BearbeitungsdauerNeu);
             Navigate(Zeiterfassung)
+        Tooltip: ="Zurück zum Hauptfenster"
         X: =12
         Y: =102
         ZIndex: =12

@@ -540,6 +540,7 @@
         Height: =40
         Icon: =Icon.Settings
         OnSelect: =Navigate(Einstellungen)
+        Tooltip: ="Einstellungen"
         Width: =40
         X: =953
         Y: =115
