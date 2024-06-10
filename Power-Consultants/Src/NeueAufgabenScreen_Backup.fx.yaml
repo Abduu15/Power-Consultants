@@ -2,7 +2,7 @@ NeueAufgabenScreen_Backup As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_5 As Button:
+    ButtonCanvas3_5 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
@@ -269,7 +269,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =548
         ZIndex: =10
 
-    Header1_7 As Header:
+    Header1_7 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -687,7 +687,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =544
         ZIndex: =33
 
-    "DatePickerCanvas2_4 As 'Date picker'":
+    DatePickerCanvas2_4 As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =
@@ -696,7 +696,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =313
         ZIndex: =36
 
-    "DatePickerCanvas2_5 As 'Date picker'":
+    DatePickerCanvas2_5 As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =
@@ -705,7 +705,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =465
         ZIndex: =37
 
-    "StartInput_2 As 'Text input'":
+    StartInput_2 As Texteingabe:
         DisplayMode: =DisplayMode.Edit
         Height: =36
         Value: |-
@@ -715,7 +715,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =261
         ZIndex: =38
 
-    "EndInput_2 As 'Text input'":
+    EndInput_2 As Texteingabe:
         DisplayMode: =DisplayMode.Edit
         Height: =42
         Value: |
@@ -725,7 +725,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =397
         ZIndex: =39
 
-    "BearbeitungsDauer_2 As 'Text input'":
+    BearbeitungsDauer_2 As Texteingabe:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.View
         Height: =37
@@ -735,7 +735,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =533
         ZIndex: =40
 
-    "DateStarttime_2 As 'Date picker'":
+    DateStarttime_2 As Datumsauswahl:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =43
@@ -745,7 +745,7 @@ NeueAufgabenScreen_Backup As screen:
         Y: =262
         ZIndex: =41
 
-    "EndDate_2 As 'Date picker'":
+    EndDate_2 As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")

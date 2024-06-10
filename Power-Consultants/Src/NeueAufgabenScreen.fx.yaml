@@ -33,7 +33,7 @@ NeueAufgabenScreen As screen:
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
-        FontSize: =18
+        FontSize: =19
         Height: =43
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
@@ -47,7 +47,7 @@ NeueAufgabenScreen As screen:
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
-        FontSize: =18
+        FontSize: =19
         Height: =43
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
@@ -101,7 +101,7 @@ NeueAufgabenScreen As screen:
         Y: =480
         ZIndex: =8
 
-    Header1_6 As Header:
+    Header1_6 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -135,32 +135,34 @@ NeueAufgabenScreen As screen:
         Y: =102
         ZIndex: =12
 
-    "StartInputNeu As 'Text input'":
+    StartInputNeu As Texteingabe:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
-        Height: =36
+        FontSize: =19
+        Height: =43
         Placeholder: |-
             ="HH:mm"
         Value: |
             =//Text(gblSelectedEntry.Starttime;"HH:mm")
-        Width: =80
-        X: =763
-        Y: =237
+        Width: =100
+        X: =753
+        Y: =234
         ZIndex: =14
 
-    "EndInputNeu As 'Text input'":
+    EndInputNeu As Texteingabe:
         DisplayMode: =DisplayMode.Edit
-        Height: =36
+        FontSize: =19
+        Height: =43
         Placeholder: |-
             ="HH:mm"
         Value: |-
             =//Text(gblSelectedEntry.Endtime;"HH:mm")
-        Width: =80
-        X: =763
-        Y: =386
+        Width: =100
+        X: =753
+        Y: =383
         ZIndex: =15
 
-    "BearbeitungsdauerNeu As 'Text input'":
+    BearbeitungsdauerNeu As Texteingabe:
         BasePaletteColor: =
         DisplayMode: |-
             =//DisplayMode.View
@@ -173,16 +175,18 @@ NeueAufgabenScreen As screen:
                 DisplayMode.View,
                 DisplayMode.Disabled
             )
-        Height: =37
+        FontSize: =19
+        Height: =43
         Value: =DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
         Width: =151
         X: =548
         Y: =548
         ZIndex: =16
 
-    "DateStarttimeNeu As 'Date picker'":
+    DateStarttimeNeu As Datumsauswahl:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =19
         Height: =43
         SelectedDate: =//Text(gblSelectedEntry.Starttime; "[$-en-US]dd.mm.yyyy")
         Width: =231
@@ -190,9 +194,10 @@ NeueAufgabenScreen As screen:
         Y: =234
         ZIndex: =17
 
-    "EndDateNeu As 'Date picker'":
+    EndDateNeu As Datumsauswahl:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =19
         Height: =43
         SelectedDate: =//Text(gblSelectedEntry.Endtime; "[$-en-US]dd.mm.yyyy")
         Width: =231
@@ -200,7 +205,7 @@ NeueAufgabenScreen As screen:
         Y: =383
         ZIndex: =18
 
-    ButtonCanvas3_4 As Button:
+    ButtonCanvas3_4 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(5, 102, 178, 1)

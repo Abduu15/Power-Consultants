@@ -4,7 +4,7 @@ BearbeitenScreen As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ButtonCanvas3_3 As Button:
+    ButtonCanvas3_3 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
@@ -106,7 +106,7 @@ BearbeitenScreen As screen:
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
-        FontSize: =18
+        FontSize: =19
         Height: =43
         InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
         Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
@@ -120,7 +120,7 @@ BearbeitenScreen As screen:
         BasePaletteColor: =
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
-        FontSize: =18
+        FontSize: =19
         Height: =43
         InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
         Items: |
@@ -174,7 +174,7 @@ BearbeitenScreen As screen:
         Y: =450
         ZIndex: =8
 
-    Header1_3 As Header:
+    Header1_3 As Kopfzeile:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -276,29 +276,32 @@ BearbeitenScreen As screen:
         Y: =618
         ZIndex: =41
 
-    "StartInput As 'Text input'":
+    StartInput As Texteingabe:
         DisplayMode: =DisplayMode.Edit
-        Height: =36
+        FontSize: =19
+        Height: =43
         Value: |-
             =Text(gblSelectedEntry.Starttime,"HH:mm")
-        Width: =72
-        X: =970
-        Y: =237
+        Width: =100
+        X: =952
+        Y: =234
         ZIndex: =42
 
-    "EndInput As 'Text input'":
+    EndInput As Texteingabe:
         DisplayMode: =DisplayMode.Edit
-        Height: =36
+        FontSize: =19
+        Height: =43
         Value: |
             =Text(gblSelectedEntry.Endtime,"HH:mm")
-        Width: =72
-        X: =970
-        Y: =386
+        Width: =100
+        X: =952
+        Y: =383
         ZIndex: =43
 
-    "BearbeitungsDauer As 'Text input'":
+    BearbeitungsDauer As Texteingabe:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.View
+        FontSize: =19
         Height: =37
         Value: =DateDiff(StartInput.Value,EndInput.Value,TimeUnit.Minutes)& " minuten"
         Width: =151
@@ -306,9 +309,10 @@ BearbeitenScreen As screen:
         Y: =533
         ZIndex: =44
 
-    "DateStarttime As 'Date picker'":
+    DateStarttime As Datumsauswahl:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =19
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
         Width: =231
@@ -316,8 +320,9 @@ BearbeitenScreen As screen:
         Y: =234
         ZIndex: =45
 
-    "EndDate As 'Date picker'":
+    EndDate As Datumsauswahl:
         DisplayMode: =DisplayMode.Edit
+        FontSize: =19
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")
         Width: =231
