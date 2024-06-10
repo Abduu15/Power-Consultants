@@ -98,8 +98,8 @@
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
-                    Height: =32
-                    Size: =16
+                    Height: =43
+                    Size: =19
                     Text: ="Projekt"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =320
@@ -111,20 +111,20 @@
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
-                    Height: =32
-                    Size: =16
+                    Height: =43
+                    Size: =19
                     Text: ="Projektaufgabe"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =320
                     X: =30
-                    Y: =132
+                    Y: =159
                     ZIndex: =5
 
                 ProjektCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
-                    Height: =32
+                    Height: =43
                     InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
                     Items: =["Yaveon - Zeiterfassungstool", "OctoCon - Urlaubsanfragen", "Hochschule Albstadt - SCRUM Tool"]
                     OnChange: |
@@ -135,14 +135,14 @@
                         )
                     Width: =320
                     X: =30
-                    Y: =100
+                    Y: =114
                     ZIndex: =6
 
                 AufgabeCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
-                    Height: =32
+                    Height: =43
                     InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
                     Items: |
                         =Switch(
@@ -159,15 +159,15 @@
                         )
                     Width: =320
                     X: =30
-                    Y: =164
+                    Y: =205
                     ZIndex: =7
 
                 TextCanvas4_2 As Text:
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
-                    Height: =32
-                    Size: =16
+                    Height: =43
+                    Size: =19
                     Text: ="Startzeit"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =320
@@ -179,13 +179,13 @@
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
-                    Height: =32
-                    Size: =16
+                    Height: =43
+                    Size: =19
                     Text: ="Endzeit"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =320
                     X: =382
-                    Y: =132
+                    Y: =159
                     ZIndex: =9
 
                 EndZeitInput As Texteingabe:
@@ -194,12 +194,12 @@
                     DisplayMode: =DisplayMode.View
                     Fill: =
                     FontColor: =RGBA(53, 61, 63, 1)
-                    Height: =32
+                    Height: =43
                     OnChange: =
                     Value: =varCurrentTime
                     Width: =320
                     X: =382
-                    Y: =164
+                    Y: =205
                     ZIndex: =10
 
                 TextCanvas4_4 As Text:
@@ -207,12 +207,12 @@
                     Fill: =
                     FontColor: =
                     Height: =29
-                    Size: =14
+                    Size: =16
                     Text: ="Bearbeitungsdauer"
                     Weight: ='TextCanvas.Weight'.Regular
-                    Width: =122
-                    X: =440
-                    Y: =240
+                    Width: =150
+                    X: =430
+                    Y: =267
                     ZIndex: =11
 
                 StartZeitInput As Texteingabe:
@@ -221,13 +221,13 @@
                     DisplayMode: =DisplayMode.View
                     Fill: =
                     FontColor: =RGBA(53, 61, 63, 1)
-                    Height: =32
+                    Height: =43
                     OnChange: |
                         =
                     Value: =varStartTime
                     Width: =320
                     X: =382
-                    Y: =100
+                    Y: =114
                     ZIndex: =12
 
             Container2 As groupContainer.manualLayoutContainer:
@@ -369,18 +369,18 @@
         Duration: =1e+70
         Fill: =App.Theme.Colors.Primary
         Font: =App.Theme.Font
-        Height: =24
+        Height: =37
         HoverBorderColor: =App.Theme.Colors.Darker10
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =App.Theme.Colors.Darker10
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
-        Size: =10
+        Size: =19
         Start: =varTimer
         Width: =138
         X: =443
-        Y: =376
+        Y: =411
         ZIndex: =3
 
     ButtonCanvas1 As Schaltfläche:
@@ -388,7 +388,8 @@
         BasePaletteColor: =RGBA(249, 83, 109, 1)
         DisplayMode: =varDPStop
         FontColor: =
-        Height: =32
+        FontSize: =19
+        Height: =43
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
@@ -399,7 +400,7 @@
         VerticalAlign: =""
         Width: =96
         X: =635
-        Y: =368
+        Y: =408
         ZIndex: =6
 
     ButtonCanvas1_1 As Schaltfläche:
@@ -413,7 +414,8 @@
                 DisplayMode.Disabled
             )
         FontColor: =
-        Height: =32
+        FontSize: =19
+        Height: =43
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
@@ -424,7 +426,7 @@
         VerticalAlign: =""
         Width: =96
         X: =293
-        Y: =368
+        Y: =408
         ZIndex: =7
 
     ButtonCanvas2 As Schaltfläche:
@@ -433,7 +435,9 @@
         BasePaletteColor: =RGBA(5, 102, 178, 1)
         DisplayMode: =varDPBuchen
         FontColor: =
-        Height: =32
+        FontSize: |
+            =19
+        Height: =43
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
@@ -483,7 +487,7 @@
         VerticalAlign: =""
         Width: =96
         X: =464
-        Y: =455
+        Y: =485
         ZIndex: =8
 
     ButtonCanvas4 As Schaltfläche:
@@ -492,6 +496,7 @@
         BasePaletteColor: =RGBA(141, 229, 250, 1)
         DisplayMode: =varDP
         FontColor: =
+        FontSize: =19
         Height: =50
         Icon: =""
         IconRotation: =0
@@ -512,7 +517,8 @@
         BasePaletteColor: =RGBA(141, 229, 250, 1)
         DisplayMode: =varDP
         FontColor: =
-        Height: =50
+        FontSize: =19
+        Height: =57
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
