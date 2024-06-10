@@ -56,6 +56,21 @@
     "TemplateDisplayName": "Button",
     "Version": "0.0.41"
   },
+  "Chatbot (preview)": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/Chatbot",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "Chatbot",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Chatbot (preview)",
+    "Version": "0.1.10"
+  },
   "Combobox": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
