@@ -178,6 +178,7 @@ NeueAufgabenScreen As screen:
             )
         FontSize: =19
         Height: =43
+        Placeholder: ="Minuten"
         Value: =DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)& " minuten"
         Width: =151
         X: =548

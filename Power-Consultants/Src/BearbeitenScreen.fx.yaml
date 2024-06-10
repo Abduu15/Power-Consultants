@@ -221,7 +221,7 @@ BearbeitenScreen As screen:
                 Blank()
             )
         Width: =334
-        X: =30
+        X: =71
         Y: =234
         ZIndex: =16
 
@@ -238,7 +238,7 @@ BearbeitenScreen As screen:
                 Blank()
             )
         Width: =334
-        X: =30
+        X: =71
         Y: =383
         ZIndex: =17
 
@@ -278,9 +278,12 @@ BearbeitenScreen As screen:
         ZIndex: =41
 
     StartInput As Texteingabe:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
+        Placeholder: |-
+            ="HH:mm"
         Value: |-
             =Text(gblSelectedEntry.Starttime,"HH:mm")
         Width: =100
@@ -292,6 +295,8 @@ BearbeitenScreen As screen:
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
+        Placeholder: |-
+            ="HH:mm"
         Value: |
             =Text(gblSelectedEntry.Endtime,"HH:mm")
         Width: =100
