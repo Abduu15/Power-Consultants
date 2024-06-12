@@ -5,8 +5,8 @@ PowerBIReport As screen:
     PowerBI1 As powerbi:
         BorderColor: =App.Theme.Colors.Darker40
         Height: =768
-        TileUrl: |-
-            ="https://app.powerbi.com/reportEmbed?reportId=409b1ed6-7e80-461a-9b8d-645b1a54f197&autoAuth=true&ctid=ef350f96-c962-4cb3-abad-5a3a022c948f"
+        TileUrl: |
+            ="https://app.powerbi.com/reportEmbed?reportId=ce1037b3-d626-4a5c-b93f-bf8b962b4fa5&autoAuth=true&ctid=ef350f96-c962-4cb3-abad-5a3a022c948f"
         Width: =1366
         WorkspaceId: ="__my-workspace"
         ZIndex: =1
