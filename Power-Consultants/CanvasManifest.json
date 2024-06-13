@@ -11,7 +11,7 @@
   },
   "Properties": {
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "Chatbot Komponente eingefügt",
+    "AppDescription": "PDF Export",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
@@ -79,7 +79,7 @@
       "powerfxv1": false,
       "primaryoutputpropertycoerciondeprecated": true,
       "projectionmapping": true,
-      "reactformulabar": true,
+      "reactformulabar": false,
       "reliableconcurrent": true,
       "reservedkeywords": false,
       "rtlinstudiopreview": false,
