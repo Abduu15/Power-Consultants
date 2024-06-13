@@ -3,6 +3,7 @@ ReportScreen As screen:
     Fill: =Color.White
     ImagePosition: =ImagePosition.Center
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Set(pdfVisible, false)
 
     Gallery3 As gallery.galleryVertical:
         BorderColor: =App.Theme.Colors.Darker40
@@ -279,20 +280,6 @@ ReportScreen As screen:
         Y: =36
         ZIndex: =12
 
-    Icon8 As icon.Export:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =Color.White
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =46
-        Icon: =Icon.Export
-        OnSelect: |-
-            =Set(pdfBlob, PDF(Gallery3, {ExpandContainers: true}))
-        Width: =46
-        X: =1205
-        Y: =26
-        ZIndex: =13
-
     DataCardValue5_1 As attachments:
         BorderColor: =
         BorderThickness: =2
@@ -304,7 +291,7 @@ ReportScreen As screen:
         Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
-        Height: =64
+        Height: =75
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         IsInDataCard: =true
@@ -321,8 +308,24 @@ ReportScreen As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =App.Theme.Colors.Darker30
         Tooltip: =
+        Visible: =pdfVisible
         Width: =173
-        X: =897
-        Y: =17
+        X: =1065
+        Y: =12
         ZIndex: =14
+
+    Icon10 As icon.Download:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =Color.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =46
+        Icon: =Icon.Download
+        OnSelect: |-
+            =Set(pdfBlob, PDF(Gallery3, {ExpandContainers: true}));Set(pdfVisible, true)
+        Tooltip: ="Export Report"
+        Width: =45
+        X: =999
+        Y: =26
+        ZIndex: =15
 
