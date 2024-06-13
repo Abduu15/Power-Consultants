@@ -131,7 +131,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "de-DE"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Zeiterfassung",
@@ -148,6 +148,7 @@
     "Screen2",
     "Screen3",
     "NeueAufgabenScreen_Backup",
-    "BearbeitenScreen_Backup"
+    "BearbeitenScreen_Backup",
+    "Screen4"
   ]
 }

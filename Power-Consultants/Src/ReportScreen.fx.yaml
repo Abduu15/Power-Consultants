@@ -31,7 +31,7 @@ ReportScreen As screen:
             Font: =App.Theme.Font
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Titel
+            Text: =ThisItem.Title
             X: =16
             Y: =24
             ZIndex: =1
@@ -141,7 +141,7 @@ ReportScreen As screen:
             Y: =80
             ZIndex: =9
 
-    Header1_2 As Kopfzeile:
+    Header1_2 As Header:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -278,4 +278,49 @@ ReportScreen As screen:
         X: =679
         Y: =36
         ZIndex: =12
+
+    Icon8 As icon.Export:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =Color.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =46
+        Icon: =Icon.Export
+        OnSelect: |-
+            =Set(pdfBlob, PDF(Gallery3, {ExpandContainers: true}))
+        Width: =46
+        X: =1205
+        Y: =26
+        ZIndex: =13
+
+    DataCardValue5_1 As attachments:
+        BorderColor: =
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =57
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =App.Theme.Colors.Lighter70
+        IsInDataCard: =true
+        ItemColor: =RGBA(255, 255, 255, 1)
+        ItemFill: =App.Theme.Colors.Primary
+        ItemHoverColor: =RGBA(0, 0, 0, 1)
+        ItemHoverFill: =App.Theme.Colors.Lighter70
+        Items: |-
+            ={Name: "Report.pdf",Value: pdfBlob}
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =App.Theme.Colors.Darker30
+        Tooltip: =
+        Width: =291
+        X: =893
+        Y: =21
+        ZIndex: =14
 
