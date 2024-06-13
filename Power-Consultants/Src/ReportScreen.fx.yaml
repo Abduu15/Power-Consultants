@@ -318,7 +318,6 @@ ReportScreen As screen:
         PaddingTop: =5
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =App.Theme.Colors.Darker30
-        Reset: =true
         Tooltip: =
         Width: =291
         X: =893

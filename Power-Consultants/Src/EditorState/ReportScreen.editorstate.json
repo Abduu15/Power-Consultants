@@ -244,14 +244,7 @@
         "Width",
         "Height",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "Reset",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Reset",
         "Visible"
       ],
       "HasDynamicProperties": false,
@@ -287,7 +280,7 @@
         {
           "Category": "Data",
           "PropertyName": "Reset",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
