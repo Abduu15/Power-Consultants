@@ -296,13 +296,15 @@ ReportScreen As screen:
     DataCardValue5_1 As attachments:
         BorderColor: =
         BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         Font: =App.Theme.Font
-        Height: =57
+        Height: =64
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =App.Theme.Colors.Lighter70
         IsInDataCard: =true
@@ -319,8 +321,8 @@ ReportScreen As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =App.Theme.Colors.Darker30
         Tooltip: =
-        Width: =291
-        X: =893
-        Y: =21
+        Width: =173
+        X: =897
+        Y: =17
         ZIndex: =14
 
