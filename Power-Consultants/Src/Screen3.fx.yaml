@@ -30,7 +30,7 @@ Screen3 As screen:
         Y: =65
         ZIndex: =1
 
-    "DatePickerCanvas1_1 As 'Date picker'":
+    DatePickerCanvas1_1 As Datumsauswahl:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -42,7 +42,7 @@ Screen3 As screen:
         Y: =127
         ZIndex: =8
 
-    DropdownCanvas1_1 As Dropdown.pcfdataset:
+    DropdownCanvas1_1 As Dropdownmenü.pcfdataset:
         AccessibleLabel: ="Folgende Einträge sind verfügbar"
         Appearance: ="FilledDarker"
         DisplayMode: =DisplayMode.Edit
@@ -64,7 +64,7 @@ Screen3 As screen:
         Y: =190
         ZIndex: =10
 
-    DropdownCanvas2_1 As Dropdown.pcfdataset:
+    DropdownCanvas2_1 As Dropdownmenü.pcfdataset:
         Appearance: ="FilledDarker"
         DisplayMode: =DisplayMode.Edit
         Height: =32
@@ -74,7 +74,7 @@ Screen3 As screen:
         Y: =307
         ZIndex: =11
 
-    "TextInputCanvas1_1 As 'Text input'":
+    TextInputCanvas1_1 As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
@@ -87,7 +87,7 @@ Screen3 As screen:
         Y: =359
         ZIndex: =12
 
-    "TextInputCanvas2_1 As 'Text input'":
+    TextInputCanvas2_1 As Texteingabe:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
