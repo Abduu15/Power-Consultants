@@ -401,7 +401,7 @@
         Width: =96
         X: =635
         Y: =408
-        ZIndex: =6
+        ZIndex: =4
 
     ButtonCanvas1_1 As Button:
         Align: =""
@@ -427,7 +427,7 @@
         Width: =96
         X: =293
         Y: =408
-        ZIndex: =7
+        ZIndex: =5
 
     ButtonCanvas2 As Button:
         Align: =""
@@ -488,7 +488,7 @@
         Width: =96
         X: =464
         Y: =485
-        ZIndex: =8
+        ZIndex: =6
 
     ButtonCanvas4 As Button:
         Align: =""
@@ -509,7 +509,7 @@
         Width: =140
         X: =853
         Y: =192
-        ZIndex: =9
+        ZIndex: =7
 
     ButtonCanvas4_1 As Button:
         Align: =""
@@ -530,7 +530,7 @@
         Width: =140
         X: =853
         Y: =277
-        ZIndex: =10
+        ZIndex: =8
 
     Icon2 As icon.Settings:
         BorderColor: =App.Theme.Colors.Darker40
@@ -544,7 +544,7 @@
         Width: =40
         X: =953
         Y: =115
-        ZIndex: =11
+        ZIndex: =9
 
     ButtonCanvas4_2 As Button:
         Align: =""
@@ -566,18 +566,7 @@
         Width: =140
         X: =853
         Y: =362
-        ZIndex: =12
-
-    "Chatbot1 As 'Chatbot (preview)'":
-        DisplayMode: =DisplayMode.Edit
-        EnvironmentId: ="Default-ef350f96-c962-4cb3-abad-5a3a022c948f"
-        Height: =653
-        SchemaName: ="cr8ae_yaveon"
-        Visible: =varChatbot
-        Width: =1006
-        X: =9
-        Y: =104
-        ZIndex: =13
+        ZIndex: =10
 
     Icon7 As icon.Support:
         BorderColor: =App.Theme.Colors.Darker40
@@ -591,7 +580,18 @@
         Width: =41
         X: =1195
         Y: =30
-        ZIndex: =14
+        ZIndex: =11
+
+    "Chatbot2 As 'Chatbot (preview)'":
+        DisplayMode: =DisplayMode.Edit
+        EnvironmentId: ="Default-ef350f96-c962-4cb3-abad-5a3a022c948f"
+        Height: =643
+        SchemaName: ="cr8ae_yaveon"
+        Visible: =varChatbot
+        Width: =983
+        X: =10
+        Y: =105
+        ZIndex: =12
 
     ButtonCanvas5 As Button:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
@@ -603,5 +603,5 @@
         Width: =93
         X: =860
         Y: =115
-        ZIndex: =15
+        ZIndex: =13
 
