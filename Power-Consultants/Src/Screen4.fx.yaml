@@ -16,12 +16,12 @@ Screen4 As screen:
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.Titel
+            Default: =ThisItem.Title
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Yaveon Projecttasks'],DataSourceInfo.DisplayName,Titel)
+            DisplayName: =DataSourceInfo([@'Yaveon Projecttasks'],DataSourceInfo.DisplayName,Title)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@'Yaveon Projecttasks'], DataSourceInfo.MaxLength, Titel)
+            MaxLength: =DataSourceInfo([@'Yaveon Projecttasks'], DataSourceInfo.MaxLength, Title)
             Required: =false
             Update: =DataCardValue1.Value
             Width: =433
@@ -40,7 +40,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue1 As Texteingabe:
+            "DataCardValue1 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -103,7 +103,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue2 As Texteingabe:
+            "DataCardValue2 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -166,7 +166,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue3 As Texteingabe:
+            "DataCardValue3 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -229,7 +229,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue4 As Texteingabe:
+            "DataCardValue4 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -291,7 +291,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DateValue1 As Datumsauswahl:
+            "DateValue1 As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -302,7 +302,7 @@ Screen4 As screen:
                 Y: =DataCardKey5.Y + DataCardKey5.Height + 4
                 ZIndex: =2
 
-            HourValue1 As Dropdownmenü.pcfdataset:
+            HourValue1 As Dropdown.pcfdataset:
                 DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -323,7 +323,7 @@ Screen4 As screen:
                 Y: =HourValue1.Y
                 ZIndex: =4
 
-            MinuteValue1 As Dropdownmenü.pcfdataset:
+            MinuteValue1 As Dropdown.pcfdataset:
                 DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -382,7 +382,7 @@ Screen4 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DateValue2 As Datumsauswahl:
+            "DateValue2 As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -393,7 +393,7 @@ Screen4 As screen:
                 Y: =DataCardKey6.Y + DataCardKey6.Height + 4
                 ZIndex: =2
 
-            HourValue2 As Dropdownmenü.pcfdataset:
+            HourValue2 As Dropdown.pcfdataset:
                 DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -414,7 +414,7 @@ Screen4 As screen:
                 Y: =HourValue2.Y
                 ZIndex: =4
 
-            MinuteValue2 As Dropdownmenü.pcfdataset:
+            MinuteValue2 As Dropdown.pcfdataset:
                 DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -450,9 +450,9 @@ Screen4 As screen:
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Anlagen
+            Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Yaveon Projecttasks'],DataSourceInfo.DisplayName,Anlagen)
+            DisplayName: =DataSourceInfo([@'Yaveon Projecttasks'],DataSourceInfo.DisplayName,Attachments)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
