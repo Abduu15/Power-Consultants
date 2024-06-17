@@ -582,15 +582,15 @@
         Y: =30
         ZIndex: =11
 
-    "Chatbot2 As 'Chatbot (preview)'":
+    "Chatbot1 As 'Chatbot (preview)'":
         DisplayMode: =DisplayMode.Edit
         EnvironmentId: ="Default-ef350f96-c962-4cb3-abad-5a3a022c948f"
-        Height: =643
+        Height: =634
         SchemaName: ="cr8ae_yaveon"
         Visible: =varChatbot
-        Width: =983
+        Width: =1002
         X: =10
-        Y: =105
+        Y: =115
         ZIndex: =12
 
     ButtonCanvas5 As Button:
