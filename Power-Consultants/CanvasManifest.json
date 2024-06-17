@@ -43,7 +43,7 @@
       "enablecopilotcontrol": true,
       "enabledataverseoffline": false,
       "enableeditcacherefreshfrequency": false,
-      "enableeditinmcs": false,
+      "enableeditinmcs": true,
       "enableexcelonlinebusinessv2connector": true,
       "enableideaspanel": true,
       "enablelegacybarcodescanner": false,
