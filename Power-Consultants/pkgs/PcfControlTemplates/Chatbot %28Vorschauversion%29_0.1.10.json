@@ -39,7 +39,7 @@
         "ShowInCanvasInlineActionBar": false,
         "Type": 0,
         "WizardStep": {
-          "Label": "Schema Name",
+          "Label": "Schemaname",
           "LinkedLocation": 8192,
           "PanelTitle": "Chatbots",
           "PropertyInvariantName": "SchemaName"
@@ -339,14 +339,14 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Chatbot (preview)",
+  "Name": "Chatbot (Vorschauversion)",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Environment ID",
+      "Description": "Umgebungs-ID",
       "DescriptionResourceString": "Manifest_Property_Description_EnvironmentId",
-      "DisplayName": "Environment ID",
+      "DisplayName": "Umgebungs-ID",
       "DisplayNameResourceString": "Manifest_Property_Name_EnvironmentId",
       "EnumValues": [],
       "HelperUI": "",
@@ -372,9 +372,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Endpoint",
+      "Description": "Endpunkt",
       "DescriptionResourceString": "Manifest_Property_Description_EndPoint",
-      "DisplayName": "Endpoint",
+      "DisplayName": "Endpunkt",
       "DisplayNameResourceString": "Manifest_Property_Name_EndPoint",
       "EnumValues": [],
       "HelperUI": "",
@@ -400,9 +400,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Schema name from your published Power Virtual Agents bot",
+      "Description": "Schemaname Ihres veröffentlichten Power Virtual Agents-Bots",
       "DescriptionResourceString": "Manifest_Property_Description_SchemaName",
-      "DisplayName": "Schema Name",
+      "DisplayName": "Schemaname",
       "DisplayNameResourceString": "Manifest_Property_Name_SchemaName",
       "EnumValues": [],
       "HelperUI": null,
@@ -456,9 +456,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Header label",
+      "Description": "Kopfzeilenbeschriftung",
       "DescriptionResourceString": "Manifest_Property_Description_HeaderLabel",
-      "DisplayName": "Header label",
+      "DisplayName": "Kopfzeilenbeschriftung",
       "DisplayNameResourceString": "Manifest_Property_Name_HeaderLabel",
       "EnumValues": [],
       "HelperUI": null,
@@ -977,7 +977,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 14,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Manifest_Control_Name\":\"Chatbot (preview)\",\"Manifest_Control_Description\":\"Chatbot powered by Power Virtual Agents\",\"Manifest_Property_Name_EnvironmentId\":\"Environment ID\",\"Manifest_Property_Description_EnvironmentId\":\"Environment ID\",\"Manifest_Property_Name_EndPoint\":\"Endpoint\",\"Manifest_Property_Description_EndPoint\":\"Endpoint\",\"Manifest_Property_Name_SchemaName\":\"Schema Name\",\"Manifest_Property_Description_SchemaName\":\"Schema name from your published Power Virtual Agents bot\",\"Manifest_Property_Name_HeaderLabel\":\"Header label\",\"Manifest_Property_Description_HeaderLabel\":\"Header label\",\"Error_Message_Default\":\"Something went wrong\",\"Error_Message_Subheader_Default\":\"Click the Refresh button and try again. \",\"Error_RefreshButton_Label\":\"Refresh\",\"Loading_Message\":\"Loading...\",\"Connect_Bot_Message\":\"Connect a chatbot\",\"Connect_Bot_Subheader_Message\":\"Select a published chatbot on the {0} pane. \",\"Connect_Bot_Subheader_Properties_Text\":\"Properties\",\"Header_Label\":\"Chatbot\",\"Send_Button_Tooltip\":\"Send\",\"Header_Reset_Button_Label\":\"Restart the conversation\",\"Footer_Label\":\"AI-generated content can have mistakes. Make sure it's accurate and appropriate before using it.\",\"Footer_Label_Link\":\"Read the preview terms.\",\"Learn_More_Message\":\"Learn more\",\"Placeholder_Label\":\"Enter your question here\",\"PVABots_PaneTitle\":\"Chatbots\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Manifest_Control_Name\":\"Chatbot (Vorschauversion)\",\"Manifest_Control_Description\":\"Von Power Virtual Agents unterstützter Chatbot\",\"Manifest_Property_Name_EnvironmentId\":\"Umgebungs-ID\",\"Manifest_Property_Description_EnvironmentId\":\"Umgebungs-ID\",\"Manifest_Property_Name_EndPoint\":\"Endpunkt\",\"Manifest_Property_Description_EndPoint\":\"Endpunkt\",\"Manifest_Property_Name_SchemaName\":\"Schemaname\",\"Manifest_Property_Description_SchemaName\":\"Schemaname Ihres veröffentlichten Power Virtual Agents-Bots\",\"Manifest_Property_Name_HeaderLabel\":\"Kopfzeilenbeschriftung\",\"Manifest_Property_Description_HeaderLabel\":\"Kopfzeilenbeschriftung\",\"Error_Message_Default\":\"Leider ist ein Problem aufgetreten.\",\"Error_Message_Subheader_Default\":\"Klicken Sie auf die Seite „Aktualisieren“, und versuchen Sie es erneut. \",\"Error_RefreshButton_Label\":\"Aktualisieren\",\"Loading_Message\":\"Wird geladen…\",\"Connect_Bot_Message\":\"Verbindung mit einem Chatbot herstellen\",\"Connect_Bot_Subheader_Message\":\"Wählen Sie einen veröffentlichten Chatbot im Bereich {0} aus. \",\"Connect_Bot_Subheader_Properties_Text\":\"Eigenschaften\",\"Header_Label\":\"Chatbot\",\"Send_Button_Tooltip\":\"Senden\",\"Header_Reset_Button_Label\":\"Die Unterhaltung neu starten\",\"Footer_Label\":\"KI-generierte Inhalte können Fehler enthalten. Stellen Sie sicher, dass sie korrekt und geeignet sind, bevor Sie sie verwenden.\",\"Footer_Label_Link\":\"Lesen Sie die Nutzungsbedingungen der Vorschauversion.\",\"Learn_More_Message\":\"Mehr erfahren\",\"Placeholder_Label\":\"Frage hier eingeben\",\"PVABots_PaneTitle\":\"Chatbots\"}}}",
       "Type": 3
     },
     {

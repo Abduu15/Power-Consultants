@@ -36,7 +36,7 @@
             RadiusTopRight: =4
             ZIndex: =2
 
-            Header1 As Header:
+            Header1 As Kopfzeile:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FillPortions: =1
@@ -188,7 +188,7 @@
                     Y: =159
                     ZIndex: =9
 
-                "EndZeitInput As 'Text input'":
+                EndZeitInput As Texteingabe:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.View
@@ -215,7 +215,7 @@
                     Y: =267
                     ZIndex: =11
 
-                "StartZeitInput As 'Text input'":
+                StartZeitInput As Texteingabe:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.View
@@ -244,7 +244,7 @@
                 "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                     BorderColor: =App.Theme.Colors.Lighter60
                     DelayItemLoading: =true
-                    Items: =Filter('Yaveon Projecttasks', 'Created By'.DisplayName = User().FullName && Text(Today(),"[$-en-US]dd.mm.yyyy") in Endzeit)
+                    Items: =Filter('Yaveon Projecttasks', 'Erstellt von'.DisplayName = User().FullName && Text(Today(),"[$-en-US]dd.mm.yyyy") in Endzeit)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -383,7 +383,7 @@
         Y: =411
         ZIndex: =3
 
-    ButtonCanvas1 As Button:
+    ButtonCanvas1 As Schaltfläche:
         Align: =""
         BasePaletteColor: =RGBA(249, 83, 109, 1)
         DisplayMode: =varDPStop
@@ -403,7 +403,7 @@
         Y: =408
         ZIndex: =4
 
-    ButtonCanvas1_1 As Button:
+    ButtonCanvas1_1 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(8, 222, 8, 1)
@@ -429,7 +429,7 @@
         Y: =408
         ZIndex: =5
 
-    ButtonCanvas2 As Button:
+    ButtonCanvas2 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
@@ -490,7 +490,7 @@
         Y: =485
         ZIndex: =6
 
-    ButtonCanvas4 As Button:
+    ButtonCanvas4 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
@@ -511,7 +511,7 @@
         Y: =192
         ZIndex: =7
 
-    ButtonCanvas4_1 As Button:
+    ButtonCanvas4_1 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
@@ -546,7 +546,7 @@
         Y: =115
         ZIndex: =9
 
-    ButtonCanvas4_2 As Button:
+    ButtonCanvas4_2 As Schaltfläche:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
@@ -582,7 +582,7 @@
         Y: =30
         ZIndex: =11
 
-    "Chatbot1 As 'Chatbot (preview)'":
+    "Chatbot1 As 'Chatbot (Vorschauversion)'":
         DisplayMode: =DisplayMode.Edit
         EnvironmentId: ="Default-ef350f96-c962-4cb3-abad-5a3a022c948f"
         Height: =634
@@ -593,7 +593,7 @@
         Y: =115
         ZIndex: =12
 
-    ButtonCanvas5 As Button:
+    ButtonCanvas5 As Schaltfläche:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =26
