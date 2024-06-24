@@ -47,7 +47,7 @@ BearbeitenScreen As screen:
                             "[$-de-DE]dd.mm.yyyy"
                         ) & " " & EndInput.Value
                     ),BearbeitungsDauer: BearbeitungsDauer.Value,
-                    BearbeitungsDauerINT: (DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes))
+                    BearbeitungsDauerINT: DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)
                 }
             );
             If(

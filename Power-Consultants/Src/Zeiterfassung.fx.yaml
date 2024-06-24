@@ -454,7 +454,7 @@
                         Startzeit: StartZeitInput.Value,
                         Endzeit: EndZeitInput.Value,
                         Bearbeitungsdauer: Timer2.Text,
-                        BearbeitungsDauerINT: Timer2.Value,
+                        BearbeitungsDauerINT: Timer2.Value/60000,
                         Endtime: DateValue(EndZeitInput.Value) + TimeValue(EndZeitInput.Value),
                         Starttime: DateValue(StartZeitInput.Value) + TimeValue(StartZeitInput.Value),BearbeitungsDauer:DateDiff(StartZeitInput.Value,EndZeitInput.Value,TimeUnit.Minutes)& " minuten"
                     }
