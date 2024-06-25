@@ -970,7 +970,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Layout",
         "IconRotation",
         "IconStyle",
@@ -1156,7 +1163,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Layout",
         "IconRotation",
         "IconStyle",
@@ -1342,7 +1356,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Layout",
         "IconRotation",
         "IconStyle",

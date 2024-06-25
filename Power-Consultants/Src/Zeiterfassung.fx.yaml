@@ -499,7 +499,7 @@
         FontColor: =
         FontSize: =19
         Height: =50
-        Icon: =""
+        Icon: ="Checkmark"
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
@@ -520,7 +520,7 @@
         FontColor: =
         FontSize: =19
         Height: =57
-        Icon: =""
+        Icon: ="Add"
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
@@ -556,13 +556,13 @@
         FontSize: |
             =18
         Height: =69
-        Icon: =""
+        Icon: ="Filter"
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: |
             =Navigate(PowerBIReport, ScreenTransition.None);
-        Text: ="PowerBI Reporting test"
+        Text: ="PowerBI Reporting"
         VerticalAlign: =""
         Width: =140
         X: =853
