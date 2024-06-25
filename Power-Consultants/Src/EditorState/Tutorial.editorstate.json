@@ -198,7 +198,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -374,7 +374,7 @@
       "MetaDataIDKey": "%TutorialScreenIconNext.ID%",
       "Name": "iconNext1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -565,7 +565,7 @@
       "MetaDataIDKey": "%TutorialScreenIconBack.ID%",
       "Name": "iconPrev1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -768,7 +768,7 @@
       "MetaDataIDKey": "",
       "Name": "LabelSkip1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1376,7 +1376,7 @@
       "MetaDataIDKey": "%TutorialScreenDataGallery.ID%",
       "Name": "TutorialNavigator1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
