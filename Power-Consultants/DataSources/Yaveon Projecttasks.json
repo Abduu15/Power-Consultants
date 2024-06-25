@@ -30,6 +30,7 @@
       "BearbeitungsDauerINT": "BearbeitungsDauerINT",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
+      "DauerINT": "DauerINT",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "Endtime": "Endtime",

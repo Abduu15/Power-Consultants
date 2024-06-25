@@ -134,6 +134,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Tutorial",
     "Zeiterfassung",
     "ReportScreen",
     "BearbeitenScreen",
