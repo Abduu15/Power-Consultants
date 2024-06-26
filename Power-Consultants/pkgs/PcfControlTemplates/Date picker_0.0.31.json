@@ -498,14 +498,14 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Datumsauswahl",
+  "Name": "Date picker",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Beschriftung für Sprachausgabe",
+      "Description": "Label for screen readers.",
       "DescriptionResourceString": "DatePickerCanvas_AccessibleLabel_Desc",
-      "DisplayName": "Beschriftung für Bedienungshilfen",
+      "DisplayName": "Accessible label",
       "DisplayNameResourceString": "DatePickerCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
@@ -531,9 +531,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "In diesem Steuerelement ausgewähltes Datum.",
+      "Description": "Date selected in this control.",
       "DescriptionResourceString": "DatePickerCanvas_SelectedDate_Desc",
-      "DisplayName": "Ausgewähltes Datum",
+      "DisplayName": "SelectedDate",
       "DisplayNameResourceString": "DatePickerCanvas_SelectedDate",
       "EnumValues": [],
       "HelperUI": "",
@@ -559,9 +559,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Das früheste auswählbare Jahr.",
+      "Description": "The earliest year selectable.",
       "DescriptionResourceString": "DatePickerCanvas_StartYear_Desc",
-      "DisplayName": "Startjahr",
+      "DisplayName": "StartYear",
       "DisplayNameResourceString": "DatePickerCanvas_StartYear",
       "EnumValues": [],
       "HelperUI": "",
@@ -587,9 +587,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Das letzte auswählbare Jahr.",
+      "Description": "The latest year selectable.",
       "DescriptionResourceString": "DatePickerCanvas_EndYear_Desc",
-      "DisplayName": "Endjahr",
+      "DisplayName": "EndYear",
       "DisplayNameResourceString": "DatePickerCanvas_EndYear",
       "EnumValues": [],
       "HelperUI": "",
@@ -615,28 +615,28 @@
     {
       "Category": "data",
       "DefaultValue": "Long Abbreviated",
-      "Description": "Das Format, in dem das Datum angezeigt werden soll.",
+      "Description": "The format to display the date in.",
       "DescriptionResourceString": "DatePickerCanvas_Format_Desc",
       "DisplayName": "Format",
       "DisplayNameResourceString": "DatePickerCanvas_Format",
       "EnumValues": [
         {
-          "Description": "Kurz",
-          "DisplayName": "Kurz",
+          "Description": "Short",
+          "DisplayName": "Short",
           "IsDefaultValue": false,
           "Name": "Short",
           "Value": "Short"
         },
         {
-          "Description": "Lang gekürzt",
-          "DisplayName": "Lang gekürzt",
+          "Description": "LongAbbreviated",
+          "DisplayName": "LongAbbreviated",
           "IsDefaultValue": true,
           "Name": "LongAbbreviated",
           "Value": "Long Abbreviated"
         },
         {
-          "Description": "Monat des Jahres",
-          "DisplayName": "Monat des Jahres",
+          "Description": "YearMonth",
+          "DisplayName": "YearMonth",
           "IsDefaultValue": false,
           "Name": "YearMonth",
           "Value": "Year Month"
@@ -665,9 +665,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Gibt an, ob der Benutzer ein Datum eingeben kann.",
+      "Description": "Whether or not the user can type in a date.",
       "DescriptionResourceString": "DatePickerCanvas_IsEditable_Desc",
-      "DisplayName": "Ist bearbeitbar",
+      "DisplayName": "IsEditable",
       "DisplayNameResourceString": "DatePickerCanvas_IsEditable",
       "EnumValues": [],
       "HelperUI": "",
@@ -693,56 +693,56 @@
     {
       "Category": "data",
       "DefaultValue": "Sunday",
-      "Description": "An welchem Wochentag der Kalender beginnen soll.",
+      "Description": "Which day of the week the calendar should start on.",
       "DescriptionResourceString": "DatePickerCanvas_StartOfWeek_Desc",
-      "DisplayName": "Wochenbeginn",
+      "DisplayName": "StartOfWeek",
       "DisplayNameResourceString": "DatePickerCanvas_StartOfWeek",
       "EnumValues": [
         {
-          "Description": "Sonntag",
-          "DisplayName": "Sonntag",
+          "Description": "Sunday",
+          "DisplayName": "Sunday",
           "IsDefaultValue": true,
           "Name": "Sunday",
           "Value": "Sunday"
         },
         {
-          "Description": "Montag",
-          "DisplayName": "Montag",
+          "Description": "Monday",
+          "DisplayName": "Monday",
           "IsDefaultValue": false,
           "Name": "Monday",
           "Value": "Monday"
         },
         {
-          "Description": "Dienstag",
-          "DisplayName": "Dienstag",
+          "Description": "Tuesday",
+          "DisplayName": "Tuesday",
           "IsDefaultValue": false,
           "Name": "Tuesday",
           "Value": "Tuesday"
         },
         {
-          "Description": "Mittwoch",
-          "DisplayName": "Mittwoch",
+          "Description": "Wednesday",
+          "DisplayName": "Wednesday",
           "IsDefaultValue": false,
           "Name": "Wednesday",
           "Value": "Wednesday"
         },
         {
-          "Description": "Donnerstag",
-          "DisplayName": "Donnerstag",
+          "Description": "Thursday",
+          "DisplayName": "Thursday",
           "IsDefaultValue": false,
           "Name": "Thursday",
           "Value": "Thursday"
         },
         {
-          "Description": "Freitag",
-          "DisplayName": "Freitag",
+          "Description": "Friday",
+          "DisplayName": "Friday",
           "IsDefaultValue": false,
           "Name": "Friday",
           "Value": "Friday"
         },
         {
-          "Description": "Samstag",
-          "DisplayName": "Samstag",
+          "Description": "Saturday",
+          "DisplayName": "Saturday",
           "IsDefaultValue": false,
           "Name": "Saturday",
           "Value": "Saturday"
@@ -770,10 +770,10 @@
     },
     {
       "Category": "data",
-      "DefaultValue": "Datum auswählen ...",
-      "Description": "Der Text, der angezeigt wird, wenn kein Datum ausgewählt ist.",
+      "DefaultValue": "Select a date...",
+      "Description": "The text displayed when no date is selected.",
       "DescriptionResourceString": "DatePickerCanvas_Placeholder_Desc",
-      "DisplayName": "Platzhalter",
+      "DisplayName": "Placeholder",
       "DisplayNameResourceString": "DatePickerCanvas_Placeholder",
       "EnumValues": [],
       "HelperUI": null,
@@ -799,21 +799,21 @@
     {
       "Category": "data",
       "DefaultValue": "None",
-      "Description": "Der aktuelle Status der Datumsauswahl in Bezug auf die Überprüfung.",
+      "Description": "The current status of the Date picker, with regard to validation.",
       "DescriptionResourceString": "DatePickerCanvas_ValidationState_Desc",
-      "DisplayName": "Überprüfungsstatus",
+      "DisplayName": "Validation state",
       "DisplayNameResourceString": "DatePickerCanvas_ValidationState",
       "EnumValues": [
         {
-          "Description": "Fehler",
-          "DisplayName": "Fehler",
+          "Description": "Error",
+          "DisplayName": "Error",
           "IsDefaultValue": false,
           "Name": "Error",
           "Value": "Error"
         },
         {
-          "Description": "Keine",
-          "DisplayName": "Keine",
+          "Description": "None",
+          "DisplayName": "None",
           "IsDefaultValue": true,
           "Name": "None",
           "Value": "None"
@@ -842,9 +842,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.",
+      "Description": "Choose a color palette that's different from the theme.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Farbpalette",
+      "DisplayName": "Color palette",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -870,9 +870,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Name der Schriftfamilie, in der Text angezeigt wird",
+      "Description": "The name of the family of fonts in which text appears",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Schriftart",
+      "DisplayName": "Font",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -898,9 +898,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Legen Sie die Schriftgröße für den angezeigten Text fest.",
+      "Description": "Set the font size for displayed text.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Schriftgröße",
+      "DisplayName": "Font size",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -926,9 +926,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Farbe des Texts im Steuerelement",
+      "Description": "The color of text in the control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Schriftfarbe",
+      "DisplayName": "Font color",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -954,9 +954,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Die Gewichtung des Texts in einem Steuerelement",
+      "Description": "The weight of the text in a control",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Schriftstärke",
+      "DisplayName": "Font weight",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -982,9 +982,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Kursiv",
+      "Description": "Italic",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Kursiv",
+      "DisplayName": "Italic",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -1010,9 +1010,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Unterstrichen",
+      "Description": "Underline",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Unterstrichen",
+      "DisplayName": "Underline",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -1038,9 +1038,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Durchgestrichen",
+      "Description": "Strikethrough",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Durchgestrichen",
+      "DisplayName": "Strikethrough",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -1066,9 +1066,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Hintergrundfarbe des Steuerelements.",
+      "Description": "Background color of the control.",
       "DescriptionResourceString": "Fill_Description",
-      "DisplayName": "Füllung",
+      "DisplayName": "Fill",
       "DisplayNameResourceString": "Fill",
       "EnumValues": [],
       "HelperUI": null,
@@ -1094,28 +1094,28 @@
     {
       "Category": "data",
       "DefaultValue": "FilledDarker",
-      "Description": "Erscheinungsbild der Rahmen und Auffüllung des Steuerelements",
+      "Description": "Appearance of the control's borders and fill",
       "DescriptionResourceString": "Appearance_Description",
-      "DisplayName": "Erscheinungsbild",
+      "DisplayName": "Appearance",
       "DisplayNameResourceString": "Appearance",
       "EnumValues": [
         {
-          "Description": "Dunklere Auffüllung",
-          "DisplayName": "Dunklere Auffüllung",
+          "Description": "Filled Darker",
+          "DisplayName": "Filled Darker",
           "IsDefaultValue": true,
           "Name": "FilledDarker",
           "Value": "FilledDarker"
         },
         {
-          "Description": "Hellere Auffüllung",
-          "DisplayName": "Hellere Auffüllung",
+          "Description": "Filled Lighter",
+          "DisplayName": "Filled Lighter",
           "IsDefaultValue": false,
           "Name": "FilledLighter",
           "Value": "FilledLighter"
         },
         {
-          "Description": "Kontur",
-          "DisplayName": "Kontur",
+          "Description": "Outline",
+          "DisplayName": "Outline",
           "IsDefaultValue": false,
           "Name": "Outline",
           "Value": "Outline"
@@ -1144,9 +1144,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Rundung in der Ecke des Steuerelements. Der Wert „0“ ist perfekt quadratisch.",
+      "Description": "Roundedness of the control's corners. A value of 0 is perfectly square.",
       "DescriptionResourceString": "BorderRadius_Description",
-      "DisplayName": "Rahmenradius",
+      "DisplayName": "Border radius",
       "DisplayNameResourceString": "BorderRadius",
       "EnumValues": [],
       "HelperUI": null,
@@ -1173,9 +1173,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Wert für die obere Auffüllung des Steuerelements.",
+      "Description": "The value of the control's top padding.",
       "DescriptionResourceString": "PaddingTop_Description",
-      "DisplayName": "Auffüllung oben",
+      "DisplayName": "Top",
       "DisplayNameResourceString": "PaddingTop",
       "EnumValues": [],
       "HelperUI": null,
@@ -1202,9 +1202,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Wert für die rechte Auffüllung des Steuerelements.",
+      "Description": "The value of the control's right padding.",
       "DescriptionResourceString": "PaddingRight_Description",
-      "DisplayName": "Auffüllung rechts",
+      "DisplayName": "Right",
       "DisplayNameResourceString": "PaddingRight",
       "EnumValues": [],
       "HelperUI": null,
@@ -1231,9 +1231,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Wert für die untere Auffüllung des Steuerelements.",
+      "Description": "The value of the control's bottom padding.",
       "DescriptionResourceString": "PaddingBottom_Description",
-      "DisplayName": "Auffüllung unten",
+      "DisplayName": "Bottom",
       "DisplayNameResourceString": "PaddingBottom",
       "EnumValues": [],
       "HelperUI": null,
@@ -1260,9 +1260,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Der Wert für die linke Auffüllung des Steuerelements.",
+      "Description": "The value of the control's left padding.",
       "DescriptionResourceString": "PaddingLeft_Description",
-      "DisplayName": "Auffüllung links",
+      "DisplayName": "Left",
       "DisplayNameResourceString": "PaddingLeft",
       "EnumValues": [],
       "HelperUI": null,
@@ -1289,9 +1289,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Gibt an, ob dieses Steuerelement einen Wert benötigt",
+      "Description": "Whether this control must have a value.",
       "DescriptionResourceString": "DatePickerCanvas_Required_Desc",
-      "DisplayName": "Erforderlich",
+      "DisplayName": "Required",
       "DisplayNameResourceString": "DatePickerCanvas_Required",
       "EnumValues": [],
       "HelperUI": "",
@@ -1453,7 +1453,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.DatePickerCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.DatePickerCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AccessibleLabel\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"SelectedDate\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"StartDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"EndDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Format\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Long Abbreviated\"},\"IsEditable\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"StartOfWeek\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Sunday\"},\"Placeholder\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Datum auswählen ...\"},\"ValidationState\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"None\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"Fill\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"FilledDarker\"},\"BorderRadius\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingTop\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingRight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingBottom\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingLeft\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Required\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":{\"OnChange\":{\"EventName\":\"OnChange\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.DatePickerCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.DatePickerCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AccessibleLabel\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"SelectedDate\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"StartDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"EndDate\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Format\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Long Abbreviated\"},\"IsEditable\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"StartOfWeek\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Sunday\"},\"Placeholder\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Select a date...\"},\"ValidationState\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"None\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"Fill\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"FilledDarker\"},\"BorderRadius\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingTop\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingRight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingBottom\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"PaddingLeft\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Required\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":{\"OnChange\":{\"EventName\":\"OnChange\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
@@ -1803,7 +1803,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"DatePickerCanvas\":\"Datumsauswahl\",\"DatePickerCanvas_Placeholder\":\"Platzhalter\",\"DatePickerCanvas_AccessibleLabel\":\"Beschriftung für Bedienungshilfen\",\"DatePickerCanvas_AccessibleLabel_Desc\":\"Beschriftung für Sprachausgabe\",\"DatePickerCanvas_Calendar_GoToToday\":\"Zum heutigen Tag wechseln\",\"DatePickerCanvas_Calendar_NextMonth\":\"Zum nächsten Monat navigieren\",\"DatePickerCanvas_Calendar_NextYearRange\":\"Zum nächsten Jahresbereich navigieren\",\"DatePickerCanvas_Calendar_NextYear\":\"Zum nächsten Jahr navigieren\",\"DatePickerCanvas_Calendar_PreviousMonth\":\"Zum vorherigen Monat navigieren\",\"DatePickerCanvas_Calendar_PreviousYear\":\"Zum vorherigen Jahr navigieren\",\"DatePickerCanvas_Calendar_PreviousYearRange\":\"Zum vorherigen Jahresbereich navigieren\",\"DatePickerCanvas_InvalidInputMessage\":\"Ungültiges Datum in {0} eingegeben. Auf vorherigen Wert zurückgesetzt. Geben Sie ein Datum wie {1} ein.\",\"DatePickerCanvas_Required\":\"Erforderlich\",\"DatePickerCanvas_Required_Desc\":\"Gibt an, ob dieses Steuerelement einen Wert benötigt\",\"DatePickerCanvas_SelectedDate\":\"Ausgewähltes Datum\",\"DatePickerCanvas_SelectedDate_Desc\":\"In diesem Steuerelement ausgewähltes Datum.\",\"DatePickerCanvas_StartYear\":\"Startjahr\",\"DatePickerCanvas_StartYear_Desc\":\"Das früheste auswählbare Jahr.\",\"DatePickerCanvas_EndYear\":\"Endjahr\",\"DatePickerCanvas_EndYear_Desc\":\"Das letzte auswählbare Jahr.\",\"DatePickerCanvas_Placeholder_Desc\":\"Der Text, der angezeigt wird, wenn kein Datum ausgewählt ist.\",\"DatePickerCanvas_IsEditable\":\"Ist bearbeitbar\",\"DatePickerCanvas_IsEditable_Desc\":\"Gibt an, ob der Benutzer ein Datum eingeben kann.\",\"DatePickerCanvas_StartOfWeek\":\"Wochenbeginn\",\"DatePickerCanvas_StartOfWeek_Desc\":\"An welchem Wochentag der Kalender beginnen soll.\",\"DatePickerCanvas_StartOfWeek_Sunday\":\"Sonntag\",\"DatePickerCanvas_StartOfWeek_Monday\":\"Montag\",\"DatePickerCanvas_StartOfWeek_Tuesday\":\"Dienstag\",\"DatePickerCanvas_StartOfWeek_Wednesday\":\"Mittwoch\",\"DatePickerCanvas_StartOfWeek_Thursday\":\"Donnerstag\",\"DatePickerCanvas_StartOfWeek_Friday\":\"Freitag\",\"DatePickerCanvas_StartOfWeek_Saturday\":\"Samstag\",\"DatePickerCanvas_Format\":\"Format\",\"DatePickerCanvas_Format_Desc\":\"Das Format, in dem das Datum angezeigt werden soll.\",\"DatePickerCanvas_Format_Short\":\"Kurz\",\"DatePickerCanvas_Format_Long\":\"Lang\",\"DatePickerCanvas_Format_LongAbbreviated\":\"Lang gekürzt\",\"DatePickerCanvas_Format_YearMonth\":\"Monat des Jahres\",\"Base_Palette_Color\":\"Farbpalette\",\"Base_Palette_Color_description\":\"Wählen Sie eine Farbpalette aus, die sich vom Thema unterscheidet.\",\"DatePickerCanvas_ValidationState\":\"Überprüfungsstatus\",\"DatePickerCanvas_ValidationState_Desc\":\"Der aktuelle Status der Datumsauswahl in Bezug auf die Überprüfung.\",\"DatePickerCanvas_ValidationState_None\":\"Keine\",\"DatePickerCanvas_ValidationState_Error\":\"Fehler\",\"Font_Size\":\"Schriftgröße\",\"Font_Size_description\":\"Legen Sie die Schriftgröße für den angezeigten Text fest.\",\"Default_Value_Placeholder\":\"Datum auswählen ...\",\"Font\":\"Schriftart\",\"Font_description\":\"Der Name der Schriftfamilie, in der Text angezeigt wird\",\"Font_Color\":\"Schriftfarbe\",\"Font_Color_description\":\"Die Farbe des Texts im Steuerelement\",\"Font_Weight\":\"Schriftstärke\",\"Font_Weight_description\":\"Die Gewichtung des Texts in einem Steuerelement\",\"Italic\":\"Kursiv\",\"Underline\":\"Unterstrichen\",\"Strikethrough\":\"Durchgestrichen\",\"Fill\":\"Füllung\",\"Fill_Description\":\"Hintergrundfarbe des Steuerelements.\",\"BorderStyle\":\"Rahmenformat\",\"BorderStyle_Description\":\"Stil der Rahmen um das Steuerelement\",\"BorderStyle_Dashed\":\"Gestrichelt\",\"BorderStyle_Dotted\":\"Gepunktet\",\"BorderStyle_None\":\"Keine\",\"BorderStyle_Solid\":\"Durchgezogen\",\"BorderThickness\":\"Rahmenbreite\",\"BorderThickness_Description\":\"Stärke oder Breite von Rahmen um das Steuerelement.\",\"BorderColor\":\"Rahmenfarbe\",\"BorderColor_Description\":\"Farbe der Rahmen um das Steuerelement.\",\"BorderRadius\":\"Rahmenradius\",\"BorderRadius_Description\":\"Rundung in der Ecke des Steuerelements. Der Wert „0“ ist perfekt quadratisch.\",\"PaddingTop\":\"Auffüllung oben\",\"PaddingTop_Description\":\"Der Wert für die obere Auffüllung des Steuerelements.\",\"PaddingRight\":\"Auffüllung rechts\",\"PaddingRight_Description\":\"Der Wert für die rechte Auffüllung des Steuerelements.\",\"PaddingBottom\":\"Auffüllung unten\",\"PaddingBottom_Description\":\"Der Wert für die untere Auffüllung des Steuerelements.\",\"PaddingLeft\":\"Auffüllung links\",\"PaddingLeft_Description\":\"Der Wert für die linke Auffüllung des Steuerelements.\",\"HoverBorderColor\":\"Rahmenfarbe beim Zeigen\",\"HoverBorderColor_Description\":\"Farbe der Rahmen beim Zeigen auf das Steuerelement.\",\"PressedBorderColor\":\"Rahmenfarbe der gedrückten Schaltfläche\",\"PressedBorderColor_Description\":\"Farbe der Rahmen beim Drücken oder Auswählen des Steuerelements.\",\"FocusedBorderColor\":\"Fokussierte Rahmenfarbe\",\"FocusedBorderColor_Description\":\"Farbe der Rahmen bei fokussiertem Steuerelement.\",\"DisabledBorderColor\":\"Deaktivierte Rahmenfarbe\",\"DisabledBorderColor_Description\":\"Farbe der Rahmen bei deaktiviertem Steuerelement.\",\"Appearance\":\"Erscheinungsbild\",\"Appearance_Description\":\"Erscheinungsbild der Rahmen und Auffüllung des Steuerelements\",\"Appearance_FilledDarker\":\"Dunklere Auffüllung\",\"Appearance_FilledLighter\":\"Hellere Auffüllung\",\"Appearance_Outline\":\"Kontur\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"DatePickerCanvas\":\"Date picker\",\"DatePickerCanvas_Placeholder\":\"Placeholder\",\"DatePickerCanvas_AccessibleLabel\":\"Accessible label\",\"DatePickerCanvas_AccessibleLabel_Desc\":\"Label for screen readers.\",\"DatePickerCanvas_Calendar_GoToToday\":\"Go to today\",\"DatePickerCanvas_Calendar_NextMonth\":\"Navigate to next month\",\"DatePickerCanvas_Calendar_NextYearRange\":\"Navigate to next year range\",\"DatePickerCanvas_Calendar_NextYear\":\"Navigate to next year\",\"DatePickerCanvas_Calendar_PreviousMonth\":\"Navigate to previous month\",\"DatePickerCanvas_Calendar_PreviousYear\":\"Navigate to previous year\",\"DatePickerCanvas_Calendar_PreviousYearRange\":\"Navigate to previous year range\",\"DatePickerCanvas_InvalidInputMessage\":\"Invalid date entered in {0}. Reverted to previous value. Please enter a date like {1}.\",\"DatePickerCanvas_Required\":\"Required\",\"DatePickerCanvas_Required_Desc\":\"Whether this control must have a value.\",\"DatePickerCanvas_SelectedDate\":\"SelectedDate\",\"DatePickerCanvas_SelectedDate_Desc\":\"Date selected in this control.\",\"DatePickerCanvas_StartYear\":\"StartYear\",\"DatePickerCanvas_StartYear_Desc\":\"The earliest year selectable.\",\"DatePickerCanvas_EndYear\":\"EndYear\",\"DatePickerCanvas_EndYear_Desc\":\"The latest year selectable.\",\"DatePickerCanvas_Placeholder_Desc\":\"The text displayed when no date is selected.\",\"DatePickerCanvas_IsEditable\":\"IsEditable\",\"DatePickerCanvas_IsEditable_Desc\":\"Whether or not the user can type in a date.\",\"DatePickerCanvas_StartOfWeek\":\"StartOfWeek\",\"DatePickerCanvas_StartOfWeek_Desc\":\"Which day of the week the calendar should start on.\",\"DatePickerCanvas_StartOfWeek_Sunday\":\"Sunday\",\"DatePickerCanvas_StartOfWeek_Monday\":\"Monday\",\"DatePickerCanvas_StartOfWeek_Tuesday\":\"Tuesday\",\"DatePickerCanvas_StartOfWeek_Wednesday\":\"Wednesday\",\"DatePickerCanvas_StartOfWeek_Thursday\":\"Thursday\",\"DatePickerCanvas_StartOfWeek_Friday\":\"Friday\",\"DatePickerCanvas_StartOfWeek_Saturday\":\"Saturday\",\"DatePickerCanvas_Format\":\"Format\",\"DatePickerCanvas_Format_Desc\":\"The format to display the date in.\",\"DatePickerCanvas_Format_Short\":\"Short\",\"DatePickerCanvas_Format_Long\":\"Long\",\"DatePickerCanvas_Format_LongAbbreviated\":\"LongAbbreviated\",\"DatePickerCanvas_Format_YearMonth\":\"YearMonth\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"DatePickerCanvas_ValidationState\":\"Validation state\",\"DatePickerCanvas_ValidationState_Desc\":\"The current status of the Date picker, with regard to validation.\",\"DatePickerCanvas_ValidationState_None\":\"None\",\"DatePickerCanvas_ValidationState_Error\":\"Error\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Default_Value_Placeholder\":\"Select a date...\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\",\"Fill\":\"Fill\",\"Fill_Description\":\"Background color of the control.\",\"BorderStyle\":\"Border style\",\"BorderStyle_Description\":\"Style of borders around the control\",\"BorderStyle_Dashed\":\"Dashed\",\"BorderStyle_Dotted\":\"Dotted\",\"BorderStyle_None\":\"None\",\"BorderStyle_Solid\":\"Solid\",\"BorderThickness\":\"Border thickness\",\"BorderThickness_Description\":\"Thickness or width of borders around the control.\",\"BorderColor\":\"Border color\",\"BorderColor_Description\":\"Color of borders around the control.\",\"BorderRadius\":\"Border radius\",\"BorderRadius_Description\":\"Roundedness of the control's corners. A value of 0 is perfectly square.\",\"PaddingTop\":\"Top\",\"PaddingTop_Description\":\"The value of the control's top padding.\",\"PaddingRight\":\"Right\",\"PaddingRight_Description\":\"The value of the control's right padding.\",\"PaddingBottom\":\"Bottom\",\"PaddingBottom_Description\":\"The value of the control's bottom padding.\",\"PaddingLeft\":\"Left\",\"PaddingLeft_Description\":\"The value of the control's left padding.\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderColor_Description\":\"Color of borders while hovering over the control.\",\"PressedBorderColor\":\"Pressed border color\",\"PressedBorderColor_Description\":\"Color of borders while pressing or selecting the control.\",\"FocusedBorderColor\":\"Focused border color\",\"FocusedBorderColor_Description\":\"Color of borders while the control has focus.\",\"DisabledBorderColor\":\"Disabled border color\",\"DisabledBorderColor_Description\":\"Color of borders while the control is disabled.\",\"Appearance\":\"Appearance\",\"Appearance_Description\":\"Appearance of the control's borders and fill\",\"Appearance_FilledDarker\":\"Filled Darker\",\"Appearance_FilledLighter\":\"Filled Lighter\",\"Appearance_Outline\":\"Outline\"}}}",
       "Type": 3
     },
     {
