@@ -249,8 +249,7 @@ NeueAufgabenScreen As screen:
                             "[$-de-DE]dd.mm.yyyy"
                         ) & " " & EndInputNeu.Value
                     ),
-                    BearbeitungsDauer: BearbeitungsdauerNeu.Value,
-                    BearbeitungsDauerINT: (DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes))
+                    BearbeitungsDauer: BearbeitungsdauerNeu.Value
                 }
             );
             If(

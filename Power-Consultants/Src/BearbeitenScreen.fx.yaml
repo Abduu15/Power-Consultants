@@ -46,9 +46,8 @@ BearbeitenScreen As screen:
                             EndDate.SelectedDate,
                             "[$-de-DE]dd.mm.yyyy"
                         ) & " " & EndInput.Value
-                    ),BearbeitungsDauer: BearbeitungsDauer.Value,
-                    BearbeitungsDauerINT: DateDiff(StartInputNeu.Value,EndInputNeu.Value,TimeUnit.Minutes)
-                }
+                    ),BearbeitungsDauer: BearbeitungsDauer.Value
+                        }
             );
             If(
                 IsBlank(gblSelectedEntry) || IsError(gblSelectedEntry),
