@@ -79,6 +79,7 @@
             ZIndex: =6
 
     TextCanvas8 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -117,6 +118,7 @@
     ButtonCanvas3 As Button:
         Align: =""
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =54
@@ -142,6 +144,7 @@
     "TextInput_Projekt As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(9, 33, 98, 1)
@@ -154,6 +157,7 @@
     "TextInput_Projektaufgabe As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -166,6 +170,7 @@
     "TextInput_Startzeit As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -178,6 +183,7 @@
     "TextInput_Endzeit As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)
@@ -190,6 +196,7 @@
     "TextInput_Bearbeitungsdauer As 'Text input'":
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(15, 108, 189, 1)

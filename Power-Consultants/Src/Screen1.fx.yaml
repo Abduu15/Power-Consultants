@@ -157,6 +157,7 @@ Screen1 As screen:
         ZIndex: =7
 
     TextCanvas2 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -169,6 +170,7 @@ Screen1 As screen:
         ZIndex: =8
 
     TextCanvas6 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =

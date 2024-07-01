@@ -82,6 +82,7 @@
                 ZIndex: =1
 
                 TextCanvas3 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -95,6 +96,7 @@
                     ZIndex: =1
 
                 TextCanvas4 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -108,6 +110,7 @@
                     ZIndex: =4
 
                 TextCanvas4_1 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -123,6 +126,7 @@
                 ProjektCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Height: =43
                     InputTextPlaceholder: ="Projekt zur Bearbeitung auswählen"
@@ -141,6 +145,7 @@
                 AufgabeCombo As Combobox.pcfdataset:
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Height: =43
                     InputTextPlaceholder: ="Projektaufgabe zur Bearbeitung auswählen"
@@ -163,6 +168,7 @@
                     ZIndex: =7
 
                 TextCanvas4_2 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -176,6 +182,7 @@
                     ZIndex: =8
 
                 TextCanvas4_3 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -191,6 +198,7 @@
                 "EndZeitInput As 'Text input'":
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.View
                     Fill: =
                     FontColor: =RGBA(53, 61, 63, 1)
@@ -203,6 +211,7 @@
                     ZIndex: =10
 
                 TextCanvas4_4 As Text:
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     FontColor: =
@@ -218,6 +227,7 @@
                 "StartZeitInput As 'Text input'":
                     Appearance: ="FilledDarker"
                     BasePaletteColor: =
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.View
                     Fill: =
                     FontColor: =RGBA(53, 61, 63, 1)
@@ -331,6 +341,7 @@
 
                 TextCanvas5 As Text:
                     AutoHeight: =false
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     Font: =Font.Lato
@@ -386,6 +397,7 @@
     ButtonCanvas1 As Button:
         Align: =""
         BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BorderStyle: =""
         DisplayMode: =varDPStop
         FontColor: =
         FontSize: =19
@@ -407,6 +419,7 @@
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(8, 222, 8, 1)
+        BorderStyle: =""
         DisplayMode: |
             =If(
                 ButtonEnabled,
@@ -433,6 +446,7 @@
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BorderStyle: =""
         DisplayMode: =varDPBuchen
         FontColor: =
         FontSize: |
@@ -460,6 +474,23 @@
                     }
                 )
             );
+            Mail.SendEmailV3(
+                "albsig.yaveon@gmail.com",
+                "Neuer Projekttask",
+                Concatenate(
+                    ProjektCombo.Selected.Value,
+                    ";;",
+                    AufgabeCombo.Selected.Value,
+                    ";;",
+                    StartZeitInput.Value,
+                    ";;",
+                    EndZeitInput.Value,
+                    ";;",
+                    Timer2.Value/60000,
+                    ";;"
+                ),0
+            )
+            ;
             If(
                 IsBlank(varRecord) || IsError(varRecord),
                 Notify(
@@ -495,6 +526,7 @@
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
+        BorderStyle: =""
         DisplayMode: =varDP
         FontColor: =
         FontSize: =19
@@ -516,6 +548,7 @@
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
+        BorderStyle: =""
         DisplayMode: =varDP
         FontColor: =
         FontSize: =19
@@ -551,6 +584,7 @@
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(141, 229, 250, 1)
+        BorderStyle: =""
         DisplayMode: =varDP
         FontColor: =
         FontSize: |
@@ -596,6 +630,7 @@
 
     ButtonCanvas5 As Button:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =26
         OnSelect: =Set(varChatbot,false)

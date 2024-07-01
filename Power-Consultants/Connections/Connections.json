@@ -68,7 +68,9 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sendmail"
     },
     "datasets": {},
-    "dataSources": [],
+    "dataSources": [
+      "Mail"
+    ],
     "dependencies": {},
     "dependents": [
       "07b58241-9c6c-48b7-a6b8-e0d438233859"

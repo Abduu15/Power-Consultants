@@ -25,6 +25,7 @@ Dashboard As screen:
                 ="Total working hours: " & User().Bearbeitungsdauer & " hours"
             Appearance: ="FilledDarker"
             BasePaletteColor: =
+            BorderStyle: =""
             DisplayMode: =DisplayMode.Edit
             Fill: =
             FontColor: =
@@ -39,6 +40,7 @@ Dashboard As screen:
         ButtonCanvas6 As Button:
             Align: =""
             BasePaletteColor: =
+            BorderStyle: =""
             DisplayMode: =DisplayMode.Edit
             FontColor: =
             FontSize: |+
@@ -61,6 +63,7 @@ Dashboard As screen:
         ButtonCanvas6_1 As Button:
             Align: =""
             BasePaletteColor: =
+            BorderStyle: =""
             DisplayMode: =DisplayMode.Edit
             FontColor: =
             FontSize: |+

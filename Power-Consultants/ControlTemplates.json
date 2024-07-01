@@ -68,7 +68,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.41"
+    "Version": "0.0.42"
   },
   "Chatbot (preview)": {
     "CustomGroupControlTemplateName": "",
@@ -112,7 +112,7 @@
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Combobox",
-    "Version": "0.0.38"
+    "Version": "0.0.39"
   },
   "Date picker": {
     "CustomGroupControlTemplateName": "",
@@ -127,7 +127,7 @@
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Date picker",
-    "Version": "0.0.31"
+    "Version": "0.0.32"
   },
   "dropdown": {
     "CustomGroupControlTemplateName": "",
@@ -156,7 +156,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.40"
+    "Version": "0.0.41"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -394,7 +394,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.37"
+    "Version": "0.0.38"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
@@ -409,7 +409,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.37"
+    "Version": "0.0.38"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

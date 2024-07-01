@@ -6,6 +6,7 @@ NeueAufgabenScreen_Backup As screen:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BorderStyle: =""
         DisplayMode: |-
             =If(
                 And(
@@ -121,6 +122,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =1
 
     TextCanvas4_32 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -134,6 +136,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =2
 
     TextCanvas4_34 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -149,6 +152,7 @@ NeueAufgabenScreen_Backup As screen:
     ProjektCombo_NeuesProjekt_1 As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =18
@@ -163,6 +167,7 @@ NeueAufgabenScreen_Backup As screen:
     AufgabeCombo_NeueAufgabe_1 As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =18
@@ -181,6 +186,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =5
 
     TextCanvas4_33 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -194,6 +200,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =6
 
     TextCanvas4_35 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -207,6 +214,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =7
 
     TextCanvas4_36 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -413,6 +421,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =18
 
     TextCanvas9_8 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -426,6 +435,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =19
 
     TextCanvas10_8 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -438,6 +448,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =20
 
     TextCanvas10_9 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -575,6 +586,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =26
 
     TextCanvas9_9 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -588,6 +600,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =27
 
     TextCanvas10_10 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -600,6 +613,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =28
 
     TextCanvas10_11 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -662,6 +676,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =31
 
     TextCanvas9_11 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -675,6 +690,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =32
 
     TextCanvas9_10 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -688,6 +704,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =33
 
     "DatePickerCanvas2_4 As 'Date picker'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =
@@ -697,6 +714,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =36
 
     "DatePickerCanvas2_5 As 'Date picker'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =33
         SelectedDate: =
@@ -706,6 +724,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =37
 
     "StartInput_2 As 'Text input'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =36
         Value: |-
@@ -716,6 +735,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =38
 
     "EndInput_2 As 'Text input'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =42
         Value: |
@@ -727,6 +747,7 @@ NeueAufgabenScreen_Backup As screen:
 
     "BearbeitungsDauer_2 As 'Text input'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.View
         Height: =37
         Value: =DateDiff(StartInput_2.Value,EndInput_2.Value,TimeUnit.Minutes)& " minuten"
@@ -737,6 +758,7 @@ NeueAufgabenScreen_Backup As screen:
 
     "DateStarttime_2 As 'Date picker'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
@@ -746,6 +768,7 @@ NeueAufgabenScreen_Backup As screen:
         ZIndex: =41
 
     "EndDate_2 As 'Date picker'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")

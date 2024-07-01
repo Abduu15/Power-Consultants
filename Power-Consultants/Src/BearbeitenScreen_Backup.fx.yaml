@@ -8,6 +8,7 @@ BearbeitenScreen_Backup As screen:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BorderStyle: =""
         DisplayMode: |-
             =If(
                 And(
@@ -113,6 +114,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =1
 
     TextCanvas4_37 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -126,6 +128,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =2
 
     TextCanvas4_41 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -141,6 +144,7 @@ BearbeitenScreen_Backup As screen:
     ProjektCombo_BearbeitenProjekt_1 As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =18
@@ -155,6 +159,7 @@ BearbeitenScreen_Backup As screen:
     AufgabeCombo_BearbeitenAufgabe_1 As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =18
@@ -173,6 +178,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =5
 
     TextCanvas4_38 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -186,6 +192,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =6
 
     TextCanvas4_42 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -199,6 +206,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =7
 
     TextCanvas4_43 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -317,6 +325,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =13
 
     TextCanvas7_2 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -334,6 +343,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =16
 
     TextCanvas7_3 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -471,6 +481,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =21
 
     TextCanvas9_12 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -484,6 +495,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =22
 
     TextCanvas10_12 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -496,6 +508,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =23
 
     TextCanvas10_13 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -658,6 +671,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =29
 
     TextCanvas9_13 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -671,6 +685,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =30
 
     TextCanvas10_14 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -683,6 +698,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =31
 
     TextCanvas10_15 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -755,6 +771,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =34
 
     TextCanvas9_15 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -768,6 +785,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =35
 
     TextCanvas9_14 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =
@@ -781,6 +799,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =36
 
     TextCanvas4_39 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(12, 73, 171, 1)
@@ -794,6 +813,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =37
 
     TextCanvas4_40 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(12, 73, 171, 1)
@@ -807,6 +827,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =38
 
     TextCanvas11_1 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Text: =
@@ -816,6 +837,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =41
 
     "StartInput_3 As 'Text input'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =36
         Value: |-
@@ -826,6 +848,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =42
 
     "EndInput_3 As 'Text input'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =42
         Value: |
@@ -837,6 +860,7 @@ BearbeitenScreen_Backup As screen:
 
     "BearbeitungsDauer_3 As 'Text input'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.View
         Height: =37
         Value: =DateDiff(StartInput_3.Value,EndInput_3.Value,TimeUnit.Minutes)& " minuten"
@@ -847,6 +871,7 @@ BearbeitenScreen_Backup As screen:
 
     "DateStarttime_3 As 'Date picker'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Starttime, "[$-en-US]dd.mm.yyyy")
@@ -856,6 +881,7 @@ BearbeitenScreen_Backup As screen:
         ZIndex: =45
 
     "EndDate_3 As 'Date picker'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Height: =43
         SelectedDate: =Text(gblSelectedEntry.Endtime, "[$-en-US]dd.mm.yyyy")

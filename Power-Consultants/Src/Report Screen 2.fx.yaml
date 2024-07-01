@@ -172,6 +172,7 @@
     ButtonCanvas3_1 As Button:
         Align: =""
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =37
@@ -199,6 +200,7 @@
         ZIndex: =2
 
     TextCanvas4_5 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(40, 134, 222, 1)
@@ -212,6 +214,7 @@
         ZIndex: =3
 
     TextCanvas4_6 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(40, 134, 222, 1)
@@ -227,6 +230,7 @@
     ProjektCombo_Bearbeiten As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         Height: =30
@@ -240,6 +244,7 @@
     AufgabeCombo_Bearbeiten As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =RGBA(109, 49, 162, 1)
         Height: =30
@@ -258,6 +263,7 @@
         ZIndex: =6
 
     TextCanvas4_7 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(40, 134, 222, 1)
@@ -271,6 +277,7 @@
         ZIndex: =7
 
     TextCanvas4_8 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(40, 134, 222, 1)
@@ -284,6 +291,7 @@
         ZIndex: =8
 
     TextCanvas4_9 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(40, 134, 222, 1)

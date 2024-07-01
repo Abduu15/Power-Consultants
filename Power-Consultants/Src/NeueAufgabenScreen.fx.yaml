@@ -3,6 +3,7 @@ NeueAufgabenScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     TextCanvas4_27 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -16,6 +17,7 @@ NeueAufgabenScreen As screen:
         ZIndex: =2
 
     TextCanvas4_28 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -31,6 +33,7 @@ NeueAufgabenScreen As screen:
     ProjektCombo_NeuesProjekt As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
@@ -45,6 +48,7 @@ NeueAufgabenScreen As screen:
     AufgabeCombo_NeueAufgabe As Combobox.pcfdataset:
         Appearance: ="FilledDarker"
         BasePaletteColor: =
+        BorderStyle: =""
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
@@ -63,6 +67,7 @@ NeueAufgabenScreen As screen:
         ZIndex: =5
 
     TextCanvas4_29 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -76,6 +81,7 @@ NeueAufgabenScreen As screen:
         ZIndex: =6
 
     TextCanvas4_30 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -89,6 +95,7 @@ NeueAufgabenScreen As screen:
         ZIndex: =7
 
     TextCanvas4_31 As Text:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         Fill: =
         FontColor: =RGBA(71, 158, 245, 1)
@@ -138,6 +145,7 @@ NeueAufgabenScreen As screen:
 
     "StartInputNeu As 'Text input'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
@@ -151,6 +159,7 @@ NeueAufgabenScreen As screen:
         ZIndex: =14
 
     "EndInputNeu As 'Text input'":
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
@@ -165,6 +174,7 @@ NeueAufgabenScreen As screen:
 
     "BearbeitungsdauerNeu As 'Text input'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: |-
             =//DisplayMode.View
             
@@ -187,6 +197,7 @@ NeueAufgabenScreen As screen:
 
     "DateStarttimeNeu As 'Date picker'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
@@ -198,6 +209,7 @@ NeueAufgabenScreen As screen:
 
     "EndDateNeu As 'Date picker'":
         BasePaletteColor: =
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontSize: =19
         Height: =43
@@ -211,6 +223,7 @@ NeueAufgabenScreen As screen:
         Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BorderStyle: =""
         DisplayMode: |-
             =If(
                 And(

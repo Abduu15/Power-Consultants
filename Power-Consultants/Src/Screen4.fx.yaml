@@ -30,6 +30,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey1 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -42,6 +43,7 @@ Screen4 As screen:
 
             "DataCardValue1 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -54,6 +56,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             ErrorMessage1 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -66,6 +69,7 @@ Screen4 As screen:
 
             StarVisible1 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: ="*"
@@ -93,6 +97,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey2 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -105,6 +110,7 @@ Screen4 As screen:
 
             "DataCardValue2 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -117,6 +123,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             ErrorMessage2 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -129,6 +136,7 @@ Screen4 As screen:
 
             StarVisible2 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: ="*"
@@ -156,6 +164,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey3 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -168,6 +177,7 @@ Screen4 As screen:
 
             "DataCardValue3 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -180,6 +190,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             ErrorMessage3 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -192,6 +203,7 @@ Screen4 As screen:
 
             StarVisible3 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: ="*"
@@ -219,6 +231,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey4 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -231,6 +244,7 @@ Screen4 As screen:
 
             "DataCardValue4 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -243,6 +257,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             ErrorMessage4 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -255,6 +270,7 @@ Screen4 As screen:
 
             StarVisible4 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: ="*"
@@ -281,6 +297,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey5 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -293,6 +310,7 @@ Screen4 As screen:
 
             "DateValue1 As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 SelectedDate: =Parent.Default
@@ -303,6 +321,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             HourValue1 As Dropdown.pcfdataset:
+                BorderStyle: =""
                 DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -314,6 +333,7 @@ Screen4 As screen:
 
             Separator1 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =HourValue1.Height
                 Text: |-
@@ -324,6 +344,7 @@ Screen4 As screen:
                 ZIndex: =4
 
             MinuteValue1 As Dropdown.pcfdataset:
+                BorderStyle: =""
                 DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -334,6 +355,7 @@ Screen4 As screen:
                 ZIndex: =5
 
             ErrorMessage5 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -346,6 +368,7 @@ Screen4 As screen:
 
             StarVisible5 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =20
                 Text: ="*"
@@ -372,6 +395,7 @@ Screen4 As screen:
             ZIndex: =2
 
             DataCardKey6 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =Parent.DisplayName
@@ -384,6 +408,7 @@ Screen4 As screen:
 
             "DateValue2 As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                BorderStyle: =""
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 SelectedDate: =Parent.Default
@@ -394,6 +419,7 @@ Screen4 As screen:
                 ZIndex: =2
 
             HourValue2 As Dropdown.pcfdataset:
+                BorderStyle: =""
                 DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -405,6 +431,7 @@ Screen4 As screen:
 
             Separator3 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =HourValue2.Height
                 Text: |-
@@ -415,6 +442,7 @@ Screen4 As screen:
                 ZIndex: =4
 
             MinuteValue2 As Dropdown.pcfdataset:
+                BorderStyle: =""
                 DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
                 DisplayMode: =Parent.DisplayMode
                 Height: =28
@@ -425,6 +453,7 @@ Screen4 As screen:
                 ZIndex: =5
 
             ErrorMessage6 As Text:
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: =Parent.Error
@@ -437,6 +466,7 @@ Screen4 As screen:
 
             StarVisible6 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =20
                 Text: ="*"
